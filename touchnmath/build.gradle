@@ -1,0 +1,40 @@
+apply plugin: 'java'
+apply plugin: 'war'
+apply plugin: 'eclipse-wtp'  // WTP(Web Tools Platform) -> 웹 프로젝트로 인식하도록
+
+compileJava {
+    options.encoding = 'UTF-8'  // 지정하지 않으면 OS 기본 인코딩으로 간주
+    sourceCompatibility = 1.8  // 빌드시 해당 버전으로 자바 문법 검사
+}
+
+version = '1.0'
+
+eclipse {
+  wtp {
+    facet {
+      facet name: 'jst.web', version: '3.1' // Servlet Spec Version 지정, 미 지정시 2.4
+      facet name: 'jst.java', version: '1.8' // Java Version 지정
+    }
+  }
+}
+
+repositories {
+    mavenCentral() // http://repo2.maven.org/maven2
+}
+
+dependencies {
+    providedCompile 'javax.servlet:javax.servlet-api:3.1.0'   
+    compile 'mysql:mysql-connector-java:5.1.36'
+    compile 'org.mybatis:mybatis:3.3.0'
+    compile 'org.reflections:reflections:0.9.10'
+    compile 'org.springframework:spring-webmvc:4.2.5.RELEASE'
+    compile 'org.springframework:spring-jdbc:4.2.5.RELEASE'
+    // compile 'org.springframework:spring-context:4.1.7.RELEASE'
+    // webmvc가 포함하고 있기 때문에 안 써도 됨.(150805)
+    compile 'org.mybatis:mybatis-spring:1.2.3'
+    compile 'org.aspectj:aspectjweaver:1.8.6'    
+    compile 'commons-fileupload:commons-fileupload:1.3.1'
+    compile 'com.fasterxml.jackson.core:jackson-databind:2.6.1'
+ 
+    testCompile group: 'junit', name: 'junit', version: '4.+'
+}
