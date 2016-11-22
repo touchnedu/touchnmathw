@@ -2072,13 +2072,8 @@ _:-ms-input-placeholder, :root .type-2.block .image-block .bg {position: absolut
   background-color: rgba(0,0,0,0.65);
   cursor: pointer;
 }
-.down-num > span {
-  margin-left: 5px;
-  font-size: 35px;
-}
-.down-num > span:last-child {
-  font-size: 23px;
-}
+.down-num > span { margin-right: -5px; font-size: 35px; }
+.down-num > span:last-child { font-size: 23px; }
 .font-bold { font-weight: bold; }
 .font-size-18 { font-size: 18px !important; }
 .font-size-20 { font-size: 20px; }
@@ -2096,3 +2091,5 @@ _:-ms-input-placeholder, :root .type-2.block .image-block .bg {position: absolut
 .margin-b-10 { margin-bottom: 10px; }
 .margin-t-120 { margin-top: 120px; }
 .width-100 { width: 100% !important; max-width: 100% !important; }
+.footer-logo > img { width: 110px; }
+#logo img { width: 110px; }
