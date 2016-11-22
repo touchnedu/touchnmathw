@@ -19,9 +19,10 @@ function loadSheet() {
 		for(var i in data) {
 			downloadNumber = (data[0].content.$t).substring(8);
 		}
-		console.log("값 : " + downloadNumber);
 		downloadNumber = calculateNumber(downloadNumber);
-		console.log("보정된 값 : " + downloadNumber);
+		
+		
+		
 	});
 }
 
