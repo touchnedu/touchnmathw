@@ -4,25 +4,38 @@
 		var url = "https://play.google.com/store/apps/details?id=com.touchnedu.gradea.studya.math";
 		window.open(url, '_blank'); 
 	});
+	$('#link-to-ir').bind('click', function(event) {
+		event.preventDefault();
+		console.log("ir");
+		var irUrl = "";
+//		window.open(irUrl, '_blank');
+	});
 	
 	loadSheet();
 	
 }());
+
 function loadSheet() {
 	var dataId = "1KNZp0K56oZGtBxUlIXh_C2UT8USBuzmwqHWbTAL4LlY";
-	var convertUrl = "https://spreadsheets.google.com/feeds/list/" + dataId + "/od6/public/values?alt=json-in-script&gid=0&callback=?";
+	var convertUrl = "https://spreadsheets.google.com/feeds/list/" 
+									 + dataId 
+									 + "/od6/public/values?alt=json-in-script&gid=0&callback=?";
+	
 	var downloadNumber = 0; 
 	$.getJSON(convertUrl, function(result) {
-		console.log("getJSON");
 		var data = result.feed.entry;
-		console.log(result.feed.entry);
+		
 		for(var i in data) {
 			downloadNumber = (data[0].content.$t).substring(8);
 		}
 		downloadNumber = calculateNumber(downloadNumber);
-		
-		
-		
+		$('.down-num').children('div').eq(0).text(downloadNumber.substr(0, 1));
+		$('.down-num').children('div').eq(1).text(downloadNumber.substr(1, 1));
+		$('.down-num').children('div').eq(2).text(downloadNumber.substr(2, 1));
+		$('.down-num').children('div').eq(3).text(downloadNumber.substr(3, 1));
+		$('.down-num').children('div').eq(4).text(downloadNumber.substr(4, 1));
+		$('.down-num').children('div').eq(5).text(downloadNumber.substr(5, 1));
+		$('.down-num').children('div').eq(6).text(downloadNumber.substr(6, 1));
 	});
 }
 
