@@ -1,0 +1,126 @@
+<style>
+#menu-bar { background-color: #232730; width: 320px; padding-top: 10px; }
+#menu-bar .hide { display: none; }
+#menu-bar a { cursor: pointer; }
+a > span, li > ul > li { color: #a3aab4; font-size: 13px; vertical-align: top; }
+ul, li { list-style:none; padding-left:0px; }
+.drop-menu > span:first-child { color: #a3aab4; font-size: 5px; }
+.indent { background-color: #1a1d24; padding: 10px 0 10px 65px;}
+.indent > li { cursor: pointer; }
+.drop-menu > div > img { margin-left: 35px; margin-bottom: 1px; vertical-align: middle; }
+.drop-menu > div, .drop-menu > ul > li { padding-top: 10px; padding-bottom: 10px; line-height: 26px; }
+.change-bg { background-color: #2a2f3b; }
+.last { background-color: #232730 !important; }
+#download-bar { margin-top: 160px; }
+#download-bar img { width: 250px; }
+#download-bar > div { padding: 10px 0 0 35px; }
+.triangle { cursor: pointer; color: #a3aab4; position: absolute; display: inline-block; right: 20px; font-size: 0.7em; padding: 0 10px 0 10px; }
+#video-bar { margin-top: 15px; }
+#video-bar > div { color: #656d80; padding: 10px 0 10px 35px; font-size: 13px; }
+</style>
+<div id="menu-bar">
+	<div>
+		<ul>
+			<li class="drop-menu">
+			  <div class="menu-btn">
+			    <img src="../images/bullet_01.png">&nbsp;&nbsp;&nbsp;
+			    <a id="load-download"><span>다운로드</span></a>
+			    <div class="triangle">▼</div>
+			  </div>
+				<ul class="hide indent">
+					<li>- 주간 단위 측정 weekly</li>
+					<li>- 월간 단위 측정 monthly</li>
+					<li>- 가입 회원 수</li>
+					<li>- 가입 회원 대비 MAU 비율</li>
+				</ul></li>
+			<li class="drop-menu">
+			  <div class="menu-btn">
+			    <img src="../images/bullet_01.png">&nbsp;&nbsp;&nbsp;
+			    <a id="load-mau"><span>MAU 월 사용자 수</span></a>
+			    <div class="triangle">▼</div>
+			  </div>
+				<ul class="hide indent">
+					<li>- 주간 단위 측정 weekly</li>
+          <li>- 일간 단위 측정 daily</li>
+				</ul></li>
+			<li class="drop-menu">
+			  <div class="menu-btn">
+			    <img src="../images/bullet_01.png">&nbsp;&nbsp;&nbsp;
+			    <a id="load-wau"><span>WAU 주 사용자 수</span></a>
+			    <div class="triangle">▼</div>
+			  </div>
+				<ul class="hide indent">
+					<li>- 주간 단위 측정 weekly</li>
+          <li>- 일간 단위 측정 daily</li>
+				</ul></li>
+			<li class="drop-menu">
+			  <div class="menu-btn">
+			    <img src="../images/bullet_01.png">&nbsp;&nbsp;&nbsp;
+			    <a id="load-traffic"><span>일일 트래픽</span></a>
+			    <div class="triangle">▼</div>
+			  </div>
+				<ul class="hide indent">
+					<li>- 주간 단위 측정 weekly</li>
+          <li>- 일간 단위 측정 daily</li>
+				</ul></li>
+			<li class="drop-menu">
+			  <div class="menu-btn last">
+			    <img src="../images/bullet_01.png">&nbsp;&nbsp;&nbsp;
+			    <a id="load-history"><span>연혁 마일스톤</span></a>
+			  </div>	
+		</ul>
+	</div>
+	<div id="download-bar">
+	  <div>
+	    <img src="../images/menu_btn02_off.png">
+	  </div>
+	  <div>
+	    <img src="../images/menu_btn01_off.png">
+	  </div>
+	</div>
+	<div id="video-bar">
+	  <div>▶ 터치 수학 실행 영상</div>
+	  <div>▶ 창조 경제 투자 퍼레이드 발표 영상</div>
+	</div>
+	
+</div>
+
+
+
+
+<script>
+$(document).ready(function(){
+  $('.drop-menu > div > a, .triangle').bind('click', function() {
+  	var subMenu = $(this).parent().next('ul');
+    $(this).parent().toggleClass('change-bg');
+    if(subMenu.is(":visible")) {
+    	$(this).parent().children('.triangle').text('▼');
+    } else {
+    	$(this).parent().children('.triangle').text('▲');
+    }
+    subMenu.slideToggle();
+    	
+  });
+  $('.indent > li').bind('click', function() {
+  	$('.indent > li').css('color', '#a3aab4');
+  	$(this).css('color', '#fff');
+  });
+});
+function loadContent(id) {
+	console.log("id : " + id);
+	$('#content').empty();
+	switch(id) {
+	case "load-download":
+		$('#content').load('sub/download-weekly.html');
+		break;
+	case "load-mau":
+		break;
+	case "load-wau":
+		break;
+	case "load-traffic":
+		break;
+	case "load-history":
+		break;
+	}
+}
+</script>
