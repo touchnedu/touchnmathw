@@ -1,0 +1,5 @@
+#table-history { margin-left: 20px; margin-top: 10px; }
+#table-history td { padding: 10px; }
+#table-history tr > td:first-child { padding-bottom: 5px; font-size: 32px; color: #00c6b4; min-height: 20px; padding-right: 20px; font-style: italic; }
+#table-history tr > td:nth-child(2) { color: #c5cdd8; font-size: 22px; vertical-align: bottom; }
+#table-history tr > td:last-child { color: #a3aab4; font-size: 16px; vertical-align: bottom; }

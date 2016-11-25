@@ -2123,6 +2123,10 @@ _:-ms-input-placeholder, :root .type-2.block .image-block .bg {position: absolut
 @media (max-width: 1199px) {
 	.hand-image { left: 5%; max-height: 60%; }
 	.down-num > span { font-size: 20px; }
+	.phone-icons-image img{width: 293px;}
+}
+@media (max-width: 1023px) {
+  .phone-icons-image img{ width: 220px; }
 }
 @media (max-width: 767px) {
   #download-btn > img { width: 200px; }

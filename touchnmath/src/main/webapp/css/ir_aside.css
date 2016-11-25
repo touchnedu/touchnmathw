@@ -1,0 +1,21 @@
+#menu-bar { background-color: #232730; width: 320px; padding-top: 10px; }
+#menu-bar .hide { display: none; }
+#menu-bar a { cursor: pointer; }
+a > span, li > ul > li { color: #a3aab4; font-size: 13px; vertical-align: top; }
+ul, li { list-style:none; padding-left:0px; }
+.drop-menu > span:first-child { color: #a3aab4; font-size: 5px; }
+.indent { background-color: #1a1d24; padding: 10px 0 10px 65px;}
+.indent > li { cursor: pointer; }
+.drop-menu > div > img { margin-left: 35px; margin-bottom: 1px; vertical-align: middle; }
+.drop-menu > div, .drop-menu > ul > li { padding-top: 10px; padding-bottom: 10px; line-height: 26px; }
+.change-bg { background-color: #2a2f3b; }
+.last { background-color: #232730 !important; }
+#download-bar { margin-top: 55px; }
+#download-bar img { width: 250px; }
+#download-bar > div { padding: 10px 0 0 35px; }
+.triangle { cursor: pointer; color: #a3aab4; position: absolute; display: inline-block; right: 20px; font-size: 0.7em; padding: 0 10px 0 10px; }
+#video-bar { margin-top: 15px; }
+#video-bar > div { padding: 10px 0 10px 35px; font-size: 13px; }
+#video-bar a, #video-bar a:VISITED, #video-bar a:LINK { color: #656d80; text-decoration: none; }
+#video-bar a:HOVER { color: #8f98ad; }
+#down-w { color: #fff; }

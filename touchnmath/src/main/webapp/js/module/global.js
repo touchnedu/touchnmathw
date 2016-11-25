@@ -142,7 +142,8 @@ $(function() {
 	}
 
 	//scrolling to some block
-	$('.scroll-to-link').on('click', function(){
+	$('.scroll-to-link').on('click', function(e){
+		e.preventDefault();
 		var headerHeight = ($('.sidebar-menu-added').length)?0:75;
 		var index = $(this).attr('href').substr(1);
 		$('body, html').animate({'scrollTop':$('.scroll-to-block[data-id="'+index+'"]').offset().top - headerHeight + 1}, 500);

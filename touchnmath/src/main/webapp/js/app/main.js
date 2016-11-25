@@ -4,11 +4,12 @@
 		var url = "https://play.google.com/store/apps/details?id=com.touchnedu.gradea.studya.math";
 		window.open(url, '_blank'); 
 	});
-	$('#link-to-ir').bind('click', function(event) {
+	$('#link-to-ir, .down-num > div').bind('click', function(event) {
 		event.preventDefault();
-		console.log("ir");
-		var irUrl = "";
-//		window.open(irUrl, '_blank');
+		window.open('ir.html', '_blank');
+	});
+	$('#logo').bind('click', function(e) {
+		e.preventDefault();
 	});
 	
 	loadSheet();
