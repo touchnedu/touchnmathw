@@ -16,6 +16,9 @@ $(document).ready(function(){
   	if($(this).attr('id') == clickAttr)
   		return;
   	
+  	if(mobileFilter() && $(document).width() < 1024)
+  		moveAside();
+  	
   	clickAttr = $(this).attr('id');
   	$('.indent > li').css('color', '#a3aab4');
   	$('#load-history').children('span').css('color', '#a3aab4');
@@ -26,6 +29,9 @@ $(document).ready(function(){
   
   /* 연혁 & 마일스톤 */
   $('#load-history').bind('click', function() {
+  	if(mobileFilter() && $(document).width() < 1024) 
+  		moveAside();
+  	
   	$('#content').load('sub/history.html');
   	$('.indent > li').css('color', '#a3aab4');
   	$(this).children('span').css('color', '#fff');
@@ -58,12 +64,53 @@ $(document).ready(function(){
   	var preVideoUrl = "https://www.youtube.com/watch?v=MtHM-wCDM30";
   	window.open(preVideoUrl, '_blank');
   });
+
+  $('.menu-btn').mouseover(function() {
+  	if(mobileFilter())
+  		return;
+  	if(!$(this).hasClass('change-bg'))
+  		$(this).css('background-color', '#2a2f3b')
+  });
+  
+  $('.menu-btn').mouseout(function() {
+  	if(mobileFilter())
+  		return;
+  	if(!$(this).hasClass('change-bg'))
+  		$(this).css('background-color', '#232730')
+  });
+  
+  /* 사업계획서, 사업개요 - 롤오버 이미지 변경 */
+  $('.rollover').mouseover(function() {
+  	if(mobileFilter())
+  		return;
+		$(this).attr('src', $(this).attr('src').replace('off', 'on'));
+	});
+  
+  $('.rollover').mouseout(function() {
+  	if(mobileFilter())
+  		return;
+  	$(this).attr('src', $(this).attr('src').replace('on', 'off'));
+  });
   
   loadContent('down-w');
   clickAttr = "down-w";
   
 });
 
+function moveAside() {
+	$('aside').animate({'left':'-320px'}).addClass('aside-move');
+}
+
+function mobileFilter() {
+	console.log("모바일 필터");
+  var filter = "win16|win32|win64|mac|macintel";
+  if(navigator.platform) {
+    if(filter.indexOf(navigator.platform.toLowerCase()) < 0)  
+      return true;
+    else
+      return false;
+  }
+}
 
 function loadContent(id) {
 	$('#content').empty();

@@ -9,7 +9,7 @@ ul, li { list-style:none; padding-left:0px; }
 .drop-menu > div > img { margin-left: 35px; margin-bottom: 1px; vertical-align: middle; }
 .drop-menu > div, .drop-menu > ul > li { padding-top: 10px; padding-bottom: 10px; line-height: 26px; }
 .change-bg { background-color: #2a2f3b; }
-.last { background-color: #232730 !important; }
+#last { background-color: #232730; }
 #download-bar { margin-top: 55px; }
 #download-bar img { width: 250px; }
 #download-bar > div { padding: 10px 0 0 35px; }

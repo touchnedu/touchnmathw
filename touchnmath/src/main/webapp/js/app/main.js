@@ -10,6 +10,7 @@
 	});
 	$('#logo').bind('click', function(e) {
 		e.preventDefault();
+		location.reload();
 	});
 	
 	loadSheet();

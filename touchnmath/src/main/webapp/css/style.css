@@ -387,7 +387,7 @@ footer{background: #00c5b3; position: relative;}
     .type-1-text .type-1-center{text-align: center; height: 100%; display: table; vertical-align:middle;}
     .type-1-text .button{margin: 0px 15px; margin-bottom: 60px;}
     .type-1-text article{margin-top: 145px;}
-    .type-1-text article.table{display: table-cell; vertical-align:middle; float: none; margin-top: 0px;}
+    .type-1-text article.table{display: table-cell; vertical-align:middle; float: none; margin-top: 0px; padding-left:20px;}
     .marvel-device-wrap{position:relative; display: inline-block; text-align: center;}
     .marvel-device.iphone6plus{height:853px; transform: scale(0.65); -moz-transform: scale(0.65); -o-transform: scale(0.65); -ms-transform: scale(0.65); -webkit-transform: scale(0.65); position: relative; float: left; display: block; margin-top: -125px;}
     .marvel-device-wrap .iphone-image-wrap{position: absolute; left: 50%; top: 95px; margin-left: -118px; height: 412px; overflow: hidden;}
@@ -2090,6 +2090,8 @@ _:-ms-input-placeholder, :root .type-2.block .image-block .bg {position: absolut
   font-size: 28px;
   background-color: rgba(0,0,0,0.65);
   cursor: pointer;
+  /* min-width: 28px !important; */
+  text-align: center !important;
 }
 .down-num > span { margin-right: -5px; font-size: 25px; }
 .down-num > span:last-child { font-size: 20px; }
@@ -2126,6 +2128,7 @@ _:-ms-input-placeholder, :root .type-2.block .image-block .bg {position: absolut
 	.phone-icons-image img{width: 293px;}
 }
 @media (max-width: 1023px) {
+	/* .down-num > div { min-width: 22px !important; } */
   .phone-icons-image img{ width: 220px; }
 }
 @media (max-width: 767px) {
