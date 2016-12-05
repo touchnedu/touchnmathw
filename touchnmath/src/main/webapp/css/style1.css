@@ -2111,6 +2111,7 @@ _:-ms-input-placeholder, :root .type-2.block .image-block .bg {position: absolut
 .col-sm-6 > p { text-align: left; }
 .alpha-1 { background: rgba(0,0,0,0.55); }
 .font-color-1 { color: #00c5b3 !important; }
+.font-white { color: #FFF !important; }
 .inblock-area { display: inline-block; color: #777; }
 .width-80 { width: 78%; }
 .vertical-top { vertical-align: top; }
@@ -2118,6 +2119,7 @@ _:-ms-input-placeholder, :root .type-2.block .image-block .bg {position: absolut
 .margin-b-10 { margin-bottom: 10px; }
 .margin-t-120 { margin-top: 120px; }
 .open-img { width: 100% !important; max-width: 100% !important; }
+.margin-bottom-30 { margin-bottom: 30px; }
 .footer-logo > img { width: 110px; }
 .h1 > img { width: 30%; }
 .open-day { font-size:24px; color: #222; font-weight: bold; }
@@ -2125,6 +2127,9 @@ _:-ms-input-placeholder, :root .type-2.block .image-block .bg {position: absolut
 .mediascr { display: none; }
 #download-btn > img { width: 240px; }
 #logo img { width: 110px; -ms-interpolation-mode: bicubic; }
+.review-background { max-height: 500px; background-image: url("../images/review_bg.png"); padding: 70px 0; }
+.s-title, .s-content { color: #00c5b3; text-align: center; padding-bottom: 25px; }
+.s-content { color: #FFF; line-height: 22px; padding-bottom: 0px; margin-bottom: 30px; }
 
 @media (max-width: 1199px) {
 	.hand-image { left: 3%; top: 20%; /* max-height: 60%; */ }

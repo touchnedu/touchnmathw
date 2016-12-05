@@ -13,6 +13,13 @@
 		location.reload();
 	});
 	
+	$('.slider-review').bxSlider({
+		slideWidth: 800,
+    minSlides: 1,
+    maxSlides: 1,
+    slideMargin: 0
+	});
+	
 	loadSheet();
 	
 }());
