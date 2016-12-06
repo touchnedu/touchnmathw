@@ -172,7 +172,6 @@ $(window).load(function(){
 });
 
 $(function(){
-	console.log("seeSlide");
   initDiscs();
 //  initArrows();
   initSlideImgs();

@@ -617,7 +617,7 @@ footer{background: #00c5b3; position: relative;}
 /*-------------------------------------------------------------------------------------------------------------------------------*/
 /* 15 - BLOCK "TYPE 8" (index style 2) */
 /*-------------------------------------------------------------------------------------------------------------------------------*/
-.new-block{padding: 120px 0; border-bottom: 1px #f2f2f2 solid; color: #fff; background: #fff; margin-top: 0; position: relative;  -webkit-backface-visibility: hidden;}
+.new-block:not(.review-background){padding: 120px 0; border-bottom: 1px #f2f2f2 solid; color: #fff; background: #fff; margin-top: 0; position: relative;  -webkit-backface-visibility: hidden;}
 .new-block.color-background, .new-block.parallax-bg-text{border: none;}
 .new-block .new-block{padding: 0; border: none;}
 .new-block article *:last-child{padding-bottom: 0!important;}
@@ -721,13 +721,13 @@ footer{background: #00c5b3; position: relative;}
 /*-------------------------------------------------------------------------------------------------------------------------------*/
 .new-block.type-10 .paddings-container{padding: 0 15px!important; text-align: center;}
 .new-block.type-10 .image-wrapper{display: inline-block; vertical-align: bottom; margin-bottom: 24px; max-width: 370px; position: relative; overflow: hidden;}
-/* .new-block.type-10 .image-wrapper .thumbnail-image{width: 100%; height: auto; display: block; position: relative; left: 0; box-shadow: 0 0 5px rgba(0,0,0,0.3);} */
+.new-block.type-10 .image-wrapper .thumbnail-image{width: 100%; height: auto; display: block; position: relative; left: 0; box-shadow: 0 0 5px rgba(0,0,0,0.3);}
 .new-block.type-10 .image-wrapper:hover .thumbnail-image{left: 70px;}
-/* .new-block.type-10 .image-socials-box{position: absolute; left: 0; top: 0; width: 70px; height: 100%; background: #fbc011;} */
+.new-block.type-10 .image-socials-box{position: absolute; left: 0; top: 0; width: 70px; height: 100%; background: /* #fbc011 */#00c5b3;}
 .new-block.type-10 .image-socials-box a{padding: 15px; display: block; position: relative; left: -50px;}
-/* .new-block.type-10 .image-wrapper:hover .image-socials-box a{left: 0;} */
+.new-block.type-10 .image-wrapper:hover .image-socials-box a{left: 0;}
 .new-block.type-10 .image-socials-box img{width: 16px; height: 16px;}
-/* .new-block.type-10 .image-wrapper .image-socials-box a:hover img{transform: scale(0.7); -moz-transform: scale(0.7); -webkit-transform: scale(0.7); -ms-transform: scale(0.7);} */
+.new-block.type-10 .image-wrapper .image-socials-box a:hover img{transform: scale(0.7); -moz-transform: scale(0.7); -webkit-transform: scale(0.7); -ms-transform: scale(0.7);}
 .new-block.type-10 .image-socials-box .vertical-align{width: 46px; position: absolute; left: 50%; top: 50%; transform: translateX(-50%) translateY(-50%); -moz-transform: translateX(-50%) translateY(-50%); -webkit-transform: translateX(-50%) translateY(-50%); -ms-transform: translateX(-50%) translateY(-50%);}
 .new-block.type-10 .paddings-container .name{font-size: 16px; color: #222; text-transform: uppercase; line-height: 16px; font-family: 'bold'; margin-bottom: 15px;}
 .new-block.type-10 .paddings-container .position{font-size: 14px; line-height: 24px; color: #fcc012; margin-bottom: 15px;}
@@ -2135,12 +2135,14 @@ _:-ms-input-placeholder, :root .type-2.block .image-block .bg {position: absolut
 	.hand-image { left: 3%; top: 20%; /* max-height: 60%; */ }
 	.down-num > span { font-size: 20px; }
 	.phone-icons-image img{width: 293px;}
+	.bx-viewport { margin-left: 5px; }
 }
 @media (max-width: 1023px) {
 	/* .down-num > div { min-width: 22px !important; } */
   .phone-icons-image img{ width: 220px; }
   .type-1-text article.table { padding-left: 220px; }
   .hand-image { left: 5%; top: 40%; }
+  .bx-viewport { margin-left: 5px; }
 }
 @media (max-width: 767px) {
   #download-btn > img { width: 200px; }
@@ -2152,6 +2154,7 @@ _:-ms-input-placeholder, :root .type-2.block .image-block .bg {position: absolut
   .down-num > span { font-size: 17px; }
   .hand-image{ display: none; top: 10%; }
   .type-1-text article.table { padding-left: 20px; }
+  .bx-viewport { margin-left: 5px; }
 }
 @media (max-width: 639px) {
 	.down-num > span { font-size: 15px; }
@@ -2183,5 +2186,6 @@ _:-ms-input-placeholder, :root .type-2.block .image-block .bg {position: absolut
   #download-btn > img { width: 60%; }
   .type-1-text article.table { padding-left: 10px; }
   .hand-image { display: block; left: 10%; }
+  .bx-viewport { margin-left: 5px; }
 }
 
