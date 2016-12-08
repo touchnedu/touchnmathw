@@ -723,12 +723,12 @@ footer{background: #00c5b3; position: relative;}
 .new-block.type-10 .image-wrapper{display: inline-block; vertical-align: bottom; margin-bottom: 24px; max-width: 370px; position: relative; overflow: hidden;}
 .new-block.type-10 .image-wrapper .thumbnail-image{width: 100%; height: auto; display: block; position: relative; left: 0; box-shadow: 0 0 5px rgba(0,0,0,0.3);}
 .new-block.type-10 .image-wrapper:hover .thumbnail-image{left: 70px;}
-.new-block.type-10 .image-socials-box{position: absolute; left: 0; top: 0; width: 70px; height: 100%; background: /* #fbc011 */#00c5b3;}
+.new-block.type-10 .image-socials-box{position: absolute; left: 0; top: 0; width: 70px; height: 100%; background: #ffad01;}
 .new-block.type-10 .image-socials-box a{padding: 15px; display: block; position: relative; left: -50px;}
 .new-block.type-10 .image-wrapper:hover .image-socials-box a{left: 0;}
 .new-block.type-10 .image-socials-box img{width: 16px; height: 16px;}
 .new-block.type-10 .image-wrapper .image-socials-box a:hover img{transform: scale(0.7); -moz-transform: scale(0.7); -webkit-transform: scale(0.7); -ms-transform: scale(0.7);}
-.new-block.type-10 .image-socials-box .vertical-align{width: 46px; position: absolute; left: 50%; top: 50%; transform: translateX(-50%) translateY(-50%); -moz-transform: translateX(-50%) translateY(-50%); -webkit-transform: translateX(-50%) translateY(-50%); -ms-transform: translateX(-50%) translateY(-50%);}
+.new-block.type-10 .image-socials-box .vertical-align{width: 46px; position: absolute; left: 50%; top: 50%; transform: translateX(-50%) translateY(-50%); -moz-transform: translateX(-50%) translateY(-50%); -webkit-transform: translateX(-50%) translateY(-50%); -ms-transform: translateX(-50%) translateY(-50%); font-size: 1.2em; line-height: 24px; font-weight: bold; }
 .new-block.type-10 .paddings-container .name{font-size: 16px; color: #222; text-transform: uppercase; line-height: 16px; font-family: 'bold'; margin-bottom: 15px;}
 .new-block.type-10 .paddings-container .position{font-size: 14px; line-height: 24px; color: #fcc012; margin-bottom: 15px;}
 .new-block.type-10 .paddings-container .description{font-size: 14px; line-height: 24px; color: #777; padding: 0 35px;}
