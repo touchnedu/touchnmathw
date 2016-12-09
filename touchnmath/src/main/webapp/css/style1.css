@@ -425,13 +425,14 @@ footer{background: #00c5b3; position: relative;}
   }
   @media (max-width: 639px) {
         .block.type-1{height: auto; min-height:910px;}
-        .type-1-text{padding-top: 164px; padding-left: 30px;}
+        .type-1-text{padding-top: 100px; padding-left: 30px;}
         .type-1-text p{padding-bottom: 20px;}
         .marvel-device-wrap{display: none;}
         .block.type-1.type-1-1 .clip{height: 100%;}
         .block.type-1.type-1-1 .type-1-text article{margin-top: 65px; margin-bottom: 20px;}
         .type-1-text .type-1-center{overflow: hidden;}
-        .row > .type-1-center { margin-top: 500px; }
+        .row > .type-1-center { margin-top: 0; }
+        .hand-image { margin-top: 280px; }
   }
 
 @keyframes magic-move{
@@ -2130,6 +2131,7 @@ _:-ms-input-placeholder, :root .type-2.block .image-block .bg {position: absolut
 .review-background { max-height: 500px; background-image: url("../images/review_bg.png"); padding: 70px 0; }
 .s-title, .s-content { color: #00c5b3; text-align: center; padding-bottom: 25px; }
 .s-content { color: #FFF; line-height: 22px; padding-bottom: 0px; margin-bottom: 30px; }
+.s-title { padding-top: 4px; }
 
 @media (max-width: 1199px) {
 	.hand-image { left: 3%; top: 20%; /* max-height: 60%; */ }
@@ -2152,9 +2154,12 @@ _:-ms-input-placeholder, :root .type-2.block .image-block .bg {position: absolut
   .cell-view{ padding-top: 0px; }
   .dividing-image { width: 70%; }
   .down-num > span { font-size: 17px; }
+  .down-num > div { padding: 0px 5px 0px 5px; font-size: 20px; }
   .hand-image{ display: none; top: 10%; }
   .type-1-text article.table { padding-left: 20px; }
   .bx-viewport { margin-left: 5px; }
+  .margin-top-20 { margin-top: 10px; }
+  .font-size-25 { font-size: 20px !important; }
 }
 @media (max-width: 639px) {
 	.down-num > span { font-size: 15px; }
@@ -2179,7 +2184,6 @@ _:-ms-input-placeholder, :root .type-2.block .image-block .bg {position: absolut
   .mediascr { display: block; }
   .margin-t-120 { margin-top: 30px; }
   .down-num > span:last-child { font-size: 17px; }
-  .down-num > div { padding: 0px 5px 0px 5px; font-size: 17px; }
   .phone-icons-image img{ width: 264px; }
   .cell-view{ padding-top: 0px; }
   .typography-article h2{ margin-bottom: 0 !important; }
@@ -2187,5 +2191,6 @@ _:-ms-input-placeholder, :root .type-2.block .image-block .bg {position: absolut
   .type-1-text article.table { padding-left: 10px; }
   .hand-image { display: block; left: 10%; }
   .bx-viewport { margin-left: 5px; }
+  .margin-top-20 { margin-top: 1px; }
 }
 
