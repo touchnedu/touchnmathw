@@ -54,7 +54,7 @@ $(document).ready(function(){
   /* 앱 실행 영상 */
   $('#app-video').bind('click', function(e) {
   	e.preventDefault();
-  	var appVideoUrl = "https://www.youtube.com/watch?v=4brnOfFBlVM";
+  	var appVideoUrl = "https://youtu.be/82DC6UnMvIc";
   	window.open(appVideoUrl, '_blank');
   });
   
@@ -142,6 +142,18 @@ function loadContent(id) {
 		break;
 	case "wau-d":
 		window.open('sub/wau-d.html', '_blank');
+		break;
+		
+	case "stick-1":
+		$('#content').load('sub/stick-1.html');
+		break;
+		
+	case "stick-2":
+		$('#content').load('sub/stick-2.html');
+		break;
+		
+	case "stick-3":
+		$('#content').load('sub/stick-3.html');
 		break;
 		
 	case "traffic-w":
