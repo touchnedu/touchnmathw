@@ -41,7 +41,7 @@ $(document).ready(function(){
   /* 사업 계획서 */
   $('#business-plan').bind('click', function(e) {
   	e.preventDefault();
-  	window.open('files/business_plan.pdf', '_blank');
+  	window.open('http://touchnedu.cafe24.com/business_plan.pdf', '_blank');
   });
   
   /* 사업 개요*/
@@ -114,53 +114,59 @@ function mobileFilter() {
 function loadContent(id) {
 	$('#content').empty();
 	switch(id) {
-	case "down-w":
-		$('#content').load('sub/download-weekly.html');
-		break;
-	case "down-m":
-		$('#content').load('sub/download-monthly.html');
-		break;
-	case "down-mau":
-		$('#content').load('sub/download-mau.html');
-		break;
-	case "member":
-		$('#content').load('sub/member.html');
-		break;
-	case "member-mau":
-		$('#content').load('sub/member-mau.html');
-		break;
-		
-	case "mau-w":
-		$('#content').load('sub/mau-w.html');
-		break;
-	case "mau-d":
-		window.open('sub/mau-d.html', '_blank');
-		break;
-		
-	case "wau-w":
-		$('#content').load('sub/wau-w.html');
-		break;
-	case "wau-d":
-		window.open('sub/wau-d.html', '_blank');
-		break;
-		
-	case "stick-1":
-		$('#content').load('sub/stick-1.html');
-		break;
-		
-	case "stick-2":
-		$('#content').load('sub/stick-2.html');
-		break;
-		
-	case "stick-3":
-		$('#content').load('sub/stick-3.html');
-		break;
-		
-	case "traffic-w":
-		$('#content').load('sub/traffic-w.html');
-		break;
-	case "traffic-d":
-		$('#content').load('sub/traffic-m.html');
-		break;
+		case "down-w":
+			$('#content').load('sub/download-weekly.html');
+			break;
+		case "down-m":
+			$('#content').load('sub/download-monthly.html');
+			break;
+		case "down-mau":
+			$('#content').load('sub/download-mau.html');
+			break;
+		case "graph-w":
+			$('#content').load('sub/graph-w.html');
+			break;
+		case "member":
+			$('#content').load('sub/member.html');
+			break;
+		case "member-ratio":
+			$('#content').load('sub/member-ratio.html');
+			break;
+		case "member-mau":
+			$('#content').load('sub/member-mau.html');
+			break;
+			
+		case "mau-w":
+			$('#content').load('sub/mau-w.html');
+			break;
+		case "mau-d":
+			window.open('sub/mau-d.html', '_blank');
+			break;
+			
+		case "wau-w":
+			$('#content').load('sub/wau-w.html');
+			break;
+		case "wau-d":
+			window.open('sub/wau-d.html', '_blank');
+			break;
+			
+		case "stick-1":
+			$('#content').load('sub/stick-1.html');
+			break;
+			
+		case "stick-2":
+			$('#content').load('sub/stick-2.html');
+			break;
+			
+		case "stick-3":
+			$('#content').load('sub/stick-3.html');
+			break;
+			
+		case "traffic-w":
+			$('#content').load('sub/traffic-w.html');
+			break;
+		case "traffic-d":
+			$('#content').load('sub/traffic-m.html');
+			break;
 	}
 }
