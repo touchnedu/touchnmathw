@@ -1,0 +1,300 @@
+<style>
+body {
+  background-color: #000;
+}
+table {
+  margin: 0 auto;
+  background-color: #FFF;
+  border: 2px solid #BBB;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 10px;
+  border: 1px solid #EEE;
+  text-align: center;
+  font-size: 0.9em;
+}
+td:not(.border-1) {
+  border-top: 2px solid #ccc;
+}
+.coins {
+  width: 20px;
+  vertical-align: bottom;
+}
+.factory {
+  width: 100px;
+}
+@media (max-width: 639px) {
+  .factory { width: 60px; }
+  th, td { padding: 7px; font-size: 0.8em; }
+  .coins { width: 13px; }
+}
+</style>
+<table>
+  <thead>
+    <tr>
+      <th>레벨</th>
+      <th colspan="2" style="">공장</th>
+      <th>인구</th>
+      <th>비용</th>
+      <th>시간</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- 빵집 -->
+    <tr>
+      <td>2</td>
+      <td><img class='factory' src="http://vignette2.wikia.nocookie.net/township/images/2/26/Bakery-0.png"></td>
+      <td>빵집</td>
+      <td>55</td>
+      <td><img class='coins' src="http://vignette3.wikia.nocookie.net/township/images/8/8f/Cost.png"> 125</td>
+      <td>5s</td>
+    </tr>
+    <!-- 사료 분쇄기 -->
+    <tr>
+      <td>3</td>
+      <td rowspan="3"><img class='factory' src="http://vignette4.wikia.nocookie.net/township/images/b/b4/Feed_mill.png"></td>
+      <td rowspan="3">사료 분쇄기 * 3</td>
+      <td>60</td>
+      <td><img class='coins' src="http://vignette3.wikia.nocookie.net/township/images/8/8f/Cost.png"> 150</td>
+      <td>40s</td>
+    </tr>
+    <tr>
+      <td class="border-1">19</td>
+      <td class="border-1">655</td>
+      <td class="border-1"><img class='coins' src="http://vignette3.wikia.nocookie.net/township/images/8/8f/Cost.png"> 3,000</td>
+      <td class="border-1">16h</td>
+    </tr>
+    <tr>
+      <td class="border-1">44</td>
+      <td class="border-1">4,150</td>
+      <td class="border-1"><img class='coins' src="http://vignette3.wikia.nocookie.net/township/images/8/8f/Cost.png"> 40,000</td>
+      <td class="border-1">1d 20h</td>
+    </tr>
+    <!-- 유제품 공장 -->
+    <tr>
+      <td>4</td>
+      <td><img class='factory' src="http://vignette3.wikia.nocookie.net/township/images/9/9f/Dairy_factory-0.png"></td>
+      <td>유제품 공장</td>
+      <td>65</td>
+      <td><img class='coins' src="http://vignette3.wikia.nocookie.net/township/images/8/8f/Cost.png"> 175</td>
+      <td>1h</td>
+    </tr>
+    <!-- 설탕 공장 -->
+    <tr>
+      <td>7</td>
+      <td><img class='factory' src="http://vignette1.wikia.nocookie.net/township/images/5/5b/Sugar_factory.png"></td>
+      <td>설탕 공장</td>
+      <td>75</td>
+      <td><img class='coins' src="http://vignette3.wikia.nocookie.net/township/images/8/8f/Cost.png"> 250</td>
+      <td>2h</td>
+    </tr>
+    <!-- 섬유 공장 -->
+    <tr>
+      <td>9</td>
+      <td><img class='factory' src="http://vignette4.wikia.nocookie.net/township/images/9/98/Textile_Factory.png"></td>
+      <td>섬유 공장</td>
+      <td>105</td>
+      <td><img class='coins' src="http://vignette3.wikia.nocookie.net/township/images/8/8f/Cost.png"> 500</td>
+      <td>6h</td>
+    </tr>
+    <!-- 양복점 -->
+    <tr>
+      <td>12</td>
+      <td><img class='factory' src="http://vignette4.wikia.nocookie.net/township/images/f/fe/Tailor_shop.png"></td>
+      <td>양복점</td>
+      <td>195</td>
+      <td><img class='coins' src="http://vignette3.wikia.nocookie.net/township/images/8/8f/Cost.png"> 800</td>
+      <td>10h</td>
+    </tr>
+    <!-- 과자 공장-->
+    <tr>
+      <td>14</td>
+      <td><img class='factory' src="http://vignette2.wikia.nocookie.net/township/images/3/3b/Snack_factory.png"></td>
+      <td>과자 공장</td>
+      <td>300</td>
+      <td><img class='coins' src="http://vignette3.wikia.nocookie.net/township/images/8/8f/Cost.png"> 1,400</td>
+      <td>12h</td>
+    </tr>
+    <!-- 패스트푸드 레스토랑-->
+    <tr>
+      <td>16</td>
+      <td><img class='factory' src="http://vignette3.wikia.nocookie.net/township/images/d/d4/Fastfood_restaurant.png"></td>
+      <td><div>패스트푸드</div><div>레스토랑</div></td>
+      <td>425</td>
+      <td><img class='coins' src="http://vignette3.wikia.nocookie.net/township/images/8/8f/Cost.png"> 2,400</td>
+      <td>16</td>
+    </tr>
+    <!-- 종이 공장 -->
+    <tr>
+      <td>18</td>
+      <td><img class='factory' src="http://vignette2.wikia.nocookie.net/township/images/9/99/Paper_factory.png"></td>
+      <td>종이 공장</td>
+      <td>570</td>
+      <td><img class='coins' src="http://vignette3.wikia.nocookie.net/township/images/8/8f/Cost.png"> 3,200</td>
+      <td>16h</td>
+    </tr>
+    <!-- 아이스크림 공장 -->
+    <tr>
+      <td>20</td>
+      <td><img class='factory' src="http://vignette3.wikia.nocookie.net/township/images/0/02/Ice_cream_factory.png"></td>
+      <td><div>아이스크림</div><div>공장</div></td>
+      <td>735</td>
+      <td><img class='coins' src="http://vignette3.wikia.nocookie.net/township/images/8/8f/Cost.png"> 4,100</td>
+      <td>1d</td>
+    </tr>
+    <!-- 반죽 공장 -->
+    <tr>
+      <td>24</td>
+      <td><img class='factory' src="http://vignette3.wikia.nocookie.net/township/images/8/8a/Pastry_factory-0.png"></td>
+      <td>반죽 공장</td>
+      <td>1100</td>
+      <td><img class='coins' src="http://vignette3.wikia.nocookie.net/township/images/8/8f/Cost.png"> 6,000</td>
+      <td>1d 4h</td>
+    </tr>
+    <!-- 잼 공장 -->
+    <tr>
+      <td>27</td>
+      <td><img class='factory' src="http://vignette2.wikia.nocookie.net/township/images/e/e4/Jam_factory.png"></td>
+      <td>잼 공장</td>
+      <td>1,480</td>
+      <td><img class='coins' src="http://vignette3.wikia.nocookie.net/township/images/8/8f/Cost.png"> 8,200</td>
+      <td>1d 2h</td>
+    </tr>
+    <!-- 고무 공장 -->
+    <tr>
+      <td>29</td>
+      <td><img class='factory' src="http://vignette2.wikia.nocookie.net/township/images/3/3f/Rubber_factory.png"></td>
+      <td>고무 공장</td>
+      <td>1,670</td>
+      <td><img class='coins' src="http://vignette3.wikia.nocookie.net/township/images/8/8f/Cost.png"> 12,000</td>
+      <td>1d 8h</td>
+    </tr>
+    <!-- 플라스틱 공장 -->
+    <tr>
+      <td>34</td>
+      <td><img class='factory' src="http://vignette2.wikia.nocookie.net/township/images/2/27/Plastics_factory.png"></td>
+      <td>플라스틱 공장</td>
+      <td>2,375</td>
+      <td><img class='coins' src="http://vignette3.wikia.nocookie.net/township/images/8/8f/Cost.png"> 21,000</td>
+      <td>1d 11h</td>
+    </tr>
+    <!-- 사탕 공장 -->
+    <tr>
+      <td>39</td>
+      <td><img class='factory' src="http://vignette1.wikia.nocookie.net/township/images/0/06/Candy_factory.png"></td>
+      <td>사탕 공장</td>
+      <td>3,190</td>
+      <td><img class='coins' src="http://vignette3.wikia.nocookie.net/township/images/8/8f/Cost.png"> 27,000</td>
+      <td>1d 15h</td>
+    </tr>
+    <!-- 멕시코 레스토랑 -->
+    <tr>
+      <td>43</td>
+      <td><img class='factory' src="http://vignette2.wikia.nocookie.net/township/images/c/ca/Mexican_restaurant.png"></td>
+      <td><div>멕시코</div><div>레스토랑</div></td>
+      <td>3,950</td>
+      <td><img class='coins' src="http://vignette3.wikia.nocookie.net/township/images/8/8f/Cost.png"> 45,000</td>
+      <td>1d 20h</td>
+    </tr>
+    <!-- 가구 공장 -->
+    <tr>
+      <td>47</td>
+      <td><img class='factory' src="http://vignette2.wikia.nocookie.net/township/images/6/6c/Furniture_factory.png"></td>
+      <td>가구 공장</td>
+      <td>4,760</td>
+      <td><img class='coins' src="http://vignette3.wikia.nocookie.net/township/images/8/8f/Cost.png"> 70,000</td>
+      <td>2d</td>
+    </tr>
+    <!-- 신발 공장 -->
+    <tr>
+      <td>50</td>
+      <td><img class='factory' src="http://vignette1.wikia.nocookie.net/township/images/c/cb/Shoe_factory.png"></td>
+      <td>신발 공장</td>
+      <td>5,465</td>
+      <td><img class='coins' src="http://vignette3.wikia.nocookie.net/township/images/8/8f/Cost.png"> 85,000</td>
+      <td>2d 4h</td>
+    </tr>
+    <!-- 보석상 -->
+    <tr>
+      <td>53</td>
+      <td><img class='factory' src="http://vignette2.wikia.nocookie.net/township/images/a/a4/Jewelry_store.png"></td>
+      <td>보석상</td>
+      <td>5,860</td>
+      <td><img class='coins' src="http://vignette3.wikia.nocookie.net/township/images/8/8f/Cost.png"> 100,000</td>
+      <td>2d 8h</td>
+    </tr>
+    <!-- 아시아 레스토랑 -->
+    <tr>
+      <td>56</td>
+      <td><img class='factory' src="http://vignette1.wikia.nocookie.net/township/images/c/ca/Asian_restaurant.png"></td>
+      <td><div>아시아</div><div>레스토랑</div></td>
+      <td>7,500</td>
+      <td><img class='coins' src="http://vignette3.wikia.nocookie.net/township/images/8/8f/Cost.png"> 140,000</td>
+      <td>2d 12h</td>
+    </tr>
+    <!-- 그릴 공장 -->
+    <tr>
+      <td>59</td>
+      <td><img class='factory' src="http://vignette2.wikia.nocookie.net/township/images/f/f3/Grill_factory.png"></td>
+      <td>그릴 공장</td>
+      <td>8,700</td>
+      <td><img class='coins' src="http://vignette3.wikia.nocookie.net/township/images/8/8f/Cost.png"> 170,000</td>
+      <td>2d 15h</td>
+    </tr>
+    <!-- 향수 공장 -->
+    <tr>
+      <td>61</td>
+      <td><img class='factory' src="http://vignette2.wikia.nocookie.net/township/images/d/d3/Perfume_Factory.png"></td>
+      <td>향수 공장</td>
+      <td>9,480</td>
+      <td><img class='coins' src="http://vignette3.wikia.nocookie.net/township/images/8/8f/Cost.png"> 200,000</td>
+      <td>2d 17h</td>
+    </tr>
+    <!-- 음료 공장 -->
+    <tr>
+      <td>65</td>
+      <td><img class='factory' src="http://vignette2.wikia.nocookie.net/township/images/5/54/Beverage_factory.png"></td>
+      <td>음료 공장</td>
+      <td>10,900</td>
+      <td><img class='coins' src="http://vignette3.wikia.nocookie.net/township/images/8/8f/Cost.png"> 300,000</td>
+      <td>3d</td>
+    </tr>
+    <!-- 핫도그 공장-->
+    <tr>
+      <td>68</td>
+      <td><img class='factory' src="http://vignette4.wikia.nocookie.net/township/images/3/3a/Hot_Dog_Factory.png"></td>
+      <td>핫도그 공장</td>
+      <td>11,300</td>
+      <td><img class='coins' src="http://vignette3.wikia.nocookie.net/township/images/8/8f/Cost.png"> 350,000</td>
+      <td>3d 3h</td>
+    </tr>
+    <!-- 커피 공장 -->
+    <tr>
+      <td>72</td>
+      <td><img class='factory' src="http://vignette1.wikia.nocookie.net/township/images/3/3b/Coffee_Factory.png"></td>
+      <td>커피 공장</td>
+      <td>12,600</td>
+      <td><img class='coins' src="http://vignette3.wikia.nocookie.net/township/images/8/8f/Cost.png"> 440,000</td>
+      <td>3d 6h 40m</td>
+    </tr>
+    <!-- 인형 공장-->
+    <tr>
+      <td>76</td>
+      <td><img class='factory' src="http://vignette3.wikia.nocookie.net/township/images/5/52/Doll_Factory.png"></td>
+      <td>인형 공장</td>
+      <td>13,900</td>
+      <td><img class='coins' src="http://vignette3.wikia.nocookie.net/township/images/8/8f/Cost.png"> 520,000</td>
+      <td>3d 10h 30m</td>
+    </tr>
+    <!-- 주방용품 공장 -->
+    <tr>
+      <td>78</td>
+      <td><img class='factory' src="http://vignette3.wikia.nocookie.net/township/images/6/6c/Kitchenware_Factory.png"></td>
+      <td>주방용품 공장</td>
+      <td>14,500</td>
+      <td><img class='coins' src="http://vignette3.wikia.nocookie.net/township/images/8/8f/Cost.png"> 590,000</td>
+      <td>3d 14h</td>
+    </tr>
+  </tbody>
+</table>

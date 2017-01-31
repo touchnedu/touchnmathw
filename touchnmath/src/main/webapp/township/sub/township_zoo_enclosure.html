@@ -1,0 +1,1103 @@
+<style>
+body {
+  background-color: #000;
+}
+table {
+  margin: 0 auto;
+  background-color: #FFF;
+  border: 2px solid #BBB;
+  border-collapse: collapse;
+  
+}
+th, td {
+  padding: 10px;
+  border: 1px solid #EEE;
+  text-align: center;
+  font-size: 0.9em;
+}
+td:not(.border-1) {
+  border-top: 2px solid #ccc;
+}
+.coins {
+  width: 20px;
+  vertical-align: bottom;
+}
+.building {
+  max-width: 120px;
+  max-height: 120px;
+}
+.div-material {
+  padding: 2px 0 2px 0;
+}
+.material {
+  width: 18px; 
+  vertical-align: middle;
+  margin-bottom: 1px;
+}
+.cash {
+  width: 20px;
+  vertical-align: middle;
+  margin-bottom: 1px;
+}
+.name { font-size: 12px; }
+@media (max-width: 639px) {
+  body { margin: 0; padding: 0; padding-bottom: 75px;}
+  table { width: 100%; }
+  td { font-size: 13px; }
+  th, td { padding: 7px; }
+  th {font-size: 13px; }
+  .building { max-width: 90px;  max-height: 90px; }
+  .coins { width: 15px; }
+  tr > td:nth-child(3) { font-size: 13px; }
+}
+</style>
+<table>
+  <thead>
+    <tr>
+      <th>레벨</th>
+      <th>우리</th>
+      <th>비용</th>
+      <th>필요 자재</th>
+      <th>시간</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- 곰 우리 -->
+    <tr>
+      <td>1</td>
+      <td>
+        <div><img class='building' src="http://vignette2.wikia.nocookie.net/township/images/1/16/Bears.png"></div>
+        <div class='name'>곰 우리</div>
+      </td>
+      <td><img class='coins' src="http://vignette3.wikia.nocookie.net/township/images/8/8f/Cost.png"> 
+       500
+      </td>
+      <td>
+        <div class='div-material'><img class='material' src="http://vignette1.wikia.nocookie.net/township/images/1/15/Glass.png">
+         2
+        </div>
+        <div class='div-material'><img class='material' src="http://vignette4.wikia.nocookie.net/township/images/8/87/Slabs.png">
+         2
+        </div>
+        <div class='div-material'><img class='material' src="http://vignette3.wikia.nocookie.net/township/images/7/71/Timber.png">
+         1
+        </div>(무료)
+      </td>
+      <td>5s</td>
+    </tr>
+    <!-- 플라밍고 우리 -->
+    <tr>
+      <td>2</td>
+      <td>
+        <div><img class='building' src="http://vignette2.wikia.nocookie.net/township/images/f/f3/Flamingo_enclosure.png"></div>
+        <div class='name'>플라밍고 우리</div>
+      </td>
+      <td><img class='coins' src="http://vignette3.wikia.nocookie.net/township/images/8/8f/Cost.png"> 
+       1,000
+      </td>
+      <td>
+        <!-- 유리 -->
+        <div class='div-material'><img class='material' src="http://vignette1.wikia.nocookie.net/township/images/1/15/Glass.png">
+         2  
+        </div>
+        <!-- 석판 -->
+        <div class='div-material'><img class='material' src="http://vignette4.wikia.nocookie.net/township/images/8/87/Slabs.png">
+         2  
+        </div>
+        <!-- 나무 -->
+        <div class='div-material'><img class='material' src="http://vignette3.wikia.nocookie.net/township/images/7/71/Timber.png">
+         2  
+        </div>
+      </td>
+      <td>7h</td>
+    </tr>
+    <!-- 얼룩말 우리 -->
+    <tr>
+      <td>3</td>
+      <td>
+        <div><img class='building' src="http://vignette2.wikia.nocookie.net/township/images/e/e5/Zebra_enclosure.png"></div>
+        <div class='name'>얼룩말 우리</div>
+      </td>
+      <td><img class='coins' src="http://vignette3.wikia.nocookie.net/township/images/8/8f/Cost.png"> 
+       1,500
+      </td>
+      <td>
+        <!-- 벽돌 -->
+        <div class='div-material'><img class='material' src="http://vignette2.wikia.nocookie.net/township/images/f/ff/Bricks.png">
+         3
+        </div>
+        <!-- 석판 -->
+        <div class='div-material'><img class='material' src="http://vignette4.wikia.nocookie.net/township/images/8/87/Slabs.png">
+         3
+        </div>
+        <!-- 나무 -->
+        <div class='div-material'><img class='material' src="http://vignette3.wikia.nocookie.net/township/images/7/71/Timber.png">
+         3
+        </div>
+      </td>
+      <td>10h</td>
+    </tr>
+    <!-- 펭귄 우리 -->
+    <tr>
+      <td>4</td>
+      <td>
+        <div><img class='building' src="http://vignette2.wikia.nocookie.net/township/images/8/84/Penguin_enclosure.png"></div>
+        <div class='name'>펭귄 우리</div>
+      </td>
+      <td><img class='coins' src="http://vignette3.wikia.nocookie.net/township/images/8/8f/Cost.png"> 
+       2,000
+      </td>
+      <td>
+        <!-- 유리 -->
+        <div class='div-material'><img class='material' src="http://vignette1.wikia.nocookie.net/township/images/1/15/Glass.png">
+         3
+        </div>
+        <!-- 벽돌 -->
+        <div class='div-material'><img class='material' src="http://vignette2.wikia.nocookie.net/township/images/f/ff/Bricks.png">
+         3
+        </div>
+        <!-- 나무 -->
+        <div class='div-material'><img class='material' src="http://vignette3.wikia.nocookie.net/township/images/7/71/Timber.png">
+         4
+        </div>
+      </td>
+      <td>14h</td>
+    </tr>
+    <!-- 챔팬지 우리 -->
+    <tr>
+      <td>5</td>
+      <td>
+        <div><img class='building' src="http://vignette1.wikia.nocookie.net/township/images/5/51/Monkey_enclosure.png"></div>
+        <div class='name'>침팬지 우리</div>
+      </td>
+      <td><img class='coins' src="http://vignette3.wikia.nocookie.net/township/images/8/8f/Cost.png"> 
+       3,000
+      </td>
+      <td>
+        <!-- 유리 -->
+        <div class='div-material'><img class='material' src="http://vignette1.wikia.nocookie.net/township/images/1/15/Glass.png">
+         4
+        </div>
+        <!-- 벽돌 -->
+        <div class='div-material'><img class='material' src="http://vignette2.wikia.nocookie.net/township/images/f/ff/Bricks.png">
+         4
+        </div>
+        <!-- 나무 -->
+        <div class='div-material'><img class='material' src="http://vignette3.wikia.nocookie.net/township/images/7/71/Timber.png">
+         5
+        </div>
+      </td>
+      <td>15h</td>
+    </tr>
+    <!-- 사자 우리 -->
+    <tr>
+      <td>6</td>
+      <td>
+        <div><img class='building' src="http://vignette2.wikia.nocookie.net/township/images/4/4b/Lion_enclosure.png"></div>
+        <div class='name'>사자 우리</div>
+      </td>
+      <td><img class='coins' src="http://vignette3.wikia.nocookie.net/township/images/8/8f/Cost.png"> 
+       4,000
+      </td>
+      <td>
+        <!-- 유리 -->
+        <div class='div-material'><img class='material' src="http://vignette1.wikia.nocookie.net/township/images/1/15/Glass.png">
+         6
+        </div>
+        <!-- 석판 -->
+        <div class='div-material'><img class='material' src="http://vignette4.wikia.nocookie.net/township/images/8/87/Slabs.png">
+         6
+        </div>
+        <!-- 나무 -->
+        <div class='div-material'><img class='material' src="http://vignette3.wikia.nocookie.net/township/images/7/71/Timber.png">
+         7
+        </div>
+      </td>
+      <td>16h</td>
+    </tr>
+    <!-- 하마 우리 -->
+    <tr>
+      <td>7</td>
+      <td>
+        <div><img class='building' src="http://vignette1.wikia.nocookie.net/township/images/4/47/Hippo_enclosure.png"></div>
+        <div class='name'>하마 우리</div>
+      </td>
+      <td><img class='coins' src="http://vignette3.wikia.nocookie.net/township/images/8/8f/Cost.png"> 
+       5,000
+      </td>
+      <td>
+        <!-- 유리 -->
+        <div class='div-material'><img class='material' src="http://vignette1.wikia.nocookie.net/township/images/1/15/Glass.png">
+         8
+        </div>
+        <!-- 벽돌 -->
+        <div class='div-material'><img class='material' src="http://vignette2.wikia.nocookie.net/township/images/f/ff/Bricks.png">
+         8
+        </div>
+        <!-- 나무 -->
+        <div class='div-material'><img class='material' src="http://vignette3.wikia.nocookie.net/township/images/7/71/Timber.png">
+         10
+        </div>
+      </td>
+      <td>17h</td>
+    </tr>
+    <!-- 기린 우리 -->
+    <tr>
+      <td>8</td>
+      <td>
+        <div><img class='building' src="http://vignette3.wikia.nocookie.net/township/images/6/60/Giraffe.png"></div>
+        <div class='name'>기린 우리</div>
+      </td>
+      <td><img class='coins' src="http://vignette3.wikia.nocookie.net/township/images/8/8f/Cost.png"> 
+       6,000
+      </td>
+      <td>
+        <!-- 벽돌 -->
+        <div class='div-material'><img class='material' src="http://vignette2.wikia.nocookie.net/township/images/f/ff/Bricks.png">
+         10
+        </div>
+        <!-- 석판 -->
+        <div class='div-material'><img class='material' src="http://vignette4.wikia.nocookie.net/township/images/8/87/Slabs.png">
+         10
+        </div>
+        <!-- 나무 -->
+        <div class='div-material'><img class='material' src="http://vignette3.wikia.nocookie.net/township/images/7/71/Timber.png">
+         14
+        </div>
+      </td>
+      <td>18h</td>
+    </tr>
+    <!-- 북극곰 우리 -->
+    <tr>
+      <td>9</td>
+      <td>
+        <div><img class='building' src="http://vignette1.wikia.nocookie.net/township/images/d/d9/PolarBear.png"></div>
+        <div class='name'>북극곰 우리</div>
+      </td>
+      <td><img class='coins' src="http://vignette3.wikia.nocookie.net/township/images/8/8f/Cost.png"> 
+       7,000
+      </td>
+      <td>
+        <!-- 벽돌 -->
+        <div class='div-material'><img class='material' src="http://vignette2.wikia.nocookie.net/township/images/f/ff/Bricks.png">
+         12
+        </div>
+        <!-- 석판 -->
+        <div class='div-material'><img class='material' src="http://vignette4.wikia.nocookie.net/township/images/8/87/Slabs.png">
+         12
+        </div>
+        <!-- 나무 -->
+        <div class='div-material'><img class='material' src="http://vignette3.wikia.nocookie.net/township/images/7/71/Timber.png">
+         17
+        </div>
+      </td>
+      <td>19h</td>
+    </tr>
+    <!-- 코알라 우리 -->
+    <tr>
+      <td>10</td>
+      <td>
+        <div><img class='building' src="http://vignette2.wikia.nocookie.net/township/images/2/22/Koala.png"></div>
+        <div class='name'>코알라 우리</div>
+      </td>
+      <td><img class='coins' src="http://vignette3.wikia.nocookie.net/township/images/8/8f/Cost.png"> 
+       8,000
+      </td>
+      <td>
+        <!-- 벽돌 -->
+        <div class='div-material'><img class='material' src="http://vignette2.wikia.nocookie.net/township/images/f/ff/Bricks.png">
+         15
+        </div>
+        <!-- 석판 -->
+        <div class='div-material'><img class='material' src="http://vignette4.wikia.nocookie.net/township/images/8/87/Slabs.png">
+         15
+        </div>
+        <!-- 나무 -->
+        <div class='div-material'><img class='material' src="http://vignette3.wikia.nocookie.net/township/images/7/71/Timber.png">
+         20
+        </div>
+      </td>
+      <td>20h</td>
+    </tr>
+    <!-- 코끼리 우리 -->
+    <tr>
+      <td>11</td>
+      <td>
+        <div><img class='building' src="http://vignette1.wikia.nocookie.net/township/images/a/a3/Elephantenc.png"></div>
+        <div class='name'>코끼리 우리</div>
+      </td>
+      <td><img class='coins' src="http://vignette3.wikia.nocookie.net/township/images/8/8f/Cost.png"> 
+       9,000
+      </td>
+      <td>
+        <!-- 벽돌 -->
+        <div class='div-material'><img class='material' src="http://vignette2.wikia.nocookie.net/township/images/f/ff/Bricks.png">
+         18
+        </div>
+        <!-- 석판 -->
+        <div class='div-material'><img class='material' src="http://vignette4.wikia.nocookie.net/township/images/8/87/Slabs.png">
+         18
+        </div>
+        <!-- 나무 -->
+        <div class='div-material'><img class='material' src="http://vignette3.wikia.nocookie.net/township/images/7/71/Timber.png">
+         22
+        </div>
+      </td>
+      <td>21h</td>
+    </tr>
+    <!-- 악어 우리 -->
+    <tr>
+      <td>12</td>
+      <td>
+        <div><img class='building' src="http://vignette4.wikia.nocookie.net/township/images/5/5a/CrocodileEnc.png"></div>
+        <div class='name'>악어 우리</div>
+      </td>
+      <td><img class='coins' src="http://vignette3.wikia.nocookie.net/township/images/8/8f/Cost.png"> 
+       10,000
+      </td>
+      <td>
+        <!-- 유리 -->
+        <div class='div-material'><img class='material' src="http://vignette1.wikia.nocookie.net/township/images/1/15/Glass.png">
+         20
+        </div>
+        <!-- 벽돌 -->
+        <div class='div-material'><img class='material' src="http://vignette2.wikia.nocookie.net/township/images/f/ff/Bricks.png">
+         20
+        </div>
+        <!-- 나무 -->
+        <div class='div-material'><img class='material' src="http://vignette3.wikia.nocookie.net/township/images/7/71/Timber.png">
+         25
+        </div>
+      </td>
+      <td>22h</td>
+    </tr>
+    <!-- 캥거루 우리 -->
+    <tr>
+      <td>13</td>
+      <td>
+        <div><img class='building' src="http://vignette2.wikia.nocookie.net/township/images/5/56/Kangaroo.png"></div>
+        <div class='name'>캥거루 우리</div>
+      </td>
+      <td><img class='coins' src="http://vignette3.wikia.nocookie.net/township/images/8/8f/Cost.png"> 
+       11,000
+      </td>
+      <td>
+        <!-- 유리 -->
+        <div class='div-material'><img class='material' src="http://vignette1.wikia.nocookie.net/township/images/1/15/Glass.png">
+         23
+        </div>
+        <!-- 벽돌 -->
+        <div class='div-material'><img class='material' src="http://vignette2.wikia.nocookie.net/township/images/f/ff/Bricks.png">
+         23
+        </div>
+        <!-- 나무 -->
+        <div class='div-material'><img class='material' src="http://vignette3.wikia.nocookie.net/township/images/7/71/Timber.png">
+         27
+        </div>
+      </td>
+      <td>23h</td>
+    </tr>
+    <!-- 물개 우리 -->
+    <tr>
+      <td>14</td>
+      <td>
+        <div><img class='building' src="http://vignette3.wikia.nocookie.net/township/images/4/43/Seal_enclosure.png"></div>
+        <div class='name'>물개 우리</div>
+      </td>
+      <td><img class='coins' src="http://vignette3.wikia.nocookie.net/township/images/8/8f/Cost.png"> 
+       12,000
+      </td>
+      <td>
+        <!-- 벽돌 -->
+        <div class='div-material'><img class='material' src="http://vignette2.wikia.nocookie.net/township/images/f/ff/Bricks.png">
+         25
+        </div>
+        <!-- 석판 -->
+        <div class='div-material'><img class='material' src="http://vignette4.wikia.nocookie.net/township/images/8/87/Slabs.png">
+         25
+        </div>
+        <!-- 나무 -->
+        <div class='div-material'><img class='material' src="http://vignette3.wikia.nocookie.net/township/images/7/71/Timber.png">
+         30
+        </div>
+      </td>
+      <td>24h</td>
+    </tr>
+    <!-- 고릴라 우리 -->
+    <tr>
+      <td>15</td>
+      <td>
+        <div><img class='building' src="http://vignette3.wikia.nocookie.net/township/images/c/ce/Gorilla_enclosure.png"></div>
+        <div class='name'>고릴라 우리</div>
+      </td>
+      <td><img class='coins' src="http://vignette3.wikia.nocookie.net/township/images/8/8f/Cost.png"> 
+       14,000
+      </td>
+      <td>
+        <!-- 유리 -->
+        <div class='div-material'><img class='material' src="http://vignette1.wikia.nocookie.net/township/images/1/15/Glass.png">
+         28
+        </div>
+        <!-- 벽돌 -->
+        <div class='div-material'><img class='material' src="http://vignette2.wikia.nocookie.net/township/images/f/ff/Bricks.png">
+         28
+        </div>
+        <!-- 나무 -->
+        <div class='div-material'><img class='material' src="http://vignette3.wikia.nocookie.net/township/images/7/71/Timber.png">
+         34
+        </div>
+      </td>
+      <td>25h</td>
+    </tr>
+    <!-- 판다 우리 -->
+    <tr>
+      <td>16</td>
+      <td>
+        <div><img class='building' src="http://vignette1.wikia.nocookie.net/township/images/d/da/Pandas_cropped.png"></div>
+        <div class='name'>판다 우리</div>
+      </td>
+      <td><img class='coins' src="http://vignette3.wikia.nocookie.net/township/images/8/8f/Cost.png"> 
+       20,000
+      </td>
+      <td>
+        <!-- 유리 -->
+        <div class='div-material'><img class='material' src="http://vignette1.wikia.nocookie.net/township/images/1/15/Glass.png">
+         30
+        </div>
+        <!-- 석판 -->
+        <div class='div-material'><img class='material' src="http://vignette4.wikia.nocookie.net/township/images/8/87/Slabs.png">
+         30
+        </div>
+        <!-- 나무 -->
+        <div class='div-material'><img class='material' src="http://vignette3.wikia.nocookie.net/township/images/7/71/Timber.png">
+         37
+        </div>
+      </td>
+      <td>26h</td>
+    </tr>
+    <!-- 비버 우리 -->
+    <tr>
+      <td>17</td>
+      <td>
+        <div><img class='building' src="http://vignette4.wikia.nocookie.net/township/images/6/66/Beavers_cropped.png"></div>
+        <div class='name'>비버 우리</div>
+      </td>
+      <td><img class='coins' src="http://vignette3.wikia.nocookie.net/township/images/8/8f/Cost.png"> 
+       30,000
+      </td>
+      <td>
+        <!-- 유리 -->
+        <div class='div-material'><img class='material' src="http://vignette1.wikia.nocookie.net/township/images/1/15/Glass.png">
+         33
+        </div>
+        <!-- 석판 -->
+        <div class='div-material'><img class='material' src="http://vignette4.wikia.nocookie.net/township/images/8/87/Slabs.png">
+         33
+        </div>
+        <!-- 나무 -->
+        <div class='div-material'><img class='material' src="http://vignette3.wikia.nocookie.net/township/images/7/71/Timber.png">
+         40
+        </div>
+      </td>
+      <td>27h</td>
+    </tr>
+    <!-- 코뿔소 우리 -->
+    <tr>
+      <td>18</td>
+      <td>
+        <div><img class='building' src="http://vignette2.wikia.nocookie.net/township/images/c/c5/Rhinos_cropped.png"></div>
+        <div class='name'>코뿔소 우리</div>
+      </td>
+      <td><img class='coins' src="http://vignette3.wikia.nocookie.net/township/images/8/8f/Cost.png"> 
+       40,000
+      </td>
+      <td>
+        <!-- 유리 -->
+        <div class='div-material'><img class='material' src="http://vignette1.wikia.nocookie.net/township/images/1/15/Glass.png">
+         35
+        </div>
+        <!-- 벽돌 -->
+        <div class='div-material'><img class='material' src="http://vignette2.wikia.nocookie.net/township/images/f/ff/Bricks.png">
+         35
+        </div>
+        <!-- 나무 -->
+        <div class='div-material'><img class='material' src="http://vignette3.wikia.nocookie.net/township/images/7/71/Timber.png">
+         42
+        </div>
+      </td>
+      <td>28h</td>
+    </tr>
+    <!-- 사향소 우리 -->
+    <tr>
+      <td>19</td>
+      <td>
+        <div><img class='building' src="http://vignette1.wikia.nocookie.net/township/images/8/8f/Muskox_cropped.png"></div>
+        <div class='name'>사향소 우리</div>
+      </td>
+      <td><img class='coins' src="http://vignette3.wikia.nocookie.net/township/images/8/8f/Cost.png"> 
+       20,000
+      </td>
+      <td>
+        <!-- 벽돌 -->
+        <div class='div-material'><img class='material' src="http://vignette2.wikia.nocookie.net/township/images/f/ff/Bricks.png">
+         40
+        </div>
+        <!-- 석판 -->
+        <div class='div-material'><img class='material' src="http://vignette4.wikia.nocookie.net/township/images/8/87/Slabs.png">
+         40
+        </div>
+        <!-- 나무 -->
+        <div class='div-material'><img class='material' src="http://vignette3.wikia.nocookie.net/township/images/7/71/Timber.png">
+         45
+        </div>
+      </td>
+      <td>29h</td>
+    </tr>
+    <!-- 호랑이 우리 -->
+    <tr>
+      <td>20</td>
+      <td>
+        <div><img class='building' src="http://vignette3.wikia.nocookie.net/township/images/f/fa/Tiger_Enclosure.png"></div>
+        <div class='name'>호랑이 우리</div>
+      </td>
+      <td><img class='coins' src="http://vignette3.wikia.nocookie.net/township/images/8/8f/Cost.png"> 
+       60,000
+      </td>
+      <td>
+        <!-- 유리 -->
+        <div class='div-material'><img class='material' src="http://vignette1.wikia.nocookie.net/township/images/1/15/Glass.png">
+         45
+        </div>
+        <!-- 석판 -->
+        <div class='div-material'><img class='material' src="http://vignette4.wikia.nocookie.net/township/images/8/87/Slabs.png">
+         45
+        </div>
+        <!-- 나무 -->
+        <div class='div-material'><img class='material' src="http://vignette3.wikia.nocookie.net/township/images/7/71/Timber.png">
+         47
+        </div>
+      </td>
+      <td>30h</td>
+    </tr>
+    <!-- 공작 우리 -->
+    <tr>
+      <td>21</td>
+      <td>
+        <div><img class='building' src="http://vignette1.wikia.nocookie.net/township/images/8/86/Peacock_Enclosure.png"></div>
+        <div class='name'>공작 우리</div>
+      </td>
+      <td><img class='coins' src="http://vignette3.wikia.nocookie.net/township/images/8/8f/Cost.png"> 
+       70,000
+      </td>
+      <td>
+        <!-- 유리 -->
+        <div class='div-material'><img class='material' src="http://vignette1.wikia.nocookie.net/township/images/1/15/Glass.png">
+         50
+        </div>
+        <!-- 석판 -->
+        <div class='div-material'><img class='material' src="http://vignette4.wikia.nocookie.net/township/images/8/87/Slabs.png">
+         50
+        </div>
+        <!-- 나무 -->
+        <div class='div-material'><img class='material' src="http://vignette3.wikia.nocookie.net/township/images/7/71/Timber.png">
+         50
+        </div>
+      </td>
+      <td>31h</td>
+    </tr>
+    <!-- 거북 우리 -->
+    <tr>
+      <td>22</td>
+      <td>
+        <div><img class='building' src="http://vignette1.wikia.nocookie.net/township/images/0/0d/Tortoise_Enclosure.png"></div>
+        <div class='name'>거북 우리</div>
+      </td>
+      <td><img class='coins' src="http://vignette3.wikia.nocookie.net/township/images/8/8f/Cost.png"> 
+       85,000
+      </td>
+      <td>
+        <!-- 유리 -->
+        <div class='div-material'><img class='material' src="http://vignette1.wikia.nocookie.net/township/images/1/15/Glass.png">
+         55
+        </div>
+        <!-- 벽돌 -->
+        <div class='div-material'><img class='material' src="http://vignette2.wikia.nocookie.net/township/images/f/ff/Bricks.png">
+         55
+        </div>
+        <!-- 나무 -->
+        <div class='div-material'><img class='material' src="http://vignette3.wikia.nocookie.net/township/images/7/71/Timber.png">
+         52
+        </div>
+      </td>
+      <td>32h</td>
+    </tr>
+    <!-- 낙타 우리 -->
+    <tr>
+      <td>23</td>
+      <td>
+        <div><img class='building' src="http://vignette3.wikia.nocookie.net/township/images/5/5c/Camel_Enclosure.png"></div>
+        <div class='name'>낙타 우리</div>
+      </td>
+      <td><img class='coins' src="http://vignette3.wikia.nocookie.net/township/images/8/8f/Cost.png"> 
+       100,000
+      </td>
+      <td>
+        <!-- 벽돌 -->
+        <div class='div-material'><img class='material' src="http://vignette2.wikia.nocookie.net/township/images/f/ff/Bricks.png">
+         60
+        </div>
+        <!-- 석판 -->
+        <div class='div-material'><img class='material' src="http://vignette4.wikia.nocookie.net/township/images/8/87/Slabs.png">
+         60
+        </div>
+        <!-- 나무 -->
+        <div class='div-material'><img class='material' src="http://vignette3.wikia.nocookie.net/township/images/7/71/Timber.png">
+         55
+        </div>
+      </td>
+      <td>33h</td>
+    </tr>
+    <!-- 순록 우리 -->
+    <tr>
+      <td>24</td>
+      <td>
+        <div><img class='building' src="http://vignette2.wikia.nocookie.net/township/images/4/43/Reindeer_Enclosure.png"></div>
+        <div class='name'>순록 우리</div>
+      </td>
+      <td><img class='coins' src="http://vignette3.wikia.nocookie.net/township/images/8/8f/Cost.png"> 
+       125,000
+      </td>
+      <td>
+        <!-- 유리 -->
+        <div class='div-material'><img class='material' src="http://vignette1.wikia.nocookie.net/township/images/1/15/Glass.png">
+         70
+        </div>
+        <!-- 석판 -->
+        <div class='div-material'><img class='material' src="http://vignette4.wikia.nocookie.net/township/images/8/87/Slabs.png">
+         70
+        </div>
+        <!-- 나무 -->
+        <div class='div-material'><img class='material' src="http://vignette3.wikia.nocookie.net/township/images/7/71/Timber.png">
+         57
+        </div>
+      </td>
+      <td>34h</td>
+    </tr>
+    <!-- 큰부리새 우리 -->
+    <tr>
+      <td>25</td>
+      <td>
+        <div><img class='building' src="http://vignette1.wikia.nocookie.net/township/images/4/4a/Toucan_Enclosure.png"></div>
+        <div class='name'>큰부리새 우리</div>
+      </td>
+      <td><img class='coins' src="http://vignette3.wikia.nocookie.net/township/images/8/8f/Cost.png"> 
+       150,000
+      </td>
+      <td>
+        <!-- 유리 -->
+        <div class='div-material'><img class='material' src="http://vignette1.wikia.nocookie.net/township/images/1/15/Glass.png">
+         80
+        </div>
+        <!-- 벽돌 -->
+        <div class='div-material'><img class='material' src="http://vignette2.wikia.nocookie.net/township/images/f/ff/Bricks.png">
+         80
+        </div>
+        <!-- 나무 -->
+        <div class='div-material'><img class='material' src="http://vignette3.wikia.nocookie.net/township/images/7/71/Timber.png">
+         60
+        </div>
+      </td>
+      <td>35h</td>
+    </tr>
+    <!-- 스컹크 우리 -->
+    <tr>
+      <td>26</td>
+      <td>
+        <div><img class='building' src="http://vignette2.wikia.nocookie.net/township/images/3/3c/Skunk_Enclosure.png"></div>
+        <div class='name'>스컹크 우리</div>
+      </td>
+      <td><img class='coins' src="http://vignette3.wikia.nocookie.net/township/images/8/8f/Cost.png"> 
+       175,000
+      </td>
+      <td>
+        <!-- 벽돌 -->
+        <div class='div-material'><img class='material' src="http://vignette2.wikia.nocookie.net/township/images/f/ff/Bricks.png">
+         90
+        </div>
+        <!-- 석판 -->
+        <div class='div-material'><img class='material' src="http://vignette4.wikia.nocookie.net/township/images/8/87/Slabs.png">
+         90
+        </div>
+        <!-- 나무 -->
+        <div class='div-material'><img class='material' src="http://vignette3.wikia.nocookie.net/township/images/7/71/Timber.png">
+         62
+        </div>
+      </td>
+      <td>36h</td>
+    </tr>
+    <!-- 타조 우리 -->
+    <tr>
+      <td>27</td>
+      <td>
+        <div><img class='building' src="http://vignette1.wikia.nocookie.net/township/images/8/8a/Ostrich_Enclosure.png"></div>
+        <div class='name'>타조 우리</div>
+      </td>
+      <td><img class='coins' src="http://vignette3.wikia.nocookie.net/township/images/8/8f/Cost.png"> 
+       200,000
+      </td>
+      <td>
+        <!-- 유리 -->
+        <div class='div-material'><img class='material' src="http://vignette1.wikia.nocookie.net/township/images/1/15/Glass.png">
+         100
+        </div>
+        <!-- 석판 -->
+        <div class='div-material'><img class='material' src="http://vignette4.wikia.nocookie.net/township/images/8/87/Slabs.png">
+         100
+        </div>
+        <!-- 나무 -->
+        <div class='div-material'><img class='material' src="http://vignette3.wikia.nocookie.net/township/images/7/71/Timber.png">
+         64
+        </div>
+      </td>
+      <td>37h</td>
+    </tr>
+    <!-- 흑표범 우리 -->
+    <tr>
+      <td>28</td>
+      <td>
+        <div><img class='building' src="http://vignette1.wikia.nocookie.net/township/images/a/a7/Black_Panther_Enclosure.png"></div>
+        <div class='name'>흑표범 우리</div>
+      </td>
+      <td><img class='coins' src="http://vignette3.wikia.nocookie.net/township/images/8/8f/Cost.png"> 
+       225,000
+      </td>
+      <td>
+        <!-- 벽돌 -->
+        <div class='div-material'><img class='material' src="http://vignette2.wikia.nocookie.net/township/images/f/ff/Bricks.png">
+         110
+        </div>
+        <!-- 석판 -->
+        <div class='div-material'><img class='material' src="http://vignette4.wikia.nocookie.net/township/images/8/87/Slabs.png">
+         110
+        </div>
+        <!-- 나무 -->
+        <div class='div-material'><img class='material' src="http://vignette3.wikia.nocookie.net/township/images/7/71/Timber.png">
+         65
+        </div>
+      </td>
+      <td>38h</td>
+    </tr>
+    <!-- 북극여우 우리 -->
+    <tr>
+      <td>29</td>
+      <td>
+        <div><img class='building' src="http://vignette2.wikia.nocookie.net/township/images/a/a1/Arctic_Fox_Enclosure.png"></div>
+        <div class='name'>북극여우 우리</div>
+      </td>
+      <td><img class='coins' src="http://vignette3.wikia.nocookie.net/township/images/8/8f/Cost.png"> 
+       250,000
+      </td>
+      <td>
+        <!-- 유리 -->
+        <div class='div-material'><img class='material' src="http://vignette1.wikia.nocookie.net/township/images/1/15/Glass.png">
+         115
+        </div>
+        <!-- 벽돌 -->
+        <div class='div-material'><img class='material' src="http://vignette2.wikia.nocookie.net/township/images/f/ff/Bricks.png">
+         115
+        </div>
+        <!-- 나무 -->
+        <div class='div-material'><img class='material' src="http://vignette3.wikia.nocookie.net/township/images/7/71/Timber.png">
+         68
+        </div>
+      </td>
+      <td>39h</td>
+    </tr>
+    <!-- 오리너구리 우리 -->
+    <tr>
+      <td>30</td>
+      <td>
+        <div><img class='building' src="http://vignette4.wikia.nocookie.net/township/images/5/5c/Platypus_Enclosure.png"></div>
+        <div class='name'>오리너구리 우리</div>
+      </td>
+      <td><img class='coins' src="http://vignette3.wikia.nocookie.net/township/images/8/8f/Cost.png"> 
+       275,000
+      </td>
+      <td>
+        <!-- 유리 -->
+        <div class='div-material'><img class='material' src="http://vignette1.wikia.nocookie.net/township/images/1/15/Glass.png">
+         120
+        </div>
+        <!-- 석판 -->
+        <div class='div-material'><img class='material' src="http://vignette4.wikia.nocookie.net/township/images/8/87/Slabs.png">
+         120
+        </div>
+        <!-- 나무 -->
+        <div class='div-material'><img class='material' src="http://vignette3.wikia.nocookie.net/township/images/7/71/Timber.png">
+         70
+        </div>
+      </td>
+      <td>40h</td>
+    </tr>
+    <!-- 멧돼지 우리 -->
+    <tr>
+      <td>31</td>
+      <td>
+        <div><img class='building' src="http://vignette1.wikia.nocookie.net/township/images/e/e7/Wild_Boar_Enclosure.png"></div>
+        <div class='name'>멧돼지 우리</div>
+      </td>
+      <td><img class='coins' src="http://vignette3.wikia.nocookie.net/township/images/8/8f/Cost.png"> 
+       300,000
+      </td>
+      <td>
+        <!-- 벽돌 -->
+        <div class='div-material'><img class='material' src="http://vignette2.wikia.nocookie.net/township/images/f/ff/Bricks.png">
+         125
+        </div>
+        <!-- 석판 -->
+        <div class='div-material'><img class='material' src="http://vignette4.wikia.nocookie.net/township/images/8/87/Slabs.png">
+         125
+        </div>
+        <!-- 나무 -->
+        <div class='div-material'><img class='material' src="http://vignette3.wikia.nocookie.net/township/images/7/71/Timber.png">
+         72
+        </div>
+      </td>
+      <td>41h</td>
+    </tr>
+    <!-- 가젤 우리 -->
+    <tr>
+      <td>32</td>
+      <td>
+        <div><img class='building' src="http://vignette2.wikia.nocookie.net/township/images/f/f7/Gazelle_Enclosure.png"></div>
+        <div class='name'>가젤 우리</div>
+      </td>
+      <td><img class='coins' src="http://vignette3.wikia.nocookie.net/township/images/8/8f/Cost.png"> 
+       320,000
+      </td>
+      <td>
+        <!-- 유리 -->
+        <div class='div-material'><img class='material' src="http://vignette1.wikia.nocookie.net/township/images/1/15/Glass.png">
+         130
+        </div>
+        <!-- 석판 -->
+        <div class='div-material'><img class='material' src="http://vignette4.wikia.nocookie.net/township/images/8/87/Slabs.png">
+         130
+        </div>
+        <!-- 나무 -->
+        <div class='div-material'><img class='material' src="http://vignette3.wikia.nocookie.net/township/images/7/71/Timber.png">
+         74
+        </div>
+      </td>
+      <td>42h</td>
+    </tr>
+    <!-- 펠리컨 우리 -->
+    <tr>
+      <td>33</td>
+      <td>
+        <div><img class='building' src="http://vignette2.wikia.nocookie.net/township/images/3/3b/Pelican_Enclosure.png"></div>
+        <div class='name'>펠리컨 우리</div>
+      </td>
+      <td><img class='coins' src="http://vignette3.wikia.nocookie.net/township/images/8/8f/Cost.png"> 
+       340,000
+      </td>
+      <td>
+        <!-- 유리 -->
+        <div class='div-material'><img class='material' src="http://vignette1.wikia.nocookie.net/township/images/1/15/Glass.png">
+         133
+        </div>
+        <!-- 벽돌 -->
+        <div class='div-material'><img class='material' src="http://vignette2.wikia.nocookie.net/township/images/f/ff/Bricks.png">
+         133
+        </div>
+        <!-- 나무 -->
+        <div class='div-material'><img class='material' src="http://vignette3.wikia.nocookie.net/township/images/7/71/Timber.png">
+         76
+        </div>
+      </td>
+      <td>43h</td>
+    </tr>
+    <!-- 스라소니 우리 -->
+    <tr>
+      <td>34</td>
+      <td>
+        <div><img class='building' src="http://vignette2.wikia.nocookie.net/township/images/4/44/Lynx_Enclosure.png"></div>
+        <div class='name'>스라소니 우리</div>
+      </td>
+      <td><img class='coins' src="http://vignette3.wikia.nocookie.net/township/images/8/8f/Cost.png"> 
+       360,000
+      </td>
+      <td>
+        <!-- 벽돌 -->
+        <div class='div-material'><img class='material' src="http://vignette2.wikia.nocookie.net/township/images/f/ff/Bricks.png">
+         136
+        </div>
+        <!-- 석판 -->
+        <div class='div-material'><img class='material' src="http://vignette4.wikia.nocookie.net/township/images/8/87/Slabs.png">
+         136
+        </div>
+        <!-- 나무 -->
+        <div class='div-material'><img class='material' src="http://vignette3.wikia.nocookie.net/township/images/7/71/Timber.png">
+         78
+        </div>
+      </td>
+      <td>44h</td>
+    </tr>
+    <!-- 마코앵무새 우리 -->
+    <tr>
+      <td>35</td>
+      <td>
+        <div><img class='building' src="http://vignette2.wikia.nocookie.net/township/images/0/0b/Macaw_Enclosure.png"></div>
+        <div class='name'>마코앵무새 우리</div>
+      </td>
+      <td><img class='coins' src="http://vignette3.wikia.nocookie.net/township/images/8/8f/Cost.png"> 
+       370,000
+      </td>
+      <td>
+        <!-- 유리 -->
+        <div class='div-material'><img class='material' src="http://vignette1.wikia.nocookie.net/township/images/1/15/Glass.png">
+         138
+        </div>
+        <!-- 석판 -->
+        <div class='div-material'><img class='material' src="http://vignette4.wikia.nocookie.net/township/images/8/87/Slabs.png">
+         138
+        </div>
+        <!-- 나무 -->
+        <div class='div-material'><img class='material' src="http://vignette3.wikia.nocookie.net/township/images/7/71/Timber.png">
+         80
+        </div>
+      </td>
+      <td>45h</td>
+    </tr>
+    <!-- 너구리 우리 -->
+    <tr>
+      <td>36</td>
+      <td>
+        <div><img class='building' src="http://vignette4.wikia.nocookie.net/township/images/7/71/Raccoon_Enclosure.png"></div>
+        <div class='name'>너구리 우리</div>
+      </td>
+      <td><img class='coins' src="http://vignette3.wikia.nocookie.net/township/images/8/8f/Cost.png"> 
+       380,000
+      </td>
+      <td>
+        <!-- 유리 -->
+        <div class='div-material'><img class='material' src="http://vignette1.wikia.nocookie.net/township/images/1/15/Glass.png">
+         140
+        </div>
+        <!-- 벽돌 -->
+        <div class='div-material'><img class='material' src="http://vignette2.wikia.nocookie.net/township/images/f/ff/Bricks.png">
+         140
+        </div>
+        <!-- 나무 -->
+        <div class='div-material'><img class='material' src="http://vignette3.wikia.nocookie.net/township/images/7/71/Timber.png">
+         80
+        </div>
+      </td>
+      <td>46h</td>
+    </tr>
+    <!-- 맥 우리 -->
+    <tr>
+      <td>37</td>
+      <td>
+        <div><img class='building' src="http://vignette4.wikia.nocookie.net/township/images/6/69/Tapir_Enclosure.png"></div>
+        <div class='name'>맥 우리</div>
+      </td>
+      <td><img class='coins' src="http://vignette3.wikia.nocookie.net/township/images/8/8f/Cost.png"> 
+       390,000
+      </td>
+      <td>
+        <!-- 벽돌 -->
+        <div class='div-material'><img class='material' src="http://vignette2.wikia.nocookie.net/township/images/f/ff/Bricks.png">
+         142
+        </div>
+        <!-- 석판 -->
+        <div class='div-material'><img class='material' src="http://vignette4.wikia.nocookie.net/township/images/8/87/Slabs.png">
+         142
+        </div>
+        <!-- 나무 -->
+        <div class='div-material'><img class='material' src="http://vignette3.wikia.nocookie.net/township/images/7/71/Timber.png">
+         82
+        </div>
+      </td>
+      <td>47h</td>
+    </tr>
+    <!-- 바다코끼리 우리 -->
+    <tr>
+      <td>38</td>
+      <td>
+        <div><img class='building' src="http://vignette1.wikia.nocookie.net/township/images/9/9c/Walrus_Enclosure.png"></div>
+        <div class='name'>바다코끼리 우리</div>
+      </td>
+      <td><img class='coins' src="http://vignette3.wikia.nocookie.net/township/images/8/8f/Cost.png"> 
+       400,000
+      </td>
+      <td>
+        <!-- 유리 -->
+        <div class='div-material'><img class='material' src="http://vignette1.wikia.nocookie.net/township/images/1/15/Glass.png">
+         144
+        </div>
+        <!-- 벽돌 -->
+        <div class='div-material'><img class='material' src="http://vignette2.wikia.nocookie.net/township/images/f/ff/Bricks.png">
+         144
+        </div>
+        <!-- 나무 -->
+        <div class='div-material'><img class='material' src="http://vignette3.wikia.nocookie.net/township/images/7/71/Timber.png">
+         82
+        </div>
+      </td>
+      <td>48h</td>
+    </tr>
+    <!-- 담비 우리 -->
+    <tr>
+      <td>39</td>
+      <td>
+        <div><img class='building' src="http://vignette4.wikia.nocookie.net/township/images/3/39/Martens_Enclosure.png"></div>
+        <div class='name'>담비 우리</div>
+      </td>
+      <td><img class='coins' src="http://vignette3.wikia.nocookie.net/township/images/8/8f/Cost.png"> 
+       410,000
+      </td>
+      <td>
+        <!-- 유리 -->
+        <div class='div-material'><img class='material' src="http://vignette1.wikia.nocookie.net/township/images/1/15/Glass.png">
+         146
+        </div>
+        <!-- 석판 -->
+        <div class='div-material'><img class='material' src="http://vignette4.wikia.nocookie.net/township/images/8/87/Slabs.png">
+         146
+        </div>
+        <!-- 나무 -->
+        <div class='div-material'><img class='material' src="http://vignette3.wikia.nocookie.net/township/images/7/71/Timber.png">
+         84
+        </div>
+      </td>
+      <td>49h</td>
+    </tr>
+    <!-- 검은관두루미 우리 -->
+    <tr>
+      <td>40</td>
+      <td>
+        <div><img class='building' src="http://vignette3.wikia.nocookie.net/township/images/c/c9/Black_Crowned_Crane_Enclosure.png"></div>
+        <div class='name'>검은관두루미 우리</div>
+      </td>
+      <td><img class='coins' src="http://vignette3.wikia.nocookie.net/township/images/8/8f/Cost.png"> 
+       420,000
+      </td>
+      <td>
+        <!-- 벽돌 -->
+        <div class='div-material'><img class='material' src="http://vignette2.wikia.nocookie.net/township/images/f/ff/Bricks.png">
+         148
+        </div>
+        <!-- 석판 -->
+        <div class='div-material'><img class='material' src="http://vignette4.wikia.nocookie.net/township/images/8/87/Slabs.png">
+         148
+        </div>
+        <!-- 나무 -->
+        <div class='div-material'><img class='material' src="http://vignette3.wikia.nocookie.net/township/images/7/71/Timber.png">
+         84
+        </div>
+      </td>
+      <td>50h</td>
+    </tr>
+  </tbody>
+</table>

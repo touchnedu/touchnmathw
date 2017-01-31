@@ -1,0 +1,1353 @@
+<style>
+body {
+  background-color: #000;
+}
+table {
+  margin: 0 auto;
+  background-color: #FFF;
+  border: 2px solid #BBB;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 10px;
+  border: 1px solid #EEE;
+  text-align: center;
+  font-size: 0.9em;
+}
+td:not(.border-1) {
+  border-top: 2px solid #ccc;
+}
+.coins {
+  width: 20px;
+  vertical-align: bottom;
+}
+.building {
+  max-width: 100px;
+  max-height: 100px;
+}
+.div-material {
+  padding: 2px 0 2px 0;
+}
+.material {
+  width: 15px; 
+  vertical-align: middle;
+  margin-bottom: 1px;
+}
+.cash {
+  width: 20px;
+  vertical-align: middle;
+  margin-bottom: 1px;
+}
+@media (max-width: 639px) {
+  .building { max-width: 70px; max-height: 70px; }
+  th, td { padding: 7px; font-size: 0.8em; }
+  .cash, .coins { width: 13px; }
+}
+</style>
+<table>
+  <thead>
+    <tr>
+      <th>레벨</th>
+      <th>건물 이름</th>
+      <th>인구 증가</th>
+      <th>비용</th>
+      <th>필요 자재</th>
+      <th>시간</th>
+      <th>보상</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- 식료품점 -->
+    <tr>
+      <td>4</td>
+      <td>
+        <div><img class='building' src="http://vignette2.wikia.nocookie.net/township/images/2/26/Bakery-0.png"></div>
+        <div class='name'>식료품점</div>
+      </td>
+      <td>+15</td>
+      <td>
+        <img class='coins' src="http://vignette3.wikia.nocookie.net/township/images/8/8f/Cost.png"> 
+        25
+      </td>
+      <td>
+        <div class='div-material'>
+          <img class='material' src="http://vignette1.wikia.nocookie.net/township/images/1/15/Glass.png">
+           0
+        </div>
+        <div class='div-material'>
+          <img class='material' src="http://vignette2.wikia.nocookie.net/township/images/f/ff/Bricks.png">
+           1
+        </div>
+        <div class='div-material'>
+          <img class='material' src="http://vignette4.wikia.nocookie.net/township/images/8/87/Slabs.png">
+           0
+        </div>
+      </td>
+      <td>2m</td>
+      <td>
+        <img class='cash' src="http://vignette2.wikia.nocookie.net/township/images/6/66/Cash.png">
+         1
+      </td>
+    </tr>
+    <!-- 학교 -->
+    <tr>
+      <td>5</td>
+      <td>
+        <div><img class='building' src="http://vignette1.wikia.nocookie.net/township/images/a/ac/School.png"></div>
+        <div class='name'>학교</div>
+      </td>
+      <!-- 인구 -->
+      <td>+20</td>
+      <td>
+        <img class='coins' src="http://vignette3.wikia.nocookie.net/township/images/8/8f/Cost.png"> 
+         30
+      </td>
+      <td>
+        <!-- 자재 -->
+        <div class='div-material'>
+          <img class='material' src="http://vignette1.wikia.nocookie.net/township/images/1/15/Glass.png">
+           1
+        </div>
+        <div class='div-material'>
+          <img class='material' src="http://vignette2.wikia.nocookie.net/township/images/f/ff/Bricks.png">
+           1
+        </div>
+        <div class='div-material'>
+          <img class='material' src="http://vignette4.wikia.nocookie.net/township/images/8/87/Slabs.png">
+           0
+        </div>
+      </td>
+      <!-- 시간 -->
+      <td>10m</td>
+      <td>
+        <img class='cash' src="http://vignette2.wikia.nocookie.net/township/images/6/66/Cash.png">
+         1
+      </td>
+    </tr>
+    <!-- 병원 -->
+    <tr>
+      <td>6</td>
+      <td>
+        <div><img class='building' src="http://vignette4.wikia.nocookie.net/township/images/6/66/Hospital.png"></div>
+        <div class='name'>병원</div>
+      </td>
+      <!-- 인구 -->
+      <td>+25</td>
+      <td>
+        <img class='coins' src="http://vignette3.wikia.nocookie.net/township/images/8/8f/Cost.png"> 
+         40
+      </td>
+      <td>
+        <!-- 자재 -->
+        <div class='div-material'>
+          <img class='material' src="http://vignette1.wikia.nocookie.net/township/images/1/15/Glass.png">
+           1
+        </div>
+        <div class='div-material'>
+          <img class='material' src="http://vignette2.wikia.nocookie.net/township/images/f/ff/Bricks.png">
+           1
+        </div>
+        <div class='div-material'>
+          <img class='material' src="http://vignette4.wikia.nocookie.net/township/images/8/87/Slabs.png">
+           1
+        </div>
+      </td>
+      <!-- 시간 -->
+      <td>20m</td>
+      <td>
+        <img class='cash' src="http://vignette2.wikia.nocookie.net/township/images/6/66/Cash.png">
+         1
+      </td>
+    </tr>
+    <!-- 경찰서 -->
+    <tr>
+      <td>7</td>
+      <td>
+        <div><img class='building' src="http://vignette2.wikia.nocookie.net/township/images/2/2b/Police_station.png"></div>
+        <div class='name'>경찰서</div>
+      </td>
+      <!-- 인구 -->
+      <td>+30</td>
+      <td>
+        <img class='coins' src="http://vignette3.wikia.nocookie.net/township/images/8/8f/Cost.png"> 
+         50
+      </td>
+      <td>
+        <!-- 자재 -->
+        <div class='div-material'>
+          <img class='material' src="http://vignette1.wikia.nocookie.net/township/images/1/15/Glass.png">
+           2
+        </div>
+        <div class='div-material'>
+          <img class='material' src="http://vignette2.wikia.nocookie.net/township/images/f/ff/Bricks.png">
+           1
+        </div>
+        <div class='div-material'>
+          <img class='material' src="http://vignette4.wikia.nocookie.net/township/images/8/87/Slabs.png">
+           1
+        </div>
+      </td>
+      <!-- 시간 -->
+      <td>30m</td>
+      <td>
+        <img class='cash' src="http://vignette2.wikia.nocookie.net/township/images/6/66/Cash.png">
+         1
+      </td>
+    </tr>
+    <!-- 소방서 -->
+    <tr>
+      <td>8</td>
+      <td>
+        <div><img class='building' src="http://vignette3.wikia.nocookie.net/township/images/2/2d/Fire_station.png"></div>
+        <div class='name'>소방서</div>
+      </td>
+      <!-- 인구 -->
+      <td>+35</td>
+      <td>
+        <img class='coins' src="http://vignette3.wikia.nocookie.net/township/images/8/8f/Cost.png"> 
+         75
+      </td>
+      <td>
+        <!-- 자재 -->
+        <div class='div-material'>
+          <img class='material' src="http://vignette1.wikia.nocookie.net/township/images/1/15/Glass.png">
+           2
+        </div>
+        <div class='div-material'>
+          <img class='material' src="http://vignette2.wikia.nocookie.net/township/images/f/ff/Bricks.png">
+           2
+        </div>
+        <div class='div-material'>
+          <img class='material' src="http://vignette4.wikia.nocookie.net/township/images/8/87/Slabs.png">
+           1
+        </div>
+      </td>
+      <!-- 시간 -->
+      <td>1h</td>
+      <td>
+        <img class='cash' src="http://vignette2.wikia.nocookie.net/township/images/6/66/Cash.png">
+         1
+      </td>
+    </tr>
+    <!-- 우체국 -->
+    <tr>
+      <td>9</td>
+      <td>
+        <div><img class='building' src="http://vignette2.wikia.nocookie.net/township/images/1/10/Post_office.png"></div>
+        <div class='name'></div>
+      </td>
+      <!-- 인구 -->
+      <td>+40</td>
+      <td>
+        <img class='coins' src="http://vignette3.wikia.nocookie.net/township/images/8/8f/Cost.png"> 
+         100
+      </td>
+      <td>
+        <!-- 자재 -->
+        <div class='div-material'>
+          <img class='material' src="http://vignette1.wikia.nocookie.net/township/images/1/15/Glass.png">
+           2
+        </div>
+        <div class='div-material'>
+          <img class='material' src="http://vignette2.wikia.nocookie.net/township/images/f/ff/Bricks.png">
+           1
+        </div>
+        <div class='div-material'>
+          <img class='material' src="http://vignette4.wikia.nocookie.net/township/images/8/87/Slabs.png">
+           3
+        </div>
+      </td>
+      <!-- 시간 -->
+      <td>1h 30m</td>
+      <td>
+        <img class='cash' src="http://vignette2.wikia.nocookie.net/township/images/6/66/Cash.png">
+         1
+      </td>
+    </tr>
+    <!-- 빨래방 -->
+    <tr>
+      <td>10</td>
+      <td>
+        <div><img class='building' src="http://vignette3.wikia.nocookie.net/township/images/d/d8/Laundromat.png"></div>
+        <div class='name'>빨래방</div>
+      </td>
+      <!-- 인구 -->
+      <td>+45</td>
+      <td>
+        <img class='coins' src="http://vignette3.wikia.nocookie.net/township/images/8/8f/Cost.png"> 
+         125
+      </td>
+      <td>
+        <!-- 자재 -->
+        <div class='div-material'>
+          <img class='material' src="http://vignette1.wikia.nocookie.net/township/images/1/15/Glass.png">
+           3
+        </div>
+        <div class='div-material'>
+          <img class='material' src="http://vignette2.wikia.nocookie.net/township/images/f/ff/Bricks.png">
+           2
+        </div>
+        <div class='div-material'>
+          <img class='material' src="http://vignette4.wikia.nocookie.net/township/images/8/87/Slabs.png">
+           2
+        </div>
+      </td>
+      <!-- 시간 -->
+      <td>2h</td>
+      <td>
+        <img class='cash' src="http://vignette2.wikia.nocookie.net/township/images/6/66/Cash.png">
+         1
+      </td>
+    </tr>
+    <!-- 영화관 -->
+    <tr>
+      <td>11</td>
+      <td>
+        <div><img class='building' src="http://vignette1.wikia.nocookie.net/township/images/2/26/Movie_teather.png"></div>
+        <div class='name'>영화관</div>
+      </td>
+      <!-- 인구 -->
+      <td>+50</td>
+      <td>
+        <img class='coins' src="http://vignette3.wikia.nocookie.net/township/images/8/8f/Cost.png"> 
+         150
+      </td>
+      <td>
+        <!-- 자재 -->
+        <div class='div-material'>
+          <img class='material' src="http://vignette1.wikia.nocookie.net/township/images/1/15/Glass.png">
+           2
+        </div>
+        <div class='div-material'>
+          <img class='material' src="http://vignette2.wikia.nocookie.net/township/images/f/ff/Bricks.png">
+           3
+        </div>
+        <div class='div-material'>
+          <img class='material' src="http://vignette4.wikia.nocookie.net/township/images/8/87/Slabs.png">
+           3
+        </div>
+      </td>
+      <!-- 시간 -->
+      <td>2h 30m</td>
+      <td>
+        <img class='cash' src="http://vignette2.wikia.nocookie.net/township/images/6/66/Cash.png">
+         1
+      </td>
+    </tr>
+    <!-- 카페 -->
+    <tr>
+      <td>12</td>
+      <td>
+        <div><img class='building' src="http://vignette1.wikia.nocookie.net/township/images/b/b4/Cafe.png"></div>
+        <div class='name'>카페</div>
+      </td>
+      <!-- 인구 -->
+      <td>+55</td>
+      <td>
+        <img class='coins' src="http://vignette3.wikia.nocookie.net/township/images/8/8f/Cost.png"> 
+         175
+      </td>
+      <td>
+        <!-- 자재 -->
+        <div class='div-material'>
+          <img class='material' src="http://vignette1.wikia.nocookie.net/township/images/1/15/Glass.png">
+           2
+        </div>
+        <div class='div-material'>
+          <img class='material' src="http://vignette2.wikia.nocookie.net/township/images/f/ff/Bricks.png">
+           4
+        </div>
+        <div class='div-material'>
+          <img class='material' src="http://vignette4.wikia.nocookie.net/township/images/8/87/Slabs.png">
+           3
+        </div>
+      </td>
+      <!-- 시간 -->
+      <td>3h</td>
+      <td>
+        <img class='cash' src="http://vignette2.wikia.nocookie.net/township/images/6/66/Cash.png">
+         2
+      </td>
+    </tr>
+    <!-- 미용실 -->
+    <tr>
+      <td>13</td>
+      <td>
+        <div><img class='building' src="http://vignette1.wikia.nocookie.net/township/images/9/9f/Hair_salon.png"></div>
+        <div class='name'>미용실</div>
+      </td>
+      <!-- 인구 -->
+      <td>+60</td>
+      <td>
+        <img class='coins' src="http://vignette3.wikia.nocookie.net/township/images/8/8f/Cost.png"> 
+         200
+      </td>
+      <td>
+        <!-- 자재 -->
+        <div class='div-material'>
+          <img class='material' src="http://vignette1.wikia.nocookie.net/township/images/1/15/Glass.png">
+           4
+        </div>
+        <div class='div-material'>
+          <img class='material' src="http://vignette2.wikia.nocookie.net/township/images/f/ff/Bricks.png">
+           2
+        </div>
+        <div class='div-material'>
+          <img class='material' src="http://vignette4.wikia.nocookie.net/township/images/8/87/Slabs.png">
+           4
+        </div>
+      </td>
+      <!-- 시간 -->
+      <td>3h 30m</td>
+      <td>
+        <img class='cash' src="http://vignette2.wikia.nocookie.net/township/images/6/66/Cash.png">
+         2
+      </td>
+    </tr>
+    <!-- 피자 가게 -->
+    <tr>
+      <td>14</td>
+      <td>
+        <div><img class='building' src="http://vignette1.wikia.nocookie.net/township/images/a/ac/Pizza_parlor.png"></div>
+        <div class='name'>피자 가게</div>
+      </td>
+      <!-- 인구 -->
+      <td>+65</td>
+      <td>
+        <img class='coins' src="http://vignette3.wikia.nocookie.net/township/images/8/8f/Cost.png"> 
+         250
+      </td>
+      <td>
+        <!-- 자재 -->
+        <div class='div-material'>
+          <img class='material' src="http://vignette1.wikia.nocookie.net/township/images/1/15/Glass.png">
+           4
+        </div>
+        <div class='div-material'>
+          <img class='material' src="http://vignette2.wikia.nocookie.net/township/images/f/ff/Bricks.png">
+           1
+        </div>
+        <div class='div-material'>
+          <img class='material' src="http://vignette4.wikia.nocookie.net/township/images/8/87/Slabs.png">
+           6
+        </div>
+      </td>
+      <!-- 시간 -->
+      <td>4h</td>
+      <td>
+        <img class='cash' src="http://vignette2.wikia.nocookie.net/township/images/6/66/Cash.png">
+         2
+      </td>
+    </tr>
+    <!-- 결혼식장 -->
+    <tr>
+      <td>15</td>
+      <td>
+        <div><img class='building' src="http://vignette4.wikia.nocookie.net/township/images/d/dc/Wedding_hall.png"></div>
+        <div class='name'>결혼식장</div>
+      </td>
+      <!-- 인구 -->
+      <td>+70</td>
+      <td>
+        <img class='coins' src="http://vignette3.wikia.nocookie.net/township/images/8/8f/Cost.png"> 
+         300
+      </td>
+      <td>
+        <!-- 자재 -->
+        <div class='div-material'>
+          <img class='material' src="http://vignette1.wikia.nocookie.net/township/images/1/15/Glass.png">
+           2
+        </div>
+        <div class='div-material'>
+          <img class='material' src="http://vignette2.wikia.nocookie.net/township/images/f/ff/Bricks.png">
+           5
+        </div>
+        <div class='div-material'>
+          <img class='material' src="http://vignette4.wikia.nocookie.net/township/images/8/87/Slabs.png">
+           5
+        </div>
+      </td>
+      <!-- 시간 -->
+      <td>4h 30m</td>
+      <td>
+        <img class='cash' src="http://vignette2.wikia.nocookie.net/township/images/6/66/Cash.png">
+         2
+      </td>
+    </tr>
+    <!-- 음반 가게 -->
+    <tr>
+      <td>16</td>
+      <td>
+        <div><img class='building' src="http://vignette4.wikia.nocookie.net/township/images/9/9d/Music_store.png"></div>
+        <div class='name'>음반 가게</div>
+      </td>
+      <!-- 인구 -->
+      <td>+75</td>
+      <td>
+        <img class='coins' src="http://vignette3.wikia.nocookie.net/township/images/8/8f/Cost.png"> 
+         350
+      </td>
+      <td>
+        <!-- 자재 -->
+        <div class='div-material'>
+          <img class='material' src="http://vignette1.wikia.nocookie.net/township/images/1/15/Glass.png">
+           4
+        </div>
+        <div class='div-material'>
+          <img class='material' src="http://vignette2.wikia.nocookie.net/township/images/f/ff/Bricks.png">
+           2
+        </div>
+        <div class='div-material'>
+          <img class='material' src="http://vignette4.wikia.nocookie.net/township/images/8/87/Slabs.png">
+           7
+        </div>
+      </td>
+      <!-- 시간 -->
+      <td>5h</td>
+      <td>
+        <img class='cash' src="http://vignette2.wikia.nocookie.net/township/images/6/66/Cash.png">
+         2
+      </td>
+    </tr>
+    <!-- 볼링 -->
+    <tr>
+      <td>17</td>
+      <td>
+        <div><img class='building' src="http://vignette2.wikia.nocookie.net/township/images/9/96/Bowling.png"></div>
+        <div class='name'>볼링</div>
+      </td>
+      <!-- 인구 -->
+      <td>+80</td>
+      <td>
+        <img class='coins' src="http://vignette3.wikia.nocookie.net/township/images/8/8f/Cost.png"> 
+         400
+      </td>
+      <td>
+        <!-- 자재 -->
+        <div class='div-material'>
+          <img class='material' src="http://vignette1.wikia.nocookie.net/township/images/1/15/Glass.png">
+           5
+        </div>
+        <div class='div-material'>
+          <img class='material' src="http://vignette2.wikia.nocookie.net/township/images/f/ff/Bricks.png">
+           5
+        </div>
+        <div class='div-material'>
+          <img class='material' src="http://vignette4.wikia.nocookie.net/township/images/8/87/Slabs.png">
+           4
+        </div>
+      </td>
+      <!-- 시간 -->
+      <td>5h 30m</td>
+      <td>
+        <img class='cash' src="http://vignette2.wikia.nocookie.net/township/images/6/66/Cash.png">
+         2
+      </td>
+    </tr>
+    <!-- 장난감 가게 -->
+    <tr>
+      <td>18</td>
+      <td>
+        <div><img class='building' src="http://vignette1.wikia.nocookie.net/township/images/c/c1/Toy_store.png"></div>
+        <div class='name'>장난감 가게</div>
+      </td>
+      <!-- 인구 -->
+      <td>+85</td>
+      <td>
+        <img class='coins' src="http://vignette3.wikia.nocookie.net/township/images/8/8f/Cost.png"> 
+         450
+      </td>
+      <td>
+        <!-- 자재 -->
+        <div class='div-material'>
+          <img class='material' src="http://vignette1.wikia.nocookie.net/township/images/1/15/Glass.png">
+           7
+        </div>
+        <div class='div-material'>
+          <img class='material' src="http://vignette2.wikia.nocookie.net/township/images/f/ff/Bricks.png">
+           4
+        </div>
+        <div class='div-material'>
+          <img class='material' src="http://vignette4.wikia.nocookie.net/township/images/8/87/Slabs.png">
+           4
+        </div>
+      </td>
+      <!-- 시간 -->
+      <td>6h</td>
+      <td>
+        <img class='cash' src="http://vignette2.wikia.nocookie.net/township/images/6/66/Cash.png">
+         2
+      </td>
+    </tr>
+    <!-- 사진 센터 -->
+    <tr>
+      <td>19</td>
+      <td>
+        <div><img class='building' src="http://vignette2.wikia.nocookie.net/township/images/4/4d/Photo_center.png"></div>
+        <div class='name'>사진 센터</div>
+      </td>
+      <!-- 인구 -->
+      <td>+90</td>
+      <td>
+        <img class='coins' src="http://vignette3.wikia.nocookie.net/township/images/8/8f/Cost.png"> 
+         500
+      </td>
+      <td>
+        <!-- 자재 -->
+        <div class='div-material'>
+          <img class='material' src="http://vignette1.wikia.nocookie.net/township/images/1/15/Glass.png">
+           4
+        </div>
+        <div class='div-material'>
+          <img class='material' src="http://vignette2.wikia.nocookie.net/township/images/f/ff/Bricks.png">
+           5
+        </div>
+        <div class='div-material'>
+          <img class='material' src="http://vignette4.wikia.nocookie.net/township/images/8/87/Slabs.png">
+           7
+        </div>
+      </td>
+      <!-- 시간 -->
+      <td>6h 30m</td>
+      <td>
+        <img class='cash' src="http://vignette2.wikia.nocookie.net/township/images/6/66/Cash.png">
+         2
+      </td>
+    </tr>
+    <!-- 로켓 라이드 -->
+    <tr>
+      <td>20</td>
+      <td>
+        <div><img class='building' src="http://vignette1.wikia.nocookie.net/township/images/1/1e/Rocket_ride.png"></div>
+        <div class='name'>로켓 라이드</div>
+      </td>
+      <!-- 인구 -->
+      <td>+95</td>
+      <td>
+        <img class='coins' src="http://vignette3.wikia.nocookie.net/township/images/8/8f/Cost.png"> 
+         650
+      </td>
+      <td>
+        <!-- 자재 -->
+        <div class='div-material'>
+          <img class='material' src="http://vignette1.wikia.nocookie.net/township/images/1/15/Glass.png">
+           5
+        </div>
+        <div class='div-material'>
+          <img class='material' src="http://vignette2.wikia.nocookie.net/township/images/f/ff/Bricks.png">
+           6
+        </div>
+        <div class='div-material'>
+          <img class='material' src="http://vignette4.wikia.nocookie.net/township/images/8/87/Slabs.png">
+           6
+        </div>
+      </td>
+      <!-- 시간 -->
+      <td>7h</td>
+      <td>
+        <img class='cash' src="http://vignette2.wikia.nocookie.net/township/images/6/66/Cash.png">
+         2
+      </td>
+    </tr>
+    <!-- 전망대 -->
+    <tr>
+      <td>21</td>
+      <td>
+        <div><img class='building' src="http://vignette1.wikia.nocookie.net/township/images/6/62/Obsevatory.png"></div>
+        <div class='name'>전망대</div>
+      </td>
+      <!-- 인구 -->
+      <td>+100</td>
+      <td>
+        <img class='coins' src="http://vignette3.wikia.nocookie.net/township/images/8/8f/Cost.png"> 
+         800
+      </td>
+      <td>
+        <!-- 자재 -->
+        <div class='div-material'>
+          <img class='material' src="http://vignette1.wikia.nocookie.net/township/images/1/15/Glass.png">
+           6
+        </div>
+        <div class='div-material'>
+          <img class='material' src="http://vignette2.wikia.nocookie.net/township/images/f/ff/Bricks.png">
+           5
+        </div>
+        <div class='div-material'>
+          <img class='material' src="http://vignette4.wikia.nocookie.net/township/images/8/87/Slabs.png">
+           7
+        </div>
+      </td>
+      <!-- 시간 -->
+      <td>7h 30m</td>
+      <td>
+        <img class='cash' src="http://vignette2.wikia.nocookie.net/township/images/6/66/Cash.png">
+         2
+      </td>
+    </tr>
+    <!-- 도서관 -->
+    <tr>
+      <td>22</td>
+      <td>
+        <div><img class='building' src="http://vignette4.wikia.nocookie.net/township/images/9/9b/Library.png"></div>
+        <div class='name'>도서관</div>
+      </td>
+      <!-- 인구 -->
+      <td>+105</td>
+      <td>
+        <img class='coins' src="http://vignette3.wikia.nocookie.net/township/images/8/8f/Cost.png"> 
+         950
+      </td>
+      <td>
+        <!-- 자재 -->
+        <div class='div-material'>
+          <img class='material' src="http://vignette1.wikia.nocookie.net/township/images/1/15/Glass.png">
+           8
+        </div>
+        <div class='div-material'>
+          <img class='material' src="http://vignette2.wikia.nocookie.net/township/images/f/ff/Bricks.png">
+           5
+        </div>
+        <div class='div-material'>
+          <img class='material' src="http://vignette4.wikia.nocookie.net/township/images/8/87/Slabs.png">
+           6
+        </div>
+      </td>
+      <!-- 시간 -->
+      <td>8h</td>
+      <td>
+        <img class='cash' src="http://vignette2.wikia.nocookie.net/township/images/6/66/Cash.png">
+         3
+      </td>
+    </tr>
+    <!-- 대학 -->
+    <tr>
+      <td>23</td>
+      <td>
+        <div><img class='building' src="http://vignette3.wikia.nocookie.net/township/images/2/28/Universitet.png"></div>
+        <div class='name'>대학</div>
+      </td>
+      <!-- 인구 -->
+      <td>+110</td>
+      <td>
+        <img class='coins' src="http://vignette3.wikia.nocookie.net/township/images/8/8f/Cost.png"> 
+         1,100
+      </td>
+      <td>
+        <!-- 자재 -->
+        <div class='div-material'>
+          <img class='material' src="http://vignette1.wikia.nocookie.net/township/images/1/15/Glass.png">
+           6
+        </div>
+        <div class='div-material'>
+          <img class='material' src="http://vignette2.wikia.nocookie.net/township/images/f/ff/Bricks.png">
+           5
+        </div>
+        <div class='div-material'>
+          <img class='material' src="http://vignette4.wikia.nocookie.net/township/images/8/87/Slabs.png">
+           10
+        </div>
+      </td>
+      <!-- 시간 -->
+      <td>9h</td>
+      <td>
+        <img class='cash' src="http://vignette2.wikia.nocookie.net/township/images/6/66/Cash.png">
+         3
+      </td>
+    </tr>
+    <!-- 극장 -->
+    <tr>
+      <td>24</td>
+      <td>
+        <div><img class='building' src="http://vignette2.wikia.nocookie.net/township/images/6/6e/Theater.png"></div>
+        <div class='name'>극장</div>
+      </td>
+      <!-- 인구 -->
+      <td>+115</td>
+      <td>
+        <img class='coins' src="http://vignette3.wikia.nocookie.net/township/images/8/8f/Cost.png"> 
+         1,350
+      </td>
+      <td>
+        <!-- 자재 -->
+        <div class='div-material'>
+          <img class='material' src="http://vignette1.wikia.nocookie.net/township/images/1/15/Glass.png">
+           10
+        </div>
+        <div class='div-material'>
+          <img class='material' src="http://vignette2.wikia.nocookie.net/township/images/f/ff/Bricks.png">
+           6
+        </div>
+        <div class='div-material'>
+          <img class='material' src="http://vignette4.wikia.nocookie.net/township/images/8/87/Slabs.png">
+           7
+        </div>
+      </td>
+      <!-- 시간 -->
+      <td>10h</td>
+      <td>
+        <img class='cash' src="http://vignette2.wikia.nocookie.net/township/images/6/66/Cash.png">
+         3
+      </td>
+    </tr>
+    <!-- 미술관 -->
+    <tr>
+      <td>25</td>
+      <td>
+        <div><img class='building' src="http://vignette3.wikia.nocookie.net/township/images/2/20/Art_gallery.png"></div>
+        <div class='name'>미술관</div>
+      </td>
+      <!-- 인구 -->
+      <td>+120</td>
+      <td>
+        <img class='coins' src="http://vignette3.wikia.nocookie.net/township/images/8/8f/Cost.png"> 
+         1,600
+      </td>
+      <td>
+        <!-- 자재 -->
+        <div class='div-material'>
+          <img class='material' src="http://vignette1.wikia.nocookie.net/township/images/1/15/Glass.png">
+           8
+        </div>
+        <div class='div-material'>
+          <img class='material' src="http://vignette2.wikia.nocookie.net/township/images/f/ff/Bricks.png">
+           7
+        </div>
+        <div class='div-material'>
+          <img class='material' src="http://vignette4.wikia.nocookie.net/township/images/8/87/Slabs.png">
+           10
+        </div>
+      </td>
+      <!-- 시간 -->
+      <td>11h</td>
+      <td>
+        <img class='cash' src="http://vignette2.wikia.nocookie.net/township/images/6/66/Cash.png">
+         3
+      </td>
+    </tr>
+    <!-- 서커스 -->
+    <tr>
+      <td>26</td>
+      <td>
+        <div><img class='building' src="http://vignette3.wikia.nocookie.net/township/images/f/fc/Circus.png"></div>
+        <div class='name'>서커스</div>
+      </td>
+      <!-- 인구 -->
+      <td>+125</td>
+      <td>
+        <img class='coins' src="http://vignette3.wikia.nocookie.net/township/images/8/8f/Cost.png"> 
+         1,900
+      </td>
+      <td>
+        <!-- 자재 -->
+        <div class='div-material'>
+          <img class='material' src="http://vignette1.wikia.nocookie.net/township/images/1/15/Glass.png">
+           12
+        </div>
+        <div class='div-material'>
+          <img class='material' src="http://vignette2.wikia.nocookie.net/township/images/f/ff/Bricks.png">
+           8
+        </div>
+        <div class='div-material'>
+          <img class='material' src="http://vignette4.wikia.nocookie.net/township/images/8/87/Slabs.png">
+           7
+        </div>
+      </td>
+      <!-- 시간 -->
+      <td>12h</td>
+      <td>
+        <img class='cash' src="http://vignette2.wikia.nocookie.net/township/images/6/66/Cash.png">
+         3
+      </td>
+    </tr>
+    <!-- 주차장 -->
+    <tr>
+      <td>27</td>
+      <td>
+        <div><img class='building' src="http://vignette1.wikia.nocookie.net/township/images/8/88/Parking_garage.png"></div>
+        <div class='name'>주차장</div>
+      </td>
+      <!-- 인구 -->
+      <td>+130</td>
+      <td>
+        <img class='coins' src="http://vignette3.wikia.nocookie.net/township/images/8/8f/Cost.png"> 
+         2,200
+      </td>
+      <td>
+        <!-- 자재 -->
+        <div class='div-material'>
+          <img class='material' src="http://vignette1.wikia.nocookie.net/township/images/1/15/Glass.png">
+           14
+        </div>
+        <div class='div-material'>
+          <img class='material' src="http://vignette2.wikia.nocookie.net/township/images/f/ff/Bricks.png">
+           6
+        </div>
+        <div class='div-material'>
+          <img class='material' src="http://vignette4.wikia.nocookie.net/township/images/8/87/Slabs.png">
+           9
+        </div>
+      </td>
+      <!-- 시간 -->
+      <td>13h</td>
+      <td>
+        <img class='cash' src="http://vignette2.wikia.nocookie.net/township/images/6/66/Cash.png">
+         3
+      </td>
+    </tr>
+    <!-- 주유소 -->
+    <tr>
+      <td>28</td>
+      <td>
+        <div><img class='building' src="http://vignette4.wikia.nocookie.net/township/images/8/84/Gas_station.png"></div>
+        <div class='name'>주유소</div>
+      </td>
+      <!-- 인구 -->
+      <td>+135</td>
+      <td>
+        <img class='coins' src="http://vignette3.wikia.nocookie.net/township/images/8/8f/Cost.png"> 
+         2,500
+      </td>
+      <td>
+        <!-- 자재 -->
+        <div class='div-material'>
+          <img class='material' src="http://vignette1.wikia.nocookie.net/township/images/1/15/Glass.png">
+           9
+        </div>
+        <div class='div-material'>
+          <img class='material' src="http://vignette2.wikia.nocookie.net/township/images/f/ff/Bricks.png">
+           12
+        </div>
+        <div class='div-material'>
+          <img class='material' src="http://vignette4.wikia.nocookie.net/township/images/8/87/Slabs.png">
+           10
+        </div>
+      </td>
+      <!-- 시간 -->
+      <td>14h</td>
+      <td>
+        <img class='cash' src="http://vignette2.wikia.nocookie.net/township/images/6/66/Cash.png">
+         3
+      </td>
+    </tr>
+    <!-- 택시 회사 -->
+    <tr>
+      <td>29</td>
+      <td>
+        <div><img class='building' src="http://vignette4.wikia.nocookie.net/township/images/a/ac/Taxi_company.png"></div>
+        <div class='name'>택시 회사</div>
+      </td>
+      <!-- 인구 -->
+      <td>+140</td>
+      <td>
+        <img class='coins' src="http://vignette3.wikia.nocookie.net/township/images/8/8f/Cost.png"> 
+         2,900
+      </td>
+      <td>
+        <!-- 자재 -->
+        <div class='div-material'>
+          <img class='material' src="http://vignette1.wikia.nocookie.net/township/images/1/15/Glass.png">
+           13
+        </div>
+        <div class='div-material'>
+          <img class='material' src="http://vignette2.wikia.nocookie.net/township/images/f/ff/Bricks.png">
+           11
+        </div>
+        <div class='div-material'>
+          <img class='material' src="http://vignette4.wikia.nocookie.net/township/images/8/87/Slabs.png">
+           9
+        </div>
+      </td>
+      <!-- 시간 -->
+      <td>15h</td>
+      <td>
+        <img class='cash' src="http://vignette2.wikia.nocookie.net/township/images/6/66/Cash.png">
+         3
+      </td>
+    </tr>
+    <!-- 드라이브 인 -->
+    <tr>
+      <td>30</td>
+      <td>
+        <div><img class='building' src="http://vignette3.wikia.nocookie.net/township/images/7/73/Drive_in.png"></div>
+        <div class='name'>드라이브 인</div>
+      </td>
+      <!-- 인구 -->
+      <td>+145</td>
+      <td>
+        <img class='coins' src="http://vignette3.wikia.nocookie.net/township/images/8/8f/Cost.png"> 
+         3,300
+      </td>
+      <td>
+        <!-- 자재 -->
+        <div class='div-material'>
+          <img class='material' src="http://vignette1.wikia.nocookie.net/township/images/1/15/Glass.png">
+           10
+        </div>
+        <div class='div-material'>
+          <img class='material' src="http://vignette2.wikia.nocookie.net/township/images/f/ff/Bricks.png">
+           16
+        </div>
+        <div class='div-material'>
+          <img class='material' src="http://vignette4.wikia.nocookie.net/township/images/8/87/Slabs.png">
+           9
+        </div>
+      </td>
+      <!-- 시간 -->
+      <td>16h</td>
+      <td>
+        <img class='cash' src="http://vignette2.wikia.nocookie.net/township/images/6/66/Cash.png">
+         3
+      </td>
+    </tr>
+    <!-- 사무실 건물 -->
+    <tr>
+      <td>31</td>
+      <td>
+        <div><img class='building' src="http://vignette3.wikia.nocookie.net/township/images/7/72/Office_building.png"></div>
+        <div class='name'>사무실 건물</div>
+      </td>
+      <!-- 인구 -->
+      <td>+150</td>
+      <td>
+        <img class='coins' src="http://vignette3.wikia.nocookie.net/township/images/8/8f/Cost.png"> 
+         3,800
+      </td>
+      <td>
+        <!-- 자재 -->
+        <div class='div-material'>
+          <img class='material' src="http://vignette1.wikia.nocookie.net/township/images/1/15/Glass.png">
+           12
+        </div>
+        <div class='div-material'>
+          <img class='material' src="http://vignette2.wikia.nocookie.net/township/images/f/ff/Bricks.png">
+           12
+        </div>
+        <div class='div-material'>
+          <img class='material' src="http://vignette4.wikia.nocookie.net/township/images/8/87/Slabs.png">
+           13
+        </div>
+      </td>
+      <!-- 시간 -->
+      <td>17h</td>
+      <td>
+        <img class='cash' src="http://vignette2.wikia.nocookie.net/township/images/6/66/Cash.png">
+         3
+      </td>
+    </tr>
+    <!-- 호텔 -->
+    <tr>
+      <td>32</td>
+      <td>
+        <div><img class='building' src="http://vignette1.wikia.nocookie.net/township/images/8/83/Hotel.png"></div>
+        <div class='name'>호텔</div>
+      </td>
+      <!-- 인구 -->
+      <td>+155</td>
+      <td>
+        <img class='coins' src="http://vignette3.wikia.nocookie.net/township/images/8/8f/Cost.png"> 
+         4,300
+      </td>
+      <td>
+        <!-- 자재 -->
+        <div class='div-material'>
+          <img class='material' src="http://vignette1.wikia.nocookie.net/township/images/1/15/Glass.png">
+           11
+        </div>
+        <div class='div-material'>
+          <img class='material' src="http://vignette2.wikia.nocookie.net/township/images/f/ff/Bricks.png">
+           13
+        </div>
+        <div class='div-material'>
+          <img class='material' src="http://vignette4.wikia.nocookie.net/township/images/8/87/Slabs.png">
+           15
+        </div>
+      </td>
+      <!-- 시간 -->
+      <td>18h</td>
+      <td>
+        <img class='cash' src="http://vignette2.wikia.nocookie.net/township/images/6/66/Cash.png">
+         4
+      </td>
+    </tr>
+    <!-- 방송국 -->
+    <tr>
+      <td>33</td>
+      <td>
+        <div><img class='building' src="http://vignette3.wikia.nocookie.net/township/images/2/2e/TV_station.png"></div>
+        <div class='name'>방송국</div>
+      </td>
+      <!-- 인구 -->
+      <td>+160</td>
+      <td>
+        <img class='coins' src="http://vignette3.wikia.nocookie.net/township/images/8/8f/Cost.png"> 
+         4,800
+      </td>
+      <td>
+        <!-- 자재 -->
+        <div class='div-material'>
+          <img class='material' src="http://vignette1.wikia.nocookie.net/township/images/1/15/Glass.png">
+           17
+        </div>
+        <div class='div-material'>
+          <img class='material' src="http://vignette2.wikia.nocookie.net/township/images/f/ff/Bricks.png">
+           10
+        </div>
+        <div class='div-material'>
+          <img class='material' src="http://vignette4.wikia.nocookie.net/township/images/8/87/Slabs.png">
+           14
+        </div>
+      </td>
+      <!-- 시간 -->
+      <td>19h</td>
+      <td>
+        <img class='cash' src="http://vignette2.wikia.nocookie.net/township/images/6/66/Cash.png">
+         4
+      </td>
+    </tr>
+    <!-- 방송탑 -->
+    <tr>
+      <td>34</td>
+      <td>
+        <div><img class='building' src="http://vignette3.wikia.nocookie.net/township/images/a/a7/TV_tower.png"></div>
+        <div class='name'>방송탑</div>
+      </td>
+      <!-- 인구 -->
+      <td>+165</td>
+      <td>
+        <img class='coins' src="http://vignette3.wikia.nocookie.net/township/images/8/8f/Cost.png"> 
+         5,300
+      </td>
+      <td>
+        <!-- 자재 -->
+        <div class='div-material'>
+          <img class='material' src="http://vignette1.wikia.nocookie.net/township/images/1/15/Glass.png">
+           16
+        </div>
+        <div class='div-material'>
+          <img class='material' src="http://vignette2.wikia.nocookie.net/township/images/f/ff/Bricks.png">
+           13
+        </div>
+        <div class='div-material'>
+          <img class='material' src="http://vignette4.wikia.nocookie.net/township/images/8/87/Slabs.png">
+           14
+        </div>
+      </td>
+      <!-- 시간 -->
+      <td>20h</td>
+      <td>
+        <img class='cash' src="http://vignette2.wikia.nocookie.net/township/images/6/66/Cash.png">
+         4
+      </td>
+    </tr>
+    <!-- 관람차 -->
+    <tr>
+      <td>35</td>
+      <td>
+        <div><img class='building' src="http://vignette3.wikia.nocookie.net/township/images/f/f8/Ferris_wheel.png"></div>
+        <div class='name'>관람차</div>
+      </td>
+      <!-- 인구 -->
+      <td>+170</td>
+      <td>
+        <img class='coins' src="http://vignette3.wikia.nocookie.net/township/images/8/8f/Cost.png"> 
+         5,900
+      </td>
+      <td>
+        <!-- 자재 -->
+        <div class='div-material'>
+          <img class='material' src="http://vignette1.wikia.nocookie.net/township/images/1/15/Glass.png">
+           11
+        </div>
+        <div class='div-material'>
+          <img class='material' src="http://vignette2.wikia.nocookie.net/township/images/f/ff/Bricks.png">
+           18
+        </div>
+        <div class='div-material'>
+          <img class='material' src="http://vignette4.wikia.nocookie.net/township/images/8/87/Slabs.png">
+           16
+        </div>
+      </td>
+      <!-- 시간 -->
+      <td>21h</td>
+      <td>
+        <img class='cash' src="http://vignette2.wikia.nocookie.net/township/images/6/66/Cash.png">
+         4
+      </td>
+    </tr>
+    <!-- 롤러코스터 -->
+    <tr>
+      <td>36</td>
+      <td>
+        <div><img class='building' src="http://vignette4.wikia.nocookie.net/township/images/f/fb/Roller_coaster.png"></div>
+        <div class='name'>롤러코스터</div>
+      </td>
+      <!-- 인구 -->
+      <td>+175</td>
+      <td>
+        <img class='coins' src="http://vignette3.wikia.nocookie.net/township/images/8/8f/Cost.png"> 
+         6,500
+      </td>
+      <td>
+        <!-- 자재 -->
+        <div class='div-material'>
+          <img class='material' src="http://vignette1.wikia.nocookie.net/township/images/1/15/Glass.png">
+           13
+        </div>
+        <div class='div-material'>
+          <img class='material' src="http://vignette2.wikia.nocookie.net/township/images/f/ff/Bricks.png">
+           10
+        </div>
+        <div class='div-material'>
+          <img class='material' src="http://vignette4.wikia.nocookie.net/township/images/8/87/Slabs.png">
+           24
+        </div>
+      </td>
+      <!-- 시간 -->
+      <td>22h</td>
+      <td>
+        <img class='cash' src="http://vignette2.wikia.nocookie.net/township/images/6/66/Cash.png">
+         4
+      </td>
+    </tr>
+    <!-- 경기장 -->
+    <tr>
+      <td>37</td>
+      <td>
+        <div><img class='building' src="http://vignette2.wikia.nocookie.net/township/images/3/3f/Stadion.png"></div>
+        <div class='name'>경기장</div>
+      </td>
+      <!-- 인구 -->
+      <td>+180</td>
+      <td>
+        <img class='coins' src="http://vignette3.wikia.nocookie.net/township/images/8/8f/Cost.png"> 
+         7,200
+      </td>
+      <td>
+        <!-- 자재 -->
+        <div class='div-material'>
+          <img class='material' src="http://vignette1.wikia.nocookie.net/township/images/1/15/Glass.png">
+           18
+        </div>
+        <div class='div-material'>
+          <img class='material' src="http://vignette2.wikia.nocookie.net/township/images/f/ff/Bricks.png">
+           11
+        </div>
+        <div class='div-material'>
+          <img class='material' src="http://vignette4.wikia.nocookie.net/township/images/8/87/Slabs.png">
+           20
+        </div>
+      </td>
+      <!-- 시간 -->
+      <td>23h</td>
+      <td>
+        <img class='cash' src="http://vignette2.wikia.nocookie.net/township/images/6/66/Cash.png">
+         4
+      </td>
+    </tr>
+    <!-- 애완동물 상점 -->
+    <tr>
+      <td>38</td>
+      <td>
+        <div><img class='building' src="http://vignette1.wikia.nocookie.net/township/images/9/90/Pet_store.png"></div>
+        <div class='name'>애완동물 상점</div>
+      </td>
+      <!-- 인구 -->
+      <td>+185</td>
+      <td>
+        <img class='coins' src="http://vignette3.wikia.nocookie.net/township/images/8/8f/Cost.png"> 
+         7,900
+      </td>
+      <td>
+        <!-- 자재 -->
+        <div class='div-material'>
+          <img class='material' src="http://vignette1.wikia.nocookie.net/township/images/1/15/Glass.png">
+           19
+        </div>
+        <div class='div-material'>
+          <img class='material' src="http://vignette2.wikia.nocookie.net/township/images/f/ff/Bricks.png">
+           14
+        </div>
+        <div class='div-material'>
+          <img class='material' src="http://vignette4.wikia.nocookie.net/township/images/8/87/Slabs.png">
+           18
+        </div>
+      </td>
+      <!-- 시간 -->
+      <td>1d</td>
+      <td>
+        <img class='cash' src="http://vignette2.wikia.nocookie.net/township/images/6/66/Cash.png">
+         4
+      </td>
+    </tr>
+    <!-- 기상청 -->
+    <tr>
+      <td>39</td>
+      <td>
+        <div><img class='building' src="http://vignette3.wikia.nocookie.net/township/images/c/c4/Weather_station.png"></div>
+        <div class='name'>기상청</div>
+      </td>
+      <!-- 인구 -->
+      <td>+190</td>
+      <td>
+        <img class='coins' src="http://vignette3.wikia.nocookie.net/township/images/8/8f/Cost.png"> 
+         8,600
+      </td>
+      <td>
+        <!-- 자재 -->
+        <div class='div-material'>
+          <img class='material' src="http://vignette1.wikia.nocookie.net/township/images/1/15/Glass.png">
+           15
+        </div>
+        <div class='div-material'>
+          <img class='material' src="http://vignette2.wikia.nocookie.net/township/images/f/ff/Bricks.png">
+           16
+        </div>
+        <div class='div-material'>
+          <img class='material' src="http://vignette4.wikia.nocookie.net/township/images/8/87/Slabs.png">
+           22
+        </div>
+      </td>
+      <!-- 시간 -->
+      <td>1d 1h</td>
+      <td>
+        <img class='cash' src="http://vignette2.wikia.nocookie.net/township/images/6/66/Cash.png">
+         4
+      </td>
+    </tr>
+    <!-- 스카이다이빙 학교 -->
+    <tr>
+      <td>40</td>
+      <td>
+        <div><img class='building' src="http://vignette3.wikia.nocookie.net/township/images/4/45/Sky_diving_school.png"></div>
+        <div class='name'>스카이다이빙 학교</div>
+      </td>
+      <!-- 인구 -->
+      <td>+195</td>
+      <td>
+        <img class='coins' src="http://vignette3.wikia.nocookie.net/township/images/8/8f/Cost.png"> 
+         9,300
+      </td>
+      <td>
+        <!-- 자재 -->
+        <div class='div-material'>
+          <img class='material' src="http://vignette1.wikia.nocookie.net/township/images/1/15/Glass.png">
+           18
+        </div>
+        <div class='div-material'>
+          <img class='material' src="http://vignette2.wikia.nocookie.net/township/images/f/ff/Bricks.png">
+           19
+        </div>
+        <div class='div-material'>
+          <img class='material' src="http://vignette4.wikia.nocookie.net/township/images/8/87/Slabs.png">
+           18
+        </div>
+      </td>
+      <!-- 시간 -->
+      <td>1d 2h</td>
+      <td>
+        <img class='cash' src="http://vignette2.wikia.nocookie.net/township/images/6/66/Cash.png">
+         4
+      </td>
+    </tr>
+  </tbody>
+</table>

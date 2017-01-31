@@ -1,0 +1,46 @@
+body {
+  margin: 0;
+  background-color: #FFF;
+}
+
+#seeSlide {
+  width: 260px;
+  height: 458px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #fff;
+  position: relative;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin-top: 52px;
+}
+
+#seeSlide img {
+  position: absolute;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: 10;
+}
+
+ul#slideDiscs {
+  display: table;
+  position: relative;
+  z-index: 20;
+  top: 80%;
+  display: none;
+}
+
+ul#slideDiscs li {
+  font-size: 38px;
+  list-style: circle;
+  color: #07DABE;
+  float: left;
+  padding-right: 35px;
+}
+
+ul#slideDiscs li.selected {
+  list-style: disc;
+  color: #4CFFE7;
+}

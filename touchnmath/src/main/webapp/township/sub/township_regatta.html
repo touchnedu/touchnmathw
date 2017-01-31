@@ -1,0 +1,931 @@
+<style>
+body { background-color: #000; }
+table { margin: 0 auto; background-color: #FFF; border: 2px solid #BBB; border-collapse: collapse; }
+td { padding: 10px; border: 1px solid #EEE; text-align: center; font-size: 0.9em; }
+td > div > img { max-width: 40px; max-height: 40px; }
+tr:not(.bottom-line) > td:nth-child(2) , .bottom-line > td:first-child { color: #999; }
+.bottom-line { border-bottom: 2px solid #CCC; }
+.need { min-width: 50px; }
+.item-name { min-width: 60px; }
+.category { background-color: #EEE; border-bottom: 2px solid #CCC; }
+.item-name > div:last-child { font-size: 12px; }
+</style>
+<table>
+  <tbody>
+    <tr><td colspan='3' class='category'>수집</td></tr>
+    <!-- 우유 -->
+    <tr>
+      <td rowspan='2' class='item-name'>
+        <div><img src='http://vignette3.wikia.nocookie.net/township/images/9/92/Milk.png'></div>
+        <div>우유</div>
+      </td>
+      <td>필요 개수</td>
+      <td class='need'>82</td>
+    </tr>
+    <tr class='bottom-line'>
+      <td>제한 시간</td>
+      <td>7h</td>
+    </tr>
+    <!-- 달걀 -->
+    <tr>
+      <td rowspan='2' class='item-name'>
+        <div><img src='http://vignette2.wikia.nocookie.net/township/images/2/26/Egg.png'></div>
+        <div>달걀</div>
+      </td>
+      <td>필요 개수</td>
+      <td class='need'>55</td>
+    </tr>
+    <tr class='bottom-line'>
+      <td>제한 시간</td>
+      <td>11h</td>
+    </tr>
+    <!-- 양모 -->
+    <tr>
+      <td rowspan='2' class='item-name'>
+        <div><img src='http://vignette3.wikia.nocookie.net/township/images/3/34/Wool.png'></div>
+        <div>양모</div>
+      </td>
+      <td>필요 개수</td>
+      <td class='need'>37</td>
+    </tr>
+    <tr class='bottom-line'>
+      <td>제한 시간</td>
+      <td>1d 12h</td>
+    </tr>
+    <!-- 꿀 -->
+    <tr>
+      <td rowspan='2' class='item-name'>
+        <div><img src='http://vignette2.wikia.nocookie.net/township/images/7/7c/Honeycomb.png'></div>
+        <div>꿀</div>
+      </td>
+      <td>필요 개수</td>
+      <td class='need'>33</td>
+    </tr>
+    <tr class='bottom-line'>
+      <td>제한 시간</td>
+      <td>1d 18h</td>
+    </tr>
+    <!-- 베이컨 -->
+    <tr>
+      <td rowspan='2' class='item-name'>
+        <div><img src='http://vignette3.wikia.nocookie.net/township/images/f/f6/Bacon.png'></div>
+        <div>베이컨</div>
+      </td>
+      <td>필요 개수</td>
+      <td class='need'>27</td>
+    </tr>
+    <tr class='bottom-line'>
+      <td>제한 시간</td>
+      <td>1d 22h</td>
+    </tr>
+    <tr><td colspan='3' class='category'>수확</td></tr>
+    <!-- 밀 -->
+    <tr>
+      <td rowspan='2' class='item-name'>
+        <div><img src='http://vignette3.wikia.nocookie.net/township/images/3/3e/Wheat1.png'></div>
+        <div>밀</div>
+      </td>
+      <td>필요 개수</td>
+      <td class='need'>614</td>
+    </tr>
+    <tr class='bottom-line'>
+      <td>제한 시간</td>
+      <td>2h 30m</td>
+    </tr>
+    <!-- 옥수수 -->
+    <tr>
+      <td rowspan='2' class='item-name'>
+        <div><img src='http://vignette3.wikia.nocookie.net/township/images/e/e5/Corn1.png'></div>
+        <div>옥수수</div>
+      </td>
+      <td>필요 개수</td>
+      <td class='need'>461</td>
+    </tr>
+    <tr class='bottom-line'>
+      <td>제한 시간</td>
+      <td>3h</td>
+    </tr>
+    <!-- 사탕수수 -->
+    <tr>
+      <td rowspan='2' class='item-name'>
+        <div><img src='http://vignette3.wikia.nocookie.net/township/images/8/86/Sugarcane1.png'></div>
+        <div>사탕수수</div>
+      </td>
+      <td>필요 개수</td>
+      <td class='need'>250</td>
+    </tr>
+    <tr class='bottom-line'>
+      <td>제한 시간</td>
+      <td>5h</td>
+    </tr>
+    <!-- 면 -->
+    <tr>
+      <td rowspan='2' class='item-name'>
+        <div><img src='http://vignette1.wikia.nocookie.net/township/images/c/c3/Cotton.png'></div>
+        <div>면</div>
+      </td>
+      <td>필요 개수</td>
+      <td class='need'>216</td>
+    </tr>
+    <tr class='bottom-line'>
+      <td>제한 시간</td>
+      <td>5h 30m</td>
+    </tr>
+    <!-- 딸기 -->
+    <tr>
+      <td rowspan='2' class='item-name'>
+        <div><img src='http://vignette3.wikia.nocookie.net/township/images/6/6d/Strawberry.png'></div>
+        <div>딸기</div>
+      </td>
+      <td>필요 개수</td>
+      <td class='need'>199</td>
+    </tr>
+    <tr class='bottom-line'>
+      <td>제한 시간</td>
+      <td>9h</td>
+    </tr>
+    <!-- 쌀 -->
+    <tr>
+      <td rowspan='2' class='item-name'>
+        <div><img src='http://vignette3.wikia.nocookie.net/township/images/d/da/Rice.png'></div>
+        <div>쌀</div>
+      </td>
+      <td>필요 개수</td>
+      <td class='need'>188</td>
+    </tr>
+    <tr class='bottom-line'>
+      <td>제한 시간</td>
+      <td>6h</td>
+    </tr>
+    <!-- 토마토 -->
+    <tr>
+      <td rowspan='2' class='item-name'>
+        <div><img src='http://vignette4.wikia.nocookie.net/township/images/9/9d/Tomato.png'></div>
+        <div>토마토</div>
+      </td>
+      <td>필요 개수</td>
+      <td class='need'>169</td>
+    </tr>
+    <tr class='bottom-line'>
+      <td>제한 시간</td>
+      <td>15h</td>
+    </tr>
+    <!-- 장미 -->
+    <tr>
+      <td rowspan='2' class='item-name'>
+        <div><img src='http://vignette3.wikia.nocookie.net/township/images/4/4f/Rose.png'></div>
+        <div>장미</div>
+      </td>
+      <td>필요 개수</td>
+      <td class='need'>154</td>
+    </tr>
+    <tr class='bottom-line'>
+      <td>제한 시간</td>
+      <td>7h</td>
+    </tr>
+    <!-- 소나무 -->
+    <tr>
+      <td rowspan='2' class='item-name'>
+        <div><img src='http://vignette2.wikia.nocookie.net/township/images/d/d4/Pine_Tree.png'></div>
+        <div>소나무</div>
+      </td>
+      <td>필요 개수</td>
+      <td class='need'>172</td>
+    </tr>
+    <tr class='bottom-line'>
+      <td>제한 시간</td>
+      <td>1d</td>
+    </tr>
+    <!-- 쟈스민 -->
+    <tr>
+      <td rowspan='2' class='item-name'>
+        <div><img src='http://vignette2.wikia.nocookie.net/township/images/c/c1/Jasmine.png'></div>
+        <div>쟈스민</div>
+      </td>
+      <td>필요 개수</td>
+      <td class='need'>149</td>
+    </tr>
+    <tr class='bottom-line'>
+      <td>제한 시간</td>
+      <td>10h</td>
+    </tr>
+    <!-- 감자 -->
+    <tr>
+      <td rowspan='2' class='item-name'>
+        <div><img src='http://vignette2.wikia.nocookie.net/township/images/c/c2/Potato.png'></div>
+        <div>감자</div>
+      </td>
+      <td>필요 개수</td>
+      <td class='need'>137</td>
+    </tr>
+    <tr class='bottom-line'>
+      <td>제한 시간</td>
+      <td>22h</td>
+    </tr>
+    <!-- 고추 -->
+    <tr>
+      <td rowspan='2' class='item-name'>
+        <div><img src='http://vignette4.wikia.nocookie.net/township/images/5/50/Pepper.png'></div>
+        <div>고추</div>
+      </td>
+      <td>필요 개수</td>
+      <td class='need'>125</td>
+    </tr>
+    <tr class='bottom-line'>
+      <td>제한 시간</td>
+      <td>19h</td>
+    </tr>
+    <!-- 커피 나무 -->
+    <tr>
+      <td rowspan='2' class='item-name'>
+        <div><img src='http://vignette2.wikia.nocookie.net/township/images/1/1e/Coffee_Plant.png'></div>
+        <div>커피 나무</div>
+      </td>
+      <td>필요 개수</td>
+      <td class='need'>152</td>
+    </tr>
+    <tr class='bottom-line'>
+      <td>제한 시간</td>
+      <td>20h</td>
+    </tr>
+    <!-- 카카오 -->
+    <tr>
+      <td rowspan='2' class='item-name'>
+        <div><img src='http://vignette2.wikia.nocookie.net/township/images/6/60/Cacao.png'></div>
+        <div>카카오</div>
+      </td>
+      <td>필요 개수</td>
+      <td class='need'>131</td>
+    </tr>
+    <tr class='bottom-line'>
+      <td>제한 시간</td>
+      <td>1d 16h</td>
+    </tr>
+    <!-- 고무나무 -->
+    <tr>
+      <td rowspan='2' class='item-name'>
+        <div><img src='http://vignette2.wikia.nocookie.net/township/images/7/7b/Rubber_Tree.png'></div>
+        <div>고무나무</div>
+      </td>
+      <td>필요 개수</td>
+      <td class='need'>144</td>
+    </tr>
+    <tr class='bottom-line'>
+      <td>제한 시간</td>
+      <td>2d</td>
+    </tr>
+    <!-- 실크 -->
+    <tr>
+      <td rowspan='2' class='item-name'>
+        <div><img src='http://vignette3.wikia.nocookie.net/township/images/8/83/Silk.png'></div>
+        <div>실크</div>
+      </td>
+      <td>필요 개수</td>
+      <td class='need'>153</td>
+    </tr>
+    <tr class='bottom-line'>
+      <td>제한 시간</td>
+      <td>2d 8h</td>
+    </tr>
+    <tr><td colspan='3' class='category'>선박</td></tr>
+    <!-- 복숭아 -->
+    <tr>
+      <td rowspan='2' class='item-name'>
+        <div><img src='http://vignette1.wikia.nocookie.net/township/images/e/e2/Peach.png'></div>
+        <div>복숭아</div>
+      </td>
+      <td>필요 개수</td>
+      <td class='need'>25</td>
+    </tr>
+    <tr class='bottom-line'>
+      <td>제한 시간</td>
+      <td>2d</td>
+    </tr>
+    <!-- 수박 -->
+    <tr>
+      <td rowspan='2' class='item-name'>
+        <div><img src='http://vignette3.wikia.nocookie.net/township/images/0/06/Watermelon.png'></div>
+        <div>수박</div>
+      </td>
+      <td>필요 개수</td>
+      <td class='need'>15</td>
+    </tr>
+    <tr class='bottom-line'>
+      <td>제한 시간</td>
+      <td>2d</td>
+    </tr>
+    <!-- 포도 -->
+    <tr>
+      <td rowspan='2' class='item-name'>
+        <div><img src='http://vignette4.wikia.nocookie.net/township/images/3/39/Grapes.png'></div>
+        <div>포도</div>
+      </td>
+      <td>필요 개수</td>
+      <td class='need'>23</td>
+    </tr>
+    <tr class='bottom-line'>
+      <td>제한 시간</td>
+      <td>2d</td>
+    </tr>
+    <!-- 올리브 -->
+    <tr>
+      <td rowspan='2' class='item-name'>
+        <div><img src='http://vignette2.wikia.nocookie.net/township/images/5/5f/Olive.png'></div>
+        <div>올리브</div>
+      </td>
+      <td>필요 개수</td>
+      <td class='need'>12</td>
+    </tr>
+    <tr class='bottom-line'>
+      <td>제한 시간</td>
+      <td>2d</td>
+    </tr>
+    <!-- 바나나 -->
+    <tr>
+      <td rowspan='2' class='item-name'>
+        <div><img src='http://vignette1.wikia.nocookie.net/township/images/6/69/Banana.png'></div>
+        <div>바나나</div>
+      </td>
+      <td>필요 개수</td>
+      <td class='need'>22</td>
+    </tr>
+    <tr class='bottom-line'>
+      <td>제한 시간</td>
+      <td>2d</td>
+    </tr>
+    <!-- 코코넛 -->
+    <tr>
+      <td rowspan='2' class='item-name'>
+        <div><img src='http://vignette2.wikia.nocookie.net/township/images/2/2f/Coconut.png'></div>
+        <div>코코넛</div>
+      </td>
+      <td>필요 개수</td>
+      <td class='need'>10</td>
+    </tr>
+    <tr class='bottom-line'>
+      <td>제한 시간</td>
+      <td>2d</td>
+    </tr>
+    <!-- 물고기 -->
+    <tr>
+      <td rowspan='2' class='item-name'>
+        <div><img src='http://vignette3.wikia.nocookie.net/township/images/f/fb/Fish.png'></div>
+        <div>살구ㅋㅋ</div>
+      </td>
+      <td>필요 개수</td>
+      <td class='need'>18</td>
+    </tr>
+    <tr class='bottom-line'>
+      <td>제한 시간</td>
+      <td>2d</td>
+    </tr>
+    <!-- 새우 -->
+    <tr>
+      <td rowspan='2' class='item-name'>
+        <div><img src='http://vignette3.wikia.nocookie.net/township/images/4/40/Schrimp.png'></div>
+        <div>새우</div>
+      </td>
+      <td>필요 개수</td>
+      <td class='need'>8</td>
+    </tr>
+    <tr class='bottom-line'>
+      <td>제한 시간</td>
+      <td>2d</td>
+    </tr>
+    <tr><td colspan='3' class='category'>생산</td></tr>
+    <!-- 베이글 -->
+    <tr>
+      <td rowspan='2' class='item-name'>
+        <div><img src='http://vignette2.wikia.nocookie.net/township/images/2/2e/Bagel.png'></div>
+        <div>베이글</div>
+      </td>
+      <td>필요 개수</td>
+      <td class='need'>18</td>
+    </tr>
+    <tr class='bottom-line'>
+      <td>제한 시간</td>
+      <td>13h</td>
+    </tr>
+    <!-- 스웨터 -->
+    <tr>
+      <td rowspan='2' class='item-name'>
+        <div><img src='http://vignette4.wikia.nocookie.net/township/images/7/71/Sweather.png'></div>
+        <div>스웨터</div>
+      </td>
+      <td>필요 개수</td>
+      <td class='need'>9</td>
+    </tr>
+    <tr class='bottom-line'>
+      <td>제한 시간</td>
+      <td>20h</td>
+    </tr>
+    <!-- 치즈버거 -->
+    <tr>
+      <td rowspan='2' class='item-name'>
+        <div><img src='http://vignette2.wikia.nocookie.net/township/images/1/11/Cheeseburger.png'></div>
+        <div>치즈버거</div>
+      </td>
+      <td>필요 개수</td>
+      <td class='need'>13</td>
+    </tr>
+    <tr class='bottom-line'>
+      <td>제한 시간</td>
+      <td>10h</td>
+    </tr>
+    <!-- 시럽 -->
+    <tr>
+      <td rowspan='2' class='item-name'>
+        <div><img src='http://vignette3.wikia.nocookie.net/township/images/2/2f/Syrup.png'></div>
+        <div>시럽</div>
+      </td>
+      <td>필요 개수</td>
+      <td class='need'>15</td>
+    </tr>
+    <tr class='bottom-line'>
+      <td>제한 시간</td>
+      <td>15h</td>
+    </tr>
+    <!-- 샌드위치 -->
+    <tr>
+      <td rowspan='2' class='item-name'>
+        <div><img src='http://vignette1.wikia.nocookie.net/township/images/f/ff/Sandwich.png'></div>
+        <div>샌드위치</div>
+      </td>
+      <td>필요 개수</td>
+      <td class='need'>15</td>
+    </tr>
+    <tr class='bottom-line'>
+      <td>제한 시간</td>
+      <td>15h 30m</td>
+    </tr>
+    <!-- 아이스크림 -->
+    <tr>
+      <td rowspan='2' class='item-name'>
+        <div><img src='http://vignette1.wikia.nocookie.net/township/images/2/22/Ice_cream.png'></div>
+        <div>아이스크림</div>
+      </td>
+      <td>필요 개수</td>
+      <td class='need'>13</td>
+    </tr>
+    <tr class='bottom-line'>
+      <td>제한 시간</td>
+      <td>10h</td>
+    </tr>
+    <!-- 코트 -->
+    <tr>
+      <td rowspan='2' class='item-name'>
+        <div><img src='http://vignette1.wikia.nocookie.net/township/images/0/07/Coat.png'></div>
+        <div>코트</div>
+      </td>
+      <td>필요 개수</td>
+      <td class='need'>9</td>
+    </tr>
+    <tr class='bottom-line'>
+      <td>제한 시간</td>
+      <td>1d</td>
+    </tr>
+    <!-- 아이스캔디 -->
+    <tr>
+      <td rowspan='2' class='item-name'>
+        <div><img src='http://vignette1.wikia.nocookie.net/township/images/7/75/Popsicle.png'></div>
+        <div>아이스캔디</div>
+      </td>
+      <td>필요 개수</td>
+      <td class='need'>10</td>
+    </tr>
+    <tr class='bottom-line'>
+      <td>제한 시간</td>
+      <td>19h 30m</td>
+    </tr>
+    <!-- 피자 -->
+    <tr>
+      <td rowspan='2' class='item-name'>
+        <div><img src='http://vignette2.wikia.nocookie.net/township/images/f/f4/Pizza.png'></div>
+        <div>피자</div>
+      </td>
+      <td>필요 개수</td>
+      <td class='need'>10</td>
+    </tr>
+    <tr class='bottom-line'>
+      <td>제한 시간</td>
+      <td>1d 3h</td>
+    </tr>
+    <!-- 딸기잼 -->
+    <tr>
+      <td rowspan='2' class='item-name'>
+        <div><img src='http://vignette3.wikia.nocookie.net/township/images/1/19/Strawberry_jam.png'></div>
+        <div>딸기잼</div>
+      </td>
+      <td>필요 개수</td>
+      <td class='need'>10</td>
+    </tr>
+    <tr class='bottom-line'>
+      <td>제한 시간</td>
+      <td>21h</td>
+    </tr>
+    <!-- 벽지 -->
+    <tr>
+      <td rowspan='2' class='item-name'>
+        <div><img src='http://vignette1.wikia.nocookie.net/township/images/d/d5/Wallpaper.png'></div>
+        <div>벽지</div>
+      </td>
+      <td>필요 개수</td>
+      <td class='need'>8</td>
+    </tr>
+    <tr class='bottom-line'>
+      <td>제한 시간</td>
+      <td>1d 9h</td>
+    </tr>
+    <!-- 모자 -->
+    <tr>
+      <td rowspan='2' class='item-name'>
+        <div><img src='http://vignette3.wikia.nocookie.net/township/images/f/fc/Hat.png'></div>
+        <div>모자</div>
+      </td>
+      <td>필요 개수</td>
+      <td class='need'>10</td>
+    </tr>
+    <tr class='bottom-line'>
+      <td>제한 시간</td>
+      <td>1d 10h</td>
+    </tr>
+    <!-- 도넛 -->
+    <tr>
+      <td rowspan='2' class='item-name'>
+        <div><img src='http://vignette2.wikia.nocookie.net/township/images/9/9b/Donut.png'></div>
+        <div>도넛</div>
+      </td>
+      <td>필요 개수</td>
+      <td class='need'>12</td>
+    </tr>
+    <tr class='bottom-line'>
+      <td>제한 시간</td>
+      <td>1d 2h</td>
+    </tr>
+    <!-- 장난감 -->
+    <tr>
+      <td rowspan='2' class='item-name'>
+        <div><img src='http://vignette4.wikia.nocookie.net/township/images/3/37/Toys.png'></div>
+        <div>장난감</div>
+      </td>
+      <td>필요 개수</td>
+      <td class='need'>10</td>
+    </tr>
+    <tr class='bottom-line'>
+      <td>제한 시간</td>
+      <td>14h</td>
+    </tr>
+    <!-- 치즈 케이크 -->
+    <tr>
+      <td rowspan='2' class='item-name'>
+        <div><img src='http://vignette1.wikia.nocookie.net/township/images/3/34/Cheese_cake.png'></div>
+        <div>치즈 케이크</div>
+      </td>
+      <td>필요 개수</td>
+      <td class='need'>8</td>
+    </tr>
+    <tr class='bottom-line'>
+      <td>제한 시간</td>
+      <td>1d 6h</td>
+    </tr>
+    <!-- 젤리빈 -->
+    <tr>
+      <td rowspan='2' class='item-name'>
+        <div><img src='http://vignette3.wikia.nocookie.net/township/images/d/db/Jellybeans.png'></div>
+        <div>젤리빈</div>
+      </td>
+      <td>필요 개수</td>
+      <td class='need'>9</td>
+    </tr>
+    <tr class='bottom-line'>
+      <td>제한 시간</td>
+      <td>1d</td>
+    </tr>
+    <!-- 칠리소스 -->
+    <tr>
+      <td rowspan='2' class='item-name'>
+        <div><img src='http://vignette3.wikia.nocookie.net/township/images/9/9b/Chilisauce.png'></div>
+        <div>칠리 소스</div>
+      </td>
+      <td>필요 개수</td>
+      <td class='need'>8</td>
+    </tr>
+    <tr class='bottom-line'>
+      <td>제한 시간</td>
+      <td>23h</td>
+    </tr>
+    <!-- 구운 감자 -->
+    <tr>
+      <td rowspan='2' class='item-name'>
+        <div><img src='http://vignette2.wikia.nocookie.net/township/images/8/85/Screen_Shot_2015-08-05_at_12.25.50_pm.png'></div>
+        <div>구운 감자</div>
+      </td>
+      <td>필요 개수</td>
+      <td class='need'>12</td>
+    </tr>
+    <tr class='bottom-line'>
+      <td>제한 시간</td>
+      <td>15h</td>
+    </tr>
+    <!-- 테이블 -->
+    <tr>
+      <td rowspan='2' class='item-name'>
+        <div><img src='http://vignette2.wikia.nocookie.net/township/images/a/a5/Table.png'></div>
+        <div>테이블</div>
+      </td>
+      <td>필요 개수</td>
+      <td class='need'>8</td>
+    </tr>
+    <tr class='bottom-line'>
+      <td>제한 시간</td>
+      <td>1d 18h</td>
+    </tr>
+    <!-- 타코 -->
+    <tr>
+      <td rowspan='2' class='item-name'>
+        <div><img src='http://vignette1.wikia.nocookie.net/township/images/4/4d/Taco.png'></div>
+        <div>타코</div>
+      </td>
+      <td>필요 개수</td>
+      <td class='need'>15</td>
+    </tr>
+    <tr class='bottom-line'>
+      <td>제한 시간</td>
+      <td>1d 6h</td>
+    </tr>
+    <!-- 운동화 -->
+    <tr>
+      <td rowspan='2' class='item-name'>
+        <div><img src='http://vignette1.wikia.nocookie.net/township/images/c/c9/Sneakers-0.png'></div>
+        <div>운동화</div>
+      </td>
+      <td>필요 개수</td>
+      <td class='need'>8</td>
+    </tr>
+    <tr class='bottom-line'>
+      <td>제한 시간</td>
+      <td>23h</td>
+    </tr>
+    <!-- 모형 제작용 점토 -->
+    <tr>
+      <td rowspan='2' class='item-name'>
+        <div><img src='http://vignette3.wikia.nocookie.net/township/images/f/f9/Modeling_Clay.png'></div>
+        <div>점토</div>
+      </td>
+      <td>필요 개수</td>
+      <td class='need'>8</td>
+    </tr>
+    <tr class='bottom-line'>
+      <td>제한 시간</td>
+      <td>17h</td>
+    </tr>
+    <!-- 키시 -->
+    <tr>
+      <td rowspan='2' class='item-name'>
+        <div><img src='http://vignette2.wikia.nocookie.net/township/images/9/94/Quiche.png'></div>
+        <div>키시</div>
+      </td>
+      <td>필요 개수</td>
+      <td class='need'>9</td>
+    </tr>
+    <tr class='bottom-line'>
+      <td>제한 시간</td>
+      <td>19h</td>
+    </tr>
+    <!-- 아로마 세라피 양초 -->
+    <tr>
+      <td rowspan='2' class='item-name'>
+        <div><img src='http://vignette3.wikia.nocookie.net/township/images/d/d8/Aromatherapy_candle.png'></div>
+        <div>양초</div>
+      </td>
+      <td>필요 개수</td>
+      <td class='need'>10</td>
+    </tr>
+    <tr class='bottom-line'>
+      <td>제한 시간</td>
+      <td>1d 4h</td>
+    </tr>
+    <!-- 쌀튀밥 -->
+    <tr>
+      <td rowspan='2' class='item-name'>
+        <div><img src='http://vignette2.wikia.nocookie.net/township/images/e/e4/Puffed_rice.png'></div>
+        <div>쌀튀밥</div>
+      </td>
+      <td>필요 개수</td>
+      <td class='need'>13</td>
+    </tr>
+    <tr class='bottom-line'>
+      <td>제한 시간</td>
+      <td>15h</td>
+    </tr>
+    <!-- 쌀국수 -->
+    <tr>
+      <td rowspan='2' class='item-name'>
+        <div><img src='http://vignette1.wikia.nocookie.net/township/images/0/05/Rice_nuddles.png'></div>
+        <div>쌀국수</div>
+      </td>
+      <td>필요 개수</td>
+      <td class='need'>8</td>
+    </tr>
+    <tr class='bottom-line'>
+      <td>제한 시간</td>
+      <td>12h</td>
+    </tr>
+    <!-- 포도 피즈 -->
+    <tr>
+      <td rowspan='2' class='item-name'>
+        <div><img src='http://vignette3.wikia.nocookie.net/township/images/2/2c/Grape_fizz.png'></div>
+        <div>포도 피즈</div>
+      </td>
+      <td>필요 개수</td>
+      <td class='need'>13</td>
+    </tr>
+    <tr class='bottom-line'>
+      <td>제한 시간</td>
+      <td>19h</td>
+    </tr>
+    <!-- 방향제 -->
+    <tr>
+      <td rowspan='2' class='item-name'>
+        <div><img src='http://vignette2.wikia.nocookie.net/township/images/c/ce/Air_freshener.png'></div>
+        <div>방향제</div>
+      </td>
+      <td>필요 개수</td>
+      <td class='need'>15</td>
+    </tr>
+    <tr class='bottom-line'>
+      <td>제한 시간</td>
+      <td>15h</td>
+    </tr>
+    <!-- 전등 -->
+    <tr>
+      <td rowspan='2' class='item-name'>
+        <div><img src='http://vignette1.wikia.nocookie.net/township/images/0/05/Floorlamp.png'></div>
+        <div>전등</div>
+      </td>
+      <td>필요 개수</td>
+      <td class='need'>8</td>
+    </tr>
+    <tr class='bottom-line'>
+      <td>제한 시간</td>
+      <td>1d 18h</td>
+    </tr>
+    <!-- 콘도그 -->
+    <tr>
+      <td rowspan='2' class='item-name'>
+        <div><img src='http://vignette3.wikia.nocookie.net/township/images/1/15/Corn_Dog.png'></div>
+        <div>콘도그</div>
+      </td>
+      <td>필요 개수</td>
+      <td class='need'>10</td>
+    </tr>
+    <tr class='bottom-line'>
+      <td>제한 시간</td>
+      <td>22h</td>
+    </tr>
+    <!-- 카푸치노 -->
+    <tr>
+      <td rowspan='2' class='item-name'>
+        <div><img src='http://vignette2.wikia.nocookie.net/township/images/d/db/Cappuccino.png'></div>
+        <div>카푸치노</div>
+      </td>
+      <td>필요 개수</td>
+      <td class='need'>14</td>
+    </tr>
+    <tr class='bottom-line'>
+      <td>제한 시간</td>
+      <td>10h</td>
+    </tr>
+    <!-- 꼭두각시 -->
+    <tr>
+      <td rowspan='2' class='item-name'>
+        <div><img src='http://vignette4.wikia.nocookie.net/township/images/6/6f/Puppet.png'></div>
+        <div>꼭두각시</div>
+      </td>
+      <td>필요 개수</td>
+      <td class='need'>11</td>
+    </tr>
+    <tr class='bottom-line'>
+      <td>제한 시간</td>
+      <td>1d</td>
+    </tr>
+    <!-- 후라이팬 -->
+    <tr>
+      <td rowspan='2' class='item-name'>
+        <div><img src='http://vignette1.wikia.nocookie.net/township/images/2/2b/Frypan.png'></div>
+        <div>후라이팬</div>
+      </td>
+      <td>필요 개수</td>
+      <td class='need'>8</td>
+    </tr>
+    <tr class='bottom-line'>
+      <td>제한 시간</td>
+      <td>20h</td>
+    </tr>
+    <!-- 찻주전자 -->
+    <tr>
+      <td rowspan='2' class='item-name'>
+        <div><img src='http://upload2.inven.co.kr/upload/2016/12/01/bbs/i13555770171.png'></div>
+        <div>찻주전자</div>
+      </td>
+      <td>필요 개수</td>
+      <td class='need'>9</td>
+    </tr>
+    <tr class='bottom-line'>
+      <td>제한 시간</td>
+      <td>1d 8h</td>
+    </tr>
+    <tr><td colspan='3' class='category'>일반</td></tr>
+    <!-- 먹이 주기 -->
+    <tr>
+      <td rowspan='2' class='item-name'>
+        <div><img src='http://upload2.inven.co.kr/upload/2016/12/01/bbs/i14359182156.png'></div>
+        <div>먹이 주기</div>
+      </td>
+      <td>필요 개수</td>
+      <td class='need'>125</td>
+    </tr>
+    <tr class='bottom-line'>
+      <td>제한 시간</td>
+      <td>20h</td>
+    </tr>
+    <!-- 광산 -->
+    <tr>
+      <td rowspan='2' class='item-name'>
+        <div><img src='http://upload2.inven.co.kr/upload/2016/12/01/bbs/i13817646935.png'></div>
+        <div>광산</div>
+      </td>
+      <td>필요 개수</td>
+      <td class='need'>58</td>
+    </tr>
+    <tr class='bottom-line'>
+      <td>제한 시간</td>
+      <td>Max</td>
+    </tr>
+    <!-- 행운의 집 -->
+    <tr>
+      <td rowspan='2' class='item-name'>
+        <div><img src='http://upload2.inven.co.kr/upload/2016/12/01/bbs/i13895682214.png'></div>
+        <div>행운의 집</div>
+      </td>
+      <td>필요 개수</td>
+      <td class='need'>6</td>
+    </tr>
+    <tr class='bottom-line'>
+      <td>제한 시간</td>
+      <td>Max</td>
+    </tr>
+    <!-- 헬기 주문 -->
+    <tr>
+      <td rowspan='2' class='item-name'>
+        <div><img src='http://vignette3.wikia.nocookie.net/township/images/0/03/Helicopter-0.png'></div>
+        <div>헬기 주문</div>
+      </td>
+      <td>필요 개수</td>
+      <td class='need'>25</td>
+    </tr>
+    <tr class='bottom-line'>
+      <td>제한 시간</td>
+      <td>18h</td>
+    </tr>
+    <!-- 기차 -->
+    <tr>
+      <td rowspan='2' class='item-name'>
+        <div><img src='http://vignette3.wikia.nocookie.net/township/images/f/ff/Train.png'></div>
+        <div>기차</div>
+      </td>
+      <td>필요 개수</td>
+      <td class='need'>11</td>
+    </tr>
+    <tr class='bottom-line'>
+      <td>제한 시간</td>
+      <td>Max</td>
+    </tr>
+    <!-- 동물원 -->
+    <tr>
+      <td rowspan='2' class='item-name'>
+        <div><img src='http://upload2.inven.co.kr/upload/2016/12/01/bbs/i14386451592.png'></div>
+        <div>동물원</div>
+      </td>
+      <td>필요 개수</td>
+      <td class='need'>65</td>
+    </tr>
+    <tr class='bottom-line'>
+      <td>제한 시간</td>
+      <td>2d</td>
+    </tr>
+    <!-- 비행기 -->
+    <tr>
+      <td rowspan='2' class='item-name'>
+        <div><img src='http://vignette2.wikia.nocookie.net/township/images/4/4a/Airplane.png'></div>
+        <div>비행기</div>
+      </td>
+      <td>필요 개수</td>
+      <td class='need'>4</td>
+    </tr>
+    <tr class='bottom-line'>
+      <td>제한 시간</td>
+      <td>Max</td>
+    </tr>
+  </tbody>
+</table>
