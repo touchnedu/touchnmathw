@@ -20,9 +20,26 @@
     slideMargin: 0
 	});
 	
+	var windowWidth = $(window).width();
+	logoImgResize(windowWidth);
+	
+	$(window).resize(function() {
+		logoImgResize($(window).width());
+	});
+	
 	loadSheet();
 	
 }());
+
+function logoImgResize(width) {
+	if(width > 1023) {
+		$('#logo > img').attr('src', 'images/menu_logo_110.png');
+		$('.footer-logo > img').attr('src', 'images/menu_logo_110.png');
+	} else {
+		$('#logo > img').attr('src', 'images/menu_logo.png');
+		$('.footer-logo > img').attr('src', 'images/menu_logo.png');
+	}
+}
 
 function loadSheet() {
 	var dataId = "1KNZp0K56oZGtBxUlIXh_C2UT8USBuzmwqHWbTAL4LlY";
