@@ -2119,9 +2119,12 @@ _:-ms-input-placeholder, :root .type-2.block .image-block .bg {position: absolut
 .h1 > img { width: 30%; }
 .open-day { font-size:24px; color: #222; font-weight: bold; }
 .pcscr { display: block; }
+.feature_m { display: none !important; }
+.feature_pc { display: inline-block !important; }
 .mediascr { display: none; }
 #download-btn > img { width: 240px; }
 #logo img { width: 110px; -ms-interpolation-mode: bicubic; }
+#feature_01 { content: url("../images/feature_icon_01.png"); }
 
 @media (max-width: 1199px) {
 	.hand-image { left: 5%; max-height: 60%; }
@@ -2131,6 +2134,8 @@ _:-ms-input-placeholder, :root .type-2.block .image-block .bg {position: absolut
 @media (max-width: 1023px) {
 	/* .down-num > div { min-width: 22px !important; } */
   .phone-icons-image img{ width: 220px; }
+  .feature_m { display: inline-block !important; }
+  .feature_pc { display: none !important; }
 }
 @media (max-width: 767px) {
   #download-btn > img { width: 200px; }
