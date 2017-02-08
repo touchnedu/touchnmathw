@@ -10,7 +10,7 @@
 	});
 	$('#logo').bind('click', function(e) {
 		e.preventDefault();
-		window.location.replace("http://www.touchnedu.com/en/");
+		window.location.replace("http://www.touchnedu.com/cn/");
 	});
 	
 	$('.slider-review').bxSlider({

@@ -12,6 +12,22 @@
 		e.preventDefault();
 		window.location.replace("http://www.touchnedu.com/");
 	});
+	$('#language-icon > img').bind('click', function() {
+		$('#language-box').fadeIn();
+	});
+	$('#div-language').mouseleave(function() {
+		$('#language-box').fadeOut();
+	});
+	$('#language-box div').bind('click', function(){ 
+		var thisAttr = $(this).attr('id');
+		console.log("thisAttr " + thisAttr);
+		if(thisAttr == "language-kor")
+			window.location.replace("http://www.touchnedu.com/");
+		else if(thisAttr == "language-eng")
+			window.location.replace("http://www.touchnedu.com/en/");
+		else if(thisAttr == "language-chn")
+			window.location.replace("http://www.touchnedu.com/cn/");
+	});
 	
 	$('.slider-review').bxSlider({
 		slideWidth: 800,
