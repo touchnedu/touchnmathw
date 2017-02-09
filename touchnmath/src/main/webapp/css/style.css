@@ -2102,6 +2102,7 @@ _:-ms-input-placeholder, :root .type-2.block .image-block .bg {position: absolut
 .font-size-23 { font-size: 23px; }
 .font-size-25 { font-size: 25px; }
 .font-size-28 { font-size: 28px; }
+.font-size-30 { font-size: 30px; }
 .font-size-35 { font-size: 35px !important; }
 .margin-top-20 { margin-top: 20px; }
 .margin-bottom-40 { margin-bottom: 40px; }
@@ -2130,14 +2131,21 @@ _:-ms-input-placeholder, :root .type-2.block .image-block .bg {position: absolut
 .s-title, .s-content { color: #00c5b3; text-align: center; padding-bottom: 25px; }
 .s-content { color: #FFF; line-height: 22px; padding-bottom: 0px; margin-bottom: 30px; }
 .s-title { padding-top: 4px; }
+
+/* 국가별 페이지 */
 #div-language { position: absolute; width: 115px; height: 283px; top: 40px; right: 15px; z-index: 10; text-align: center; }
 #language-icon { cursor: pointer; }
 #language-icon > img { width: 50px; }
-#language-icon > img:HOVER { content: url("../images/languages_icon_on.png"); }
+#language-icon > img:HOVER { content: url("../images/languages_icon_off.png"); }
 #language-box { display: none; width: 115px; height: 220px; background-image: url("../images/languages_bg_pc.png"); background-repeat: no-repeat;  margin-top: 10px; padding-top: 40px; }
-#language-box img { width: 25px; vertical-align: bottom; margin-right: 12px; }
-#language-box div { font-weight: bold; font-size: 1.1em; margin-bottom: 21px; }
-#language-box div:not(#language-vnm) { cursor: pointer; font-weight: bold; font-size: 1.1em; margin-bottom: 21px; }
+#language-box img { border: 1px solid #eee; width: 25px; vertical-align: bottom; margin-right: 12px; }
+#language-box div { font-weight: bold; font-size: 1.1em; margin-bottom: 17px; text-align: left; padding-left: 20px; }
+
+/* 국가별 폰트 색상 */
+#language-box div:not(#language-jpn):not(#language-kor) { cursor: pointer; }
+#language-jpn { color: #ccc; }
+#language-kor { color: #00c5b3; } 
+/* 끝 */
 
 @media (max-width: 1199px) {
 	.hand-image { top: 20%; left: 5%; max-height: 75%; }

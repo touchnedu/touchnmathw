@@ -12,7 +12,7 @@
 		e.preventDefault();
 		window.location.replace("http://www.touchnedu.com/");
 	});
-	$('#language-icon > img').bind('click', function() {
+	$('#language-icon > img').mouseover(function() {
 		$('#language-box').fadeIn();
 	});
 	$('#div-language').mouseleave(function() {
@@ -27,6 +27,11 @@
 			window.location.replace("http://www.touchnedu.com/en/");
 		else if(thisAttr == "language-chn")
 			window.location.replace("http://www.touchnedu.com/cn/");
+		else if(thisAttr == "language-vnm")
+			window.location.replace("http://www.touchnmath.vn");
+		else if(thisAttr == "language-jpn")
+			window.location.replace("http://www.touchnmath.com/jp/");
+			
 	});
 	
 	$('.slider-review').bxSlider({
