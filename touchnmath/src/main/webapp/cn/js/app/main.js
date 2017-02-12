@@ -1,4 +1,6 @@
 (function(){
+	var mobileValue = 0;
+	
 	$('#download-btn').bind('click', function(event) {
 		event.preventDefault();
 		var url = "https://play.google.com/store/apps/details?id=com.touchnedu.gradea.studya.math";
@@ -13,6 +15,42 @@
 		window.location.replace("http://www.touchnedu.com/cn/");
 	});
 	
+	$('#language-icon > img').mouseover(function() {
+		if(mobileCheck() == "m")
+			return;
+		$('#language-icon > img').css('content', 'url("../images/languages_icon_off.png")');
+		$('#language-box').fadeIn();
+	});
+	$('#div-language').mouseleave(function() {
+		$('#language-box').fadeOut();
+	});
+	$('#language-box div').bind('click', function(){ 
+		var thisAttr = $(this).attr('id');
+		if(thisAttr == "language-chn")
+			return;
+		if(thisAttr == "language-kor")
+			window.location.replace("http://www.touchnedu.com/");
+		else if(thisAttr == "language-eng")
+			window.location.replace("http://www.touchnedu.com/en/");
+		else if(thisAttr == "language-vnm")
+			window.location.replace("http://www.touchnmath.vn");
+		else if(thisAttr == "language-jpn")
+			window.location.replace("http://www.touchnmath.com/jp/");
+	});
+	$('#language-icon img').bind('click', function() {
+		if(mobileCheck() == "pc")
+			return;
+		if(mobileValue == 0) {
+			$('#language-box').fadeIn();
+			$('#language-icon > img').css('content', 'url("../images/languages_icon_off.png")');
+			mobileValue = 1;
+		} else {
+			$('#language-box').fadeOut();
+			$('#language-icon > img').css('content', 'url("../images/languages_icon_on.png")');
+			mobileValue = 0;
+		}
+	});
+	
 	$('.slider-review').bxSlider({
 		slideWidth: 800,
     minSlides: 1,
@@ -23,6 +61,17 @@
 	loadSheet();
 	
 }());
+
+function mobileCheck() {
+	var filter = "win16|win32|win64|mac|macintel"; 
+	if(navigator.platform) { 
+		if(filter.indexOf(navigator.platform.toLowerCase()) < 0) { 
+			return "m";
+		} else { 
+			return "pc"; 
+		}
+	}
+}
 
 function loadSheet() {
 	var dataId = "1KNZp0K56oZGtBxUlIXh_C2UT8USBuzmwqHWbTAL4LlY";

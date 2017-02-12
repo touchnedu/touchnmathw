@@ -2136,7 +2136,6 @@ _:-ms-input-placeholder, :root .type-2.block .image-block .bg {position: absolut
 #div-language { position: absolute; width: 115px; height: 283px; top: 40px; right: 15px; z-index: 10; text-align: center; }
 #language-icon { cursor: pointer; }
 #language-icon > img { width: 50px; }
-#language-icon > img:HOVER { content: url("../images/languages_icon_off.png"); }
 #language-box { display: none; width: 115px; height: 220px; background-image: url("../images/languages_bg_pc.png"); background-repeat: no-repeat;  margin-top: 10px; padding-top: 40px; }
 #language-box img { border: 1px solid #eee; width: 25px; vertical-align: bottom; margin-right: 12px; }
 #language-box div { font-weight: bold; font-size: 1.1em; margin-bottom: 17px; text-align: left; padding-left: 20px; }
@@ -2151,12 +2150,15 @@ _:-ms-input-placeholder, :root .type-2.block .image-block .bg {position: absolut
 	.hand-image { top: 20%; left: 5%; max-height: 75%; }
 	.down-num > span { font-size: 20px; }
 	.phone-icons-image img{width: 293px;}
+	#div-language { top: 90px; }
 }
 @media (max-width: 1023px) {
 	/* .down-num > div { min-width: 22px !important; } */
   .phone-icons-image img{ width: 220px; }
   .feature_m { display: inline-block !important; }
   .feature_pc { display: none !important; }
+  #language-box { background-image: url("../images/languages_bg.png"); background-size: 115px; }
+  
 }
 @media (max-width: 767px) {
   #download-btn > img { width: 200px; }
@@ -2195,5 +2197,6 @@ _:-ms-input-placeholder, :root .type-2.block .image-block .bg {position: absolut
   .cell-view{ padding-top: 0px; }
   .typography-article h2{ margin-bottom: 0 !important; }
   #download-btn > img { width: 60%; }
+  #div-language { top: 80px; right: 5px; }
 }
 
