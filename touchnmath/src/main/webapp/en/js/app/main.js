@@ -22,6 +22,7 @@
 		$('#language-box').fadeIn();
 	});
 	$('#div-language').mouseleave(function() {
+		$('#language-icon > img').css('content', 'url("../images/languages_icon_on.png")');
 		$('#language-box').fadeOut();
 	});
 	$('#language-box div').bind('click', function(){ 

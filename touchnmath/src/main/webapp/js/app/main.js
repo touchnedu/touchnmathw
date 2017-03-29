@@ -23,6 +23,7 @@
 	});
 	$('#div-language').mouseleave(function() {
 		$('#language-box').fadeOut();
+		$('#language-icon > img').css('content', 'url("../images/languages_icon_on.png")');
 	});
 	$('#language-box div').bind('click', function() { 
 		var thisAttr = $(this).attr('id');
@@ -33,7 +34,7 @@
 		else if(thisAttr == "language-chn")
 			window.location.replace("http://www.touchnedu.com/cn/");
 		else if(thisAttr == "language-vnm")
-			window.location.replace("http://www.touchnmath.vn");
+			window.location.replace("http://touchnmath.vn");
 		else if(thisAttr == "language-jpn")
 			window.location.replace("http://www.touchnmath.com/jp/");
 	});

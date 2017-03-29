@@ -123,6 +123,9 @@ function loadContent(id) {
 		case "down-mau":
 			$('#content').load('sub/download-mau.html');
 			break;
+		case "dau-d":
+			$('#content').load('sub/dau-d.html');
+			break;
 		case "graph-w":
 			$('#content').load('sub/graph-w.html');
 			break;
