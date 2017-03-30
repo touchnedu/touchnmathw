@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>BILLING</title>
+<link href="css/billing.css" rel="stylesheet" type="text/css" />
+<style>
+body { margin: 0; }
+#top-menu { margin: 0 auto; width: 1920px; }
+#container { width: 1000px; margin: 0 auto; margin-top: 50px; }
+.active > div { border-bottom: 5px solid #00C5B3; color: #00C5B3; }
+.tabs > li > div { margin: 0 auto; }
+.tabs > li[data-rel="tab1"] > div { width: 120px; }
+.tabs > li[data-rel="tab2"] > div { width: 160px; }
+.tabs > li[data-rel="tab3"] > div { width: 130px; }
+.tabs > li[data-rel="tab4"] > div { color: #EEE; cursor: default !important; }
+</style>
+</head>
+<body>
+
+<div id='top-menu'>
+	<img src='billing_images/top_img.png'>
+</div>
+<div id="container">
+	<ul class="tabs">
+		<li class="active" data-rel="tab1"><div class='intab'>구독이용권</div></li>
+		<li data-rel="tab2"><div class='intab'>스페셜 혜택&amp;계획</div></li>
+		<li data-rel="tab3"><div class='intab'>프리미엄 버전</div></li>
+		<li data-rel="tab4" class='not-ready'><div class='intab'>단행본 이용권</div></li>
+	</ul>
+	<div class="tab_container">
+		<div id="tab1" class="tab_content">
+		  <img src='billing_images/m_01_con_img.png'>
+		</div>
+		
+		<div id="tab2" class="tab_content">
+		  <img src='billing_images/m_02_con_img.png'>
+		</div>
+			
+		<div id="tab3" class="tab_content">
+		  <img src='billing_images/m_03_con_img.png'>
+		</div>
+			
+		<div id="tab4" class="tab_content">
+		  <img src='billing_images/m_04_con_img.png'>
+		</div>
+	</div>
+</div>
+<!-- #container -->
+
+</body>
+<script src="js/lib/jquery-2.1.3.min.js"></script>
+<script>
+$(function () {
+  $(".tab_content").hide();
+  $(".tab_content:first").show();
+
+  $("ul.tabs li").not('.not-ready').click(function () {
+      $("ul.tabs li").removeClass("active").css("color", "#333");
+      //$(this).addClass("active").css({"color": "darkred","font-weight": "bolder"});
+      $(this).addClass("active").css("color", "darkred");
+      $(".tab_content").hide()
+      var activeTab = $(this).attr("data-rel");
+      $("#" + activeTab).fadeIn()
+  });
+});
+</script>
+</html>

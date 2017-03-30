@@ -1,0 +1,65 @@
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+html, body, div, input, textarea, span {
+	font-family: 'Nanum Gothic';
+}
+
+ul.tabs {
+	margin: 0 auto;
+	padding: 0;
+	float: left;
+	list-style: none;
+	height: 32px;
+	width: 1000px;
+	font-size: 12px;
+}
+
+ul.tabs li {
+	float: left;
+	text-align: center;
+	cursor: pointer;
+	width: 249px;
+	height: 40px;
+	line-height: 31px;
+	background: #fff;
+	overflow: hidden;
+	position: relative;
+	font-size: 17px;
+}
+
+ul.tabs li.active {
+	background: #FFFFFF;
+	border-bottom: 1px solid #FFFFFF;
+}
+
+.tab_container {
+	border-top: none;
+	clear: both;
+	float: left;
+	width: 1000px;
+	background: #FFFFFF;
+}
+
+.tab_content {
+	padding: 5px;
+	font-size: 12px;
+	display: none;
+	text-align: center;
+}
+
+.tab_container .tab_content ul {
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+}
+
+.tab_container .tab_content ul li {
+	padding: 5px;
+	list-style: none
+}
+
+;
+#container {
+	width: 249px;
+	margin: 0 auto;
+}
