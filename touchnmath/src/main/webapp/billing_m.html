@@ -9,35 +9,23 @@
 <style>
 body { margin: 0; }
 #top-menu { margin: 0 auto; width: 360px; }
-#top-menu > img { width: 360px; }
+#top-menu > img { width: 360px; margin-top: 54px; }
 #contact { margin-top: -77px; }
 #contact > img { width: 270px; opacity: 0.8; }
 #contact > img:active { opacity: 1; }
 #container { width: 360px; margin: 0 auto; }
 #tab1-title { text-align: left; padding: 10px 0; font-weight: bold; border-bottom: 2px solid #E8E8EB; margin-left: 10px; font-size: 14px; margin-bottom: 5px; }
 .active > div { color: #00C5B3; font-weight: bold; }
-.tabs > li > div { margin: 0 auto; width: 89px; }
+.tabs > li > div { margin: 0 auto; width: 89px; font-weight: bold; }
+.not-ready > div { font-weight: normal !important; }
 .tabs > li[data-rel="tab4"] > div { color: #999; }
 .tab_content > img { width: 100%; }
 .image-div { margin-bottom: 20px; }
 .text-div { text-align: left; padding: 3px 10px; font-size: .88em; line-height: 18px; }
 .f-red { color: red; }
-.intab-img { position: absolute; top: -20px; font-size: 5px; display: none; }
+.intab-img { position: absolute; top: -20px; display: none; }
 .active .intab-img { display: block; }
-button {
-margin: 0 auto;
-padding: 15px 30px;
-background: inherit;
-border: inherit;
-font: inherit;
-outline: none;
-width: 100%;
-display: block;
-text-align: left;
-font-size: 14px;
-font-weight: bold;
-margin-bottom: 5px;
-}
+button { margin: 0 auto; padding: 15px 30px; background: inherit; border: inherit; font: inherit; outline: none; width: 100%; display: block; text-align: left; font-size: 14px; font-weight: bold; margin-bottom: 5px; }
 button.b1 { color: #89A72A; }
 button.b2 { color: #477BB7; }
 button.b3 { color: #B68728; }
@@ -51,8 +39,7 @@ div > article { margin-bottom: 5px; }
 <div id="container">
 	<ul class="tabs">
 		<li class="active" data-rel="tab1">
-		  <div class='intab'>구독 이용권</div><div class='intab-img'>●
-		</div>
+		  <div class='intab'>구독 이용권</div><div class='intab-img'>●</div>
 		</li>
 		<li data-rel="tab2">
 		  <div class='intab'>스페셜 혜택</div><div class='intab-img'>●</div>
@@ -118,7 +105,6 @@ div > article { margin-bottom: 5px; }
 		</div>
 	</div>
 </div>
-<!-- #container -->
 
 </body>
 <script src="js/lib/jquery-2.1.3.min.js"></script>
@@ -128,7 +114,7 @@ $(function () {
   $(".tab_content").hide();
   $(".tab_content:first").show();
 
-  $("ul.tabs li").not('.not-ready').click(function () {
+  $("ul.tabs li")/* .not('.not-ready') */.click(function () {
   	$('.intab-img').css('display', 'none');
     $("ul.tabs li").removeClass("active").css("color", "#333");
     $(this).addClass("active").css("color", "darkred");
@@ -143,11 +129,9 @@ $(function () {
   });
   $('button').bind('click', function() {
   	if($(this).hasClass('active')) {
-  		console.log('active');
   		$(this).removeClass('active');
   		$(this).css('border-bottom', '1px solid #DDD');
   	} else {
-  		console.log('non-active');
   		$(this).addClass('active');
   		$(this).css('border-bottom', '0px');
   	}

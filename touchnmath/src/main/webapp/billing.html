@@ -15,11 +15,11 @@ body { margin: 0; }
 #contact > img { cursor: pointer; opacity: 0.8; }
 #contact > img:hover { opacity: 1; }
 .active > div { border-bottom: 5px solid #00C5B3; color: #00C5B3; }
-.tabs > li > div { margin: 0 auto; }
+.tabs > li > div { margin: 0 auto; font-weight: bold; }
 .tabs > li[data-rel="tab1"] > div { width: 120px; }
 .tabs > li[data-rel="tab2"] > div { width: 160px; }
 .tabs > li[data-rel="tab3"] > div { width: 130px; }
-.tabs > li[data-rel="tab4"] > div { color: #999; cursor: default !important; }
+.tabs > li[data-rel="tab4"] > div { color: #999; cursor: default !important; font-weight: normal; }
 </style>
 </head>
 <body>
@@ -63,7 +63,7 @@ $(function () {
   $(".tab_content").hide();
   $(".tab_content:first").show();
 
-  $("ul.tabs li").not('.not-ready').click(function () {
+  $("ul.tabs li")/* .not('.not-ready') */.click(function () {
       $("ul.tabs li").removeClass("active").css("color", "#333");
       //$(this).addClass("active").css({"color": "darkred","font-weight": "bolder"});
       $(this).addClass("active").css("color", "darkred");

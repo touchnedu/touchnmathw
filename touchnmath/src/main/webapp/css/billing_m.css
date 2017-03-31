@@ -12,6 +12,9 @@ ul.tabs {
 	height: 54px;
 	width: 360px;
 	font-size: 12px;
+	position: fixed;
+  background: #fff;
+  box-shadow: 0px 1px 5px #333;
 }
 
 ul.tabs li {
