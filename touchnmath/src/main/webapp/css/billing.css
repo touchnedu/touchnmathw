@@ -17,7 +17,6 @@ ul.tabs {
 ul.tabs li {
 	float: left;
 	text-align: center;
-	cursor: pointer;
 	width: 249px;
 	height: 40px;
 	line-height: 31px;
@@ -25,6 +24,9 @@ ul.tabs li {
 	overflow: hidden;
 	position: relative;
 	font-size: 17px;
+}
+ul.tabs li > div {
+	cursor: pointer;
 }
 
 ul.tabs li.active {

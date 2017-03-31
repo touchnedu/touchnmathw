@@ -9,7 +9,7 @@ ul.tabs {
 	padding: 0;
 	float: left;
 	list-style: none;
-	height: 37px;
+	height: 54px;
 	width: 360px;
 	font-size: 12px;
 }
@@ -19,16 +19,10 @@ ul.tabs li {
 	text-align: center;
 	cursor: pointer;
 	width: 89px;
-	line-height: 31px;
-	background: #fff;
+	line-height: 72px;
 	overflow: hidden;
 	position: relative;
 	font-size: 13px;
-}
-
-ul.tabs li.active {
-	background: #FFFFFF;
-	border-bottom: 1px solid #FFFFFF;
 }
 
 .tab_container {
@@ -40,7 +34,6 @@ ul.tabs li.active {
 }
 
 .tab_content {
-	padding: 5px;
 	font-size: 12px;
 	display: none;
 	text-align: center;

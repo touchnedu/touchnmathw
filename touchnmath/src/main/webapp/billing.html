@@ -6,20 +6,27 @@
 <link href="css/billing.css" rel="stylesheet" type="text/css" />
 <style>
 body { margin: 0; }
-#top-menu { margin: 0 auto; width: 1920px; }
+#top-menu { margin: 0 auto; width: 100%; }
+#top-menu > div { text-align: center; line-height: 0px; }
+#top-menu > div:first-child { background: #00C5B3; }
+#top-menu > div:last-child { background: #FFDF27; }
 #container { width: 1000px; margin: 0 auto; margin-top: 50px; }
+#contact { margin-top: -135px; text-align: right; padding-right: 50px; }
+#contact > img { cursor: pointer; opacity: 0.8; }
+#contact > img:hover { opacity: 1; }
 .active > div { border-bottom: 5px solid #00C5B3; color: #00C5B3; }
 .tabs > li > div { margin: 0 auto; }
 .tabs > li[data-rel="tab1"] > div { width: 120px; }
 .tabs > li[data-rel="tab2"] > div { width: 160px; }
 .tabs > li[data-rel="tab3"] > div { width: 130px; }
-.tabs > li[data-rel="tab4"] > div { color: #EEE; cursor: default !important; }
+.tabs > li[data-rel="tab4"] > div { color: #999; cursor: default !important; }
 </style>
 </head>
 <body>
 
 <div id='top-menu'>
-	<img src='billing_images/top_img.png'>
+  <div><img src='billing_images/top_img_pc_1.png'></div>
+  <div><img src='billing_images/top_img_pc_2.png'></div>
 </div>
 <div id="container">
 	<ul class="tabs">
@@ -39,6 +46,7 @@ body { margin: 0; }
 			
 		<div id="tab3" class="tab_content">
 		  <img src='billing_images/m_03_con_img.png'>
+		  <div id='contact'><img src='billing_images/m_03_btn_on.png'></div>
 		</div>
 			
 		<div id="tab4" class="tab_content">
@@ -62,6 +70,9 @@ $(function () {
       $(".tab_content").hide()
       var activeTab = $(this).attr("data-rel");
       $("#" + activeTab).fadeIn()
+  });
+  $('#contact > img').bind('click', function() {
+  	window.open('https://goo.gl/Ow0IUN');
   });
 });
 </script>
