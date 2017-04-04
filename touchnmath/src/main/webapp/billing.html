@@ -63,17 +63,29 @@ $(function () {
   $(".tab_content").hide();
   $(".tab_content:first").show();
 
-  $("ul.tabs li")/* .not('.not-ready') */.click(function () {
-      $("ul.tabs li").removeClass("active").css("color", "#333");
-      //$(this).addClass("active").css({"color": "darkred","font-weight": "bolder"});
-      $(this).addClass("active").css("color", "darkred");
-      $(".tab_content").hide()
-      var activeTab = $(this).attr("data-rel");
-      $("#" + activeTab).fadeIn()
+  $("ul.tabs li").click(function () {
+  	if($(this).hasClass('not-ready')) {
+      alert('준비중입니다.');
+      return;
+    }
+    $("ul.tabs li").removeClass("active").css("color", "#333");
+    //$(this).addClass("active").css({"color": "darkred","font-weight": "bolder"});
+    $(this).addClass("active").css("color", "darkred");
+    $(".tab_content").hide()
+    var activeTab = $(this).attr("data-rel");
+    $("#" + activeTab).fadeIn()
   });
   $('#contact > img').bind('click', function() {
   	window.open('https://goo.gl/Ow0IUN');
   });
+  mobileFilter();
 });
+function mobileFilter() {
+  var filter = "win16|win32|win64|mac|macintel";
+  if (navigator.platform) {
+    if (filter.indexOf(navigator.platform.toLowerCase()) < 0)
+    	location.href = 'http://touchnmath.com/billing_m.html';
+  }
+}
 </script>
 </html>

@@ -10,6 +10,13 @@
 		event.preventDefault();
 		window.open('ir.html', '_blank');
 	});
+	$('#bill-img-pc, #bill-popup img').bind('click', function() {
+		window.open('billing.html', '_blank');
+	});
+	$('#bill-text').bind('click', function(e) {
+		e.preventDefault();
+		location.href = 'billing_m.html';
+	});
 	$('#logo').bind('click', function(e) {
 		e.preventDefault();
 		window.location.replace("http://www.touchnedu.com/");
@@ -50,6 +57,16 @@
 			$('#language-icon > img').css('content', 'url("../images/languages_icon_on.png")');
 			mobileValue = 0;
 		}
+	});
+	
+	if(getCookie('bill-popup') != 'done') 
+		$("#bill-popup").show();
+	
+	
+	$('#popup-closeBtn').bind('click', function() {
+		if($('#no-more').prop('checked'))
+			setCookie('bill-popup', 'done', 24);
+		$('#bill-popup').hide();
 	});
 	
 	$('.slider-review').bxSlider({
@@ -132,3 +149,31 @@ function calculateNumber(number) {
 		return "000000" + number;
 	}
 }
+
+function getCookie(name) {
+	var nameOfCookie = name + "=";
+	var x = 0;
+	while(x <= document.cookie.length) {
+		var y = (x + nameOfCookie.length);
+		if (document.cookie.substring(x, y) == nameOfCookie) {
+			if ((endOfCookie = document.cookie.indexOf(";", y)) == -1)
+				endOfCookie = document.cookie.length;
+			return unescape(document.cookie.substring(y, endOfCookie));
+		}
+		x = document.cookie.indexOf(" ", x) + 1;
+		if (x == 0)
+			break;
+	}
+	return '';
+}
+
+function setCookie(name, value, expirehours, domain) {
+	var today = new Date();
+	today.setTime(today.getTime() + (60 * 60 * 1000 * expirehours));
+	document.cookie = name + "=" + escape(value) + "; path=/; expires="
+																									+ today.toGMTString() + ";";
+	if (domain) {
+		document.cookie += "domain=" + domain + ";";
+	}
+}
+

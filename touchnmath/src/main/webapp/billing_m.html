@@ -26,6 +26,7 @@ body { margin: 0; }
 .f-red { color: red; }
 .intab-img { position: absolute; top: -20px; display: none; }
 .active .intab-img { display: block; }
+ul.tabs li, button { -webkit-tap-highlight-color: transparent; }
 button { margin: 0 auto; padding: 15px 30px; background: inherit; border: inherit; font: inherit; outline: none; width: 100%; display: block; text-align: left; font-size: 14px; font-weight: bold; margin-bottom: 5px; }
 button.b1 { color: #89A72A; }
 button.b2 { color: #477BB7; }
@@ -38,76 +39,76 @@ div > article { margin-bottom: 5px; }
 <body>
 
 <div id="container">
-	<ul class="tabs">
-		<li class="active" data-rel="tab1">
-		  <div class='intab'>구독 이용권</div><div class='intab-img'>●</div>
-		</li>
-		<li data-rel="tab2">
-		  <div class='intab'>스페셜 혜택</div><div class='intab-img'>●</div>
-		</li>
-		<li data-rel="tab3">
-		  <div class='intab'>프리미엄</div><div class='intab-img'>●</div>
-		</li>
-		<li data-rel="tab4" class='not-ready'>
-		  <div class='intab'>단행본 이용권</div><div class='intab-img'>●</div>
-		</li>
-	</ul>
-	<div id='top-menu'>
-		<ul class="bxslider">
-		  <li><img src='billing_images/banner_img01.png'></li>
-		  <li><img src='billing_images/banner_img02.png'></li>
-	  </ul>
+  <ul class="tabs">
+    <li class="active" data-rel="tab1">
+      <div class='intab'>구독 이용권</div><div class='intab-img'>●</div>
+    </li>
+    <li data-rel="tab2">
+      <div class='intab'>스페셜 혜택</div><div class='intab-img'>●</div>
+    </li>
+    <li data-rel="tab3">
+      <div class='intab'>프리미엄</div><div class='intab-img'>●</div>
+    </li>
+    <li data-rel="tab4" class='not-ready'>
+      <div class='intab'>단행본 이용권</div><div class='intab-img'>●</div>
+    </li>
+  </ul>
+  <div id='top-menu'>
+    <ul class="bxslider">
+      <li><img src='billing_images/banner_img01.png'></li>
+      <li><img src='billing_images/banner_img02.png'></li>
+    </ul>
   </div>
-	<div class="tab_container">
-		<div id="tab1" class="tab_content">
-		  <img src='billing_images/m1_c_img_01.png'><br>
-		  <section id="multiple" data-accordion-group>
-			  <section data-accordion class="big-chap-1">
-			    <button data-control class="large-chapter b1">무료 평가판</button>
-			    <div data-content>
-			      <article><img src='billing_images/m1_list_01_2.png'></article>
-			    </div>
-			  </section>
-			</section>
-		  <section id="multiple" data-accordion-group>
-			  <section data-accordion class="big-chap-1">
-			    <button data-control class="large-chapter b2">구독 취소</button>
-			    <div data-content>
-			      <article><img src='billing_images/m1_list_02_2.png'></article>
-			    </div>
-			  </section>
-			</section>
-		  <section id="multiple" data-accordion-group>
-			  <section data-accordion class="big-chap-1">
-			    <button data-control class="large-chapter b3">구독 요금제 변경</button>
-			    <div data-content>
-			      <article><img src='billing_images/m1_list_03_2.png'></article>
-			    </div>
-			  </section>
-			</section>
-		  <section id="multiple" data-accordion-group>
-			  <section data-accordion class="big-chap-1">
-			    <button data-control class="large-chapter b4">결제 유예 기간</button>
-			    <div data-content>
-			      <article><img src='billing_images/m1_list_04_2.png'></article>
-			    </div>
-			  </section>
-			</section>
-		</div>
-		
-		<div id="tab2" class="tab_content">
-		  <img src='billing_images/tab_02_con.png'>
-		</div>
-			
-		<div id="tab3" class="tab_content">
-		  <img src='billing_images/tab_03_con.png'>
-		  <div id='contact'><img src='billing_images/m3_btn_on.png'></div>
-		</div>
-			
-		<div id="tab4" class="tab_content">
-		  <img src='billing_images/tab_04_con.png'>
-		</div>
-	</div>
+  <div class="tab_container">
+    <div id="tab1" class="tab_content">
+      <img src='billing_images/m1_c_img_01.png'><br>
+      <section id="multiple" data-accordion-group>
+        <section data-accordion class="big-chap-1">
+          <button data-control class="large-chapter b1">무료 평가판</button>
+          <div data-content>
+            <article><img src='billing_images/m1_list_01_2.png'></article>
+          </div>
+        </section>
+      </section>
+      <section id="multiple" data-accordion-group>
+        <section data-accordion class="big-chap-1">
+          <button data-control class="large-chapter b2">구독 취소</button>
+          <div data-content>
+            <article><img src='billing_images/m1_list_02_2.png'></article>
+          </div>
+        </section>
+      </section>
+      <section id="multiple" data-accordion-group>
+        <section data-accordion class="big-chap-1">
+          <button data-control class="large-chapter b3">구독 요금제 변경</button>
+          <div data-content>
+            <article><img src='billing_images/m1_list_03_2.png'></article>
+          </div>
+        </section>
+      </section>
+      <section id="multiple" data-accordion-group>
+        <section data-accordion class="big-chap-1">
+          <button data-control class="large-chapter b4">결제 유예 기간</button>
+          <div data-content>
+            <article><img src='billing_images/m1_list_04_2.png'></article>
+          </div>
+        </section>
+      </section>
+    </div>
+    
+    <div id="tab2" class="tab_content">
+      <img src='billing_images/tab_02_con.png'>
+    </div>
+      
+    <div id="tab3" class="tab_content">
+      <img src='billing_images/tab_03_con.png'>
+      <div id='contact'><img src='billing_images/m3_btn_on.png'></div>
+    </div>
+      
+    <div id="tab4" class="tab_content">
+      <img src='billing_images/tab_04_con.png'>
+    </div>
+  </div>
 </div>
 
 </body>
@@ -116,7 +117,7 @@ div > article { margin-bottom: 5px; }
 <script src='js/module/jquery.bxslider.min.js' type='text/javascript'></script>
 <script>
 $(function () {
-	$('.bxslider').bxSlider({
+  $('.bxslider').bxSlider({
     auto: true,
     speed: 750,
     autoControls: false
@@ -124,8 +125,12 @@ $(function () {
   $(".tab_content").hide();
   $(".tab_content:first").show();
 
-  $("ul.tabs li")/* .not('.not-ready') */.click(function () {
-  	$('.intab-img').css('display', 'none');
+  $("ul.tabs li").click(function () {
+    if($(this).hasClass('not-ready')) {
+      alert('준비중입니다.');
+      return;
+    }
+    $('.intab-img').css('display', 'none');
     $("ul.tabs li").removeClass("active").css("color", "#333");
     $(this).addClass("active").css("color", "darkred");
     $(this).children('.intab-img').css('display', 'block');
@@ -138,13 +143,13 @@ $(function () {
     window.open('https://goo.gl/Ow0IUN');
   });
   $('button').bind('click', function() {
-  	if($(this).hasClass('active')) {
-  		$(this).removeClass('active');
-  		$(this).css('border-bottom', '1px solid #DDD');
-  	} else {
-  		$(this).addClass('active');
-  		$(this).css('border-bottom', '0px');
-  	}
+    if($(this).hasClass('active')) {
+      $(this).removeClass('active');
+      $(this).css('border-bottom', '1px solid #DDD');
+    } else {
+      $(this).addClass('active');
+      $(this).css('border-bottom', '0px');
+    }
   });
 });
 </script>
