@@ -126,6 +126,9 @@ function loadContent(id) {
 		case "dau-d":
 			$('#content').load('sub/dau-d.html');
 			break;
+		case "dau-w":
+			$('#content').load('sub/dau-w.html');
+			break;
 		case "graph-w":
 			$('#content').load('sub/graph-w.html');
 			break;

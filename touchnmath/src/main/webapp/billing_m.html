@@ -16,6 +16,7 @@ body { margin: 0; }
 #contact > img:active { opacity: 1; }
 #container { width: 100%; margin: 0 auto; }
 #tab1-title { text-align: left; padding: 10px 0; font-weight: bold; border-bottom: 2px solid #E8E8EB; margin-left: 10px; font-size: 14px; margin-bottom: 5px; }
+#goToSubs { display: none; margin-bottom: 10px; text-align: right; padding-right: 20px; font-weight: bold; color: #00C5B3; }
 .active > div { color: #00C5B3; font-weight: bold; }
 .tabs > li > div { margin: 0 auto; width: 89px; font-weight: bold; }
 .not-ready > div { font-weight: normal !important; }
@@ -62,6 +63,7 @@ div > article { margin-bottom: 5px; }
   <div class="tab_container">
     <div id="tab1" class="tab_content">
       <img src='billing_images/m1_c_img_01.png'><br>
+      <div id='goToSubs'>구독하러 가기 ></div>
       <section id="multiple" data-accordion-group>
         <section data-accordion class="big-chap-1">
           <button data-control class="large-chapter b1">무료 평가판</button>
@@ -151,6 +153,15 @@ $(function () {
       $(this).css('border-bottom', '0px');
     }
   });
+  $('#goToSubs').bind('click', function() {
+  	var ua = String(navigator.userAgent).toLowerCase();
+  	if(/iphone|ipad/.test(ua)) {
+  		alert('안드로이드 기기에서만 가능합니다.');
+  		return;
+  	}
+  	location.href = 'callBill://billing_activity';
+  });
+  
 });
 </script>
 </html>
